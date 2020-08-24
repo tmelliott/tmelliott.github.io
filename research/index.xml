@@ -12,6 +12,19 @@
     
     
     <item>
+      <title>Predicting bus arrival</title>
+      <link>http://tomelliott.co.nz/hugosite/research/predicting-bus-arrival/</link>
+      <pubDate>Sat, 22 Aug 2020 09:31:00 +0000</pubDate>
+      
+      <guid>http://tomelliott.co.nz/hugosite/research/predicting-bus-arrival/</guid>
+      <description>
+
+
+&lt;p&gt;For half a decade, I explored ways of predicting bus arrival with improved reliability. I came up with a framework that uses the GTFS information to construct a &lt;em&gt;transit network&lt;/em&gt;, allowing buses to share information about traffic conditions, even between routes.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
       <title>Modelling fishing gear</title>
       <link>http://tomelliott.co.nz/hugosite/research/modelling-fishing-gear/</link>
       <pubDate>Sun, 24 Aug 2014 09:31:00 +0000</pubDate>
