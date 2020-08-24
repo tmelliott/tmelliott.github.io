@@ -5,6 +5,8 @@ options(
 )
 
 publish <- function(commit) {
+    blogdown::build_site()
+    system("git commit -am 'Build site for publishing.'")
     system("git subtree push --prefix public origin gh-pages")
 }
 

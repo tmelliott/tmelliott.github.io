@@ -1,16 +1,9 @@
 ---
-title: 'Improving the prediction of bus arrival using real-time network state'
+title: "Improving the prediction of bus arrival using real-time network state"
+description: "PhD Defense talk"
 date: '2020-08-25T10:00:00'
+filename: "talks/2020-08_exam"
 draft: true
 ---
 
 My PhD defense presentation is linked below. You possibly won't understand most of it, however, since there's no recording available and most of the text needs to be accompanied by talking!
-
-<div class="frame-container">
-  <iframe src="http://tomelliott.co.nz/talks/2020-08_exam"
-    allowfullscreen
-    title="PhD Defense">
-  </iframe>
-</div>
-
-To navigate, click on the slide and then use arrow keys. Press <kbd>f</kbd> to enter full screen.
