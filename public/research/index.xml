@@ -2,23 +2,14 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Research on Tom Elliott</title>
-    <link>/hugosite/research/</link>
+    <link>http://tomelliott.co.nz/hugosite/research/</link>
     <description>Recent content in Research on Tom Elliott</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-gb</language>
     <lastBuildDate>Wed, 12 Aug 2020 12:00:00 +0000</lastBuildDate>
     
-	<atom:link href="/hugosite/research/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="http://tomelliott.co.nz/hugosite/research/index.xml" rel="self" type="application/rss+xml" />
     
-    
-    <item>
-      <title>Predicing bus arrival</title>
-      <link>/hugosite/research/predicing-bus-arrival/</link>
-      <pubDate>Mon, 24 Aug 2020 09:31:00 +0000</pubDate>
-      
-      <guid>/hugosite/research/predicing-bus-arrival/</guid>
-      <description>The question is: can it be done?</description>
-    </item>
     
   </channel>
 </rss>
