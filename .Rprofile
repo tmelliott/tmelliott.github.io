@@ -4,7 +4,7 @@ options(
     blogdown.ext = ".Rmd"
 )
 
-publish <- function() {
+publish <- function(commit) {
     system("git subtree push --prefix public origin gh-pages")
 }
 
