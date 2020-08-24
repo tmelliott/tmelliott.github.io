@@ -3,83 +3,98 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>http://tomelliott.co.nz/hugosite/inzight/</loc>
+    <loc>/hugosite/talks/phd_defense/</loc>
+    <lastmod>2020-08-25T10:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/hugosite/talks/</loc>
+    <lastmod>2020-08-25T10:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/hugosite/</loc>
+    <lastmod>2020-08-25T10:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/hugosite/research/predicting-bus-arrival/</loc>
+    <lastmod>2020-08-24T09:31:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/hugosite/inzight/</loc>
     <lastmod>2020-08-12T12:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://tomelliott.co.nz/hugosite/research/</loc>
+    <loc>/hugosite/research/</loc>
     <lastmod>2020-08-12T12:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://tomelliott.co.nz/hugosite/</loc>
-    <lastmod>2020-08-12T12:00:00+00:00</lastmod>
+    <loc>/hugosite/talks/satrday_akl_2020/</loc>
+    <lastmod>2020-02-22T09:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://tomelliott.co.nz/hugosite/talks/satrday_akl_2020/</loc>
-    <lastmod>2020-01-20T09:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://tomelliott.co.nz/hugosite/talks/</loc>
-    <lastmod>2020-01-20T09:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://tomelliott.co.nz/hugosite/2016/12/a-plain-markdown-post/</loc>
+    <loc>/hugosite/2016/12/a-plain-markdown-post/</loc>
     <lastmod>2016-12-30T21:49:57-07:00</lastmod>
   </url>
   
   <url>
-    <loc>http://tomelliott.co.nz/hugosite/post/</loc>
+    <loc>/hugosite/post/</loc>
     <lastmod>2016-12-30T21:49:57-07:00</lastmod>
   </url>
   
   <url>
-    <loc>http://tomelliott.co.nz/hugosite/about/</loc>
+    <loc>/hugosite/about/</loc>
     <lastmod>2016-05-05T21:48:51-07:00</lastmod>
   </url>
   
   <url>
-    <loc>http://tomelliott.co.nz/hugosite/categories/</loc>
+    <loc>/hugosite/categories/</loc>
     <lastmod>2015-07-23T21:13:14-05:00</lastmod>
   </url>
   
   <url>
-    <loc>http://tomelliott.co.nz/hugosite/2015/07/hello-r-markdown/</loc>
+    <loc>/hugosite/2015/07/hello-r-markdown/</loc>
     <lastmod>2015-07-23T21:13:14-05:00</lastmod>
   </url>
   
   <url>
-    <loc>http://tomelliott.co.nz/hugosite/tags/plot/</loc>
+    <loc>/hugosite/tags/plot/</loc>
     <lastmod>2015-07-23T21:13:14-05:00</lastmod>
   </url>
   
   <url>
-    <loc>http://tomelliott.co.nz/hugosite/categories/r/</loc>
+    <loc>/hugosite/categories/r/</loc>
     <lastmod>2015-07-23T21:13:14-05:00</lastmod>
   </url>
   
   <url>
-    <loc>http://tomelliott.co.nz/hugosite/tags/r-markdown/</loc>
+    <loc>/hugosite/tags/r-markdown/</loc>
     <lastmod>2015-07-23T21:13:14-05:00</lastmod>
   </url>
   
   <url>
-    <loc>http://tomelliott.co.nz/hugosite/tags/regression/</loc>
+    <loc>/hugosite/tags/regression/</loc>
     <lastmod>2015-07-23T21:13:14-05:00</lastmod>
   </url>
   
   <url>
-    <loc>http://tomelliott.co.nz/hugosite/tags/</loc>
+    <loc>/hugosite/tags/</loc>
     <lastmod>2015-07-23T21:13:14-05:00</lastmod>
   </url>
   
   <url>
-    <loc>http://tomelliott.co.nz/hugosite/2015/01/lorem-ipsum/</loc>
+    <loc>/hugosite/2015/01/lorem-ipsum/</loc>
     <lastmod>2015-01-01T13:09:13-06:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/hugosite/research/modelling-fishing-gear/</loc>
+    <lastmod>2014-08-24T09:31:00+00:00</lastmod>
   </url>
   
 </urlset>
