@@ -10,9 +10,14 @@
   
 
 
+<link href='//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/atom-one-dark.min.css' rel='stylesheet' type='text/css' />
+
+
+
+
   
   
-  <title>Tom Elliott | Research</title>
+  <title>Tom Elliott | Predicting bus arrival</title>
 </head>
 <body>
         
@@ -53,32 +58,10 @@
 </section>
 <main id="site-main">
 
-    
-<article class="list-info">
+
+
+<article class="post">
     <header>
-        <div class="title">
-            <h1>Research</h1>
-        </div>
-
-        
-    </header>
-
-    <div class="content">
-        
-
-
-<p>I spent the 2010's at the University of Auckland's City campus figuring out what sort of career I wanted to pursue. At first, I thought biology would be good for me, but less than half way into that degree I realised that statistics—with its combination of maths, computing, and problem solving—was for me.</p>
-<p>After completing a BSc in Biological Sciences and Statistics, I quickly added an Honours in Statistics to that, which consisted of a project fitting Bayesian time series models to black hole reverberation mapping data. I found the research aspect of academia to my liking, so further pursued a thesis-based Masters degree, this time fitting Bayesian models to fisheries trawl data.</p>
-<p>At this point, one must decide between finding a &quot;real job&quot;, or diving down the rabbit hole into academia (which of course I did). The second half of the twenty-tens was devoted to a PhD investigating the prediction of bus arrival and part-time work as the lead developer of <a href="/inzight/">iNZight</a>.</p>
-
-    </div>
-</article>
-
-
-
-    
-    <article class="list-post">
-        <header>
   <div class="title">
     <h2>Predicting bus arrival</h2>
   </div>
@@ -93,44 +76,26 @@
 </header>
 
 
-        <div class="content">
-            <p>
+    <div class="content">
+        
+            
 
 
 <p>For half a decade, I explored ways of predicting bus arrival with improved reliability. I came up with a framework that uses the GTFS information to construct a <em>transit network</em>, allowing buses to share information about traffic conditions, even between routes.</p>
-</p>
-        </div>
 
-        <footer>
-            <a href="http://tomelliott.co.nz/hugosite/research/predicting-bus-arrival/">Read more</a>
-        </footer>
-    </article>
-    
-    <article class="list-post">
-        <header>
-  <div class="title">
-    <h2>Modelling fishing gear</h2>
-  </div>
+        
+        <pre class="r"><code>library(magrittr)
+library(dplyr)
+x &lt;- data.frame(x = 10)
 
-  
+x %&gt;% mutate(x = 2 * x)</code></pre>
+<pre><code>##    x
+## 1 20</code></pre>
+<pre class="r"><code>x &lt;- x$x + 2</code></pre>
+<p>I then implement a particle filter to estimate vehicle state and ultimately road speeds which are passed to the network model, a Kalman filter running in real-time estimating current traffic conditions. From there, using a particle filter, it's fairly straightforward to estimate arrival time distributions.</p>
 
-  <div class="meta">
-    <i class="fi-xnluxl-calendar"></i>
-    <time datetime="2014-08-24 09:31:00 &#43;0000 UTC">August 24, 2014</time>
-
-  </div>
-</header>
-
-
-        <div class="content">
-            <p>There's fishing gear, and then there's not.</p>
-        </div>
-
-        <footer>
-            <a href="http://tomelliott.co.nz/hugosite/research/modelling-fishing-gear/">Read more</a>
-        </footer>
-    </article>
-    
+    </div>
+</article>
 
 
             </main><section id="site-sidebar">
@@ -152,6 +117,18 @@
 <script defer src="https://friconix.com/cdn/friconix.js"> </script></div>
 
         
+
+
+
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+
+
+
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/r.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/yaml.min.js"></script>
+<script>hljs.configure({languages: []}); hljs.initHighlightingOnLoad();</script>
+
+
 
     </body>
 </html>
