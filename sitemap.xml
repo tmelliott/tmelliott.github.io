@@ -3,22 +3,17 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>http://tomelliott.co.nz/hugosite/research/predicting-bus-arrival/</loc>
-    <lastmod>2020-08-22T09:31:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://tomelliott.co.nz/hugosite/</loc>
-    <lastmod>2020-08-22T09:31:00+00:00</lastmod>
-  </url>
-  
-  <url>
     <loc>http://tomelliott.co.nz/hugosite/inzight/</loc>
     <lastmod>2020-08-12T12:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>http://tomelliott.co.nz/hugosite/research/</loc>
+    <lastmod>2020-08-12T12:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://tomelliott.co.nz/hugosite/</loc>
     <lastmod>2020-08-12T12:00:00+00:00</lastmod>
   </url>
   
