@@ -1,0 +1,93 @@
+body {
+  background: $background-color;
+}
+
+/* GRID COMPONENTS */
+#wrapper {
+  display: grid;
+  grid-template-areas:
+    "intro"
+    "main"
+    "sidebar"
+    "footer";
+  grid-template-rows: auto 1fr auto auto;
+  margin: 0 auto;
+  max-width: 80em;
+  min-height: 100vh;
+  transition: opacity $hover-slow;
+
+  /* for desktop, grid is 2 columns */
+  @include for-desktop-up {
+    grid-template-areas:
+      "intro main"
+      "sidebar main"
+      "footer main"
+      "blank main";
+    grid-template-columns: 22em 1fr;
+    grid-template-rows: auto auto auto 1fr;
+  }
+
+  /* added when menu activated */
+  &.overlay {
+    opacity: 0.25;
+  }
+}
+
+#site-intro {
+  grid-area: intro;
+
+  display: flex;
+  flex-direction: column;
+  margin-top: 0.5em;
+  padding: 1em;
+  text-align: center;
+
+  img.circle {
+    border-radius: 50%;
+  }
+
+  ul.social-icons {
+    margin: 0;
+  }
+}
+
+#site-sidebar {
+  grid-area: sidebar;
+  margin: 0em 2em;
+  padding: 1em 1em;
+
+  border-top: solid 1px $separator-color;
+
+  ul {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    list-style-type: none;
+    text-align: center;
+
+    li {
+      a {
+
+      }
+    }
+  }
+}
+
+#site-main {
+  grid-area: main;
+
+  padding: 0 1em;
+}
+
+#site-footer {
+  grid-area: footer;
+
+  margin: 1em;
+  padding: 1em;
+  text-align: center;
+
+  .copyright {
+    font-size: 0.8em;
+  }
+}

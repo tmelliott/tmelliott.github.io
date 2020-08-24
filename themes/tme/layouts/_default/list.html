@@ -1,0 +1,15 @@
+{{ define "main" }}
+
+    {{ .Render "list-header" }}
+
+    {{ range .Pages.ByPublishDate.Reverse }}
+    <article class="post">
+        {{ .Render "header" }}
+
+        <div class="content">
+            {{ .Content }}
+        </div>
+    </article>
+    {{ end }}
+
+{{ end }}

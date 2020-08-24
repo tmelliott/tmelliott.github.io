@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Talks on Tom Elliott</title>
+    <link>/talks/</link>
+    <description>Recent content in Talks on Tom Elliott</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-gb</language>
+    <lastBuildDate>Tue, 25 Aug 2020 10:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="/talks/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Improving the prediction of bus arrival using real-time network state</title>
+      <link>/talks/phd_defense/</link>
+      <pubDate>Tue, 25 Aug 2020 10:00:00 +0000</pubDate>
+      
+      <guid>/talks/phd_defense/</guid>
+      <description>My PhD defense presentation is linked below. You possibly won&#39;t understand most of it, however, since there&#39;s no recording available and most of the text needs to be accompanied by talking!
+
+ To navigate, click on the slide and then use arrow keys. Press f to enter full screen.</description>
+    </item>
+    
+    <item>
+      <title>iNZight: Behind the Scenes</title>
+      <link>/talks/satrday_akl_2020/</link>
+      <pubDate>Mon, 20 Jan 2020 09:00:00 +0000</pubDate>
+      
+      <guid>/talks/satrday_akl_2020/</guid>
+      <description>For the first Auckland satRdays conference:
+
+ To navigate, click on the slide and then use arrow keys. Press f to enter full screen.</description>
+    </item>
+    
+  </channel>
+</rss>

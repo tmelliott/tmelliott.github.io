@@ -1,0 +1,56 @@
+baseurl = "/"
+languageCode = "en-gb"
+title = "Tom Elliott"
+theme = "tme"
+googleAnalytics = ""
+disqusShortname = ""
+ignoreFiles = ["\\.Rmd$", "\\.Rmarkdown$", "_files$", "_cache$"]
+
+[permalinks]
+    post = "/:year/:month/:slug/"
+    research = "/research/:title/"
+
+[[menu.main]]
+    name = "GitHub"
+    pre = "github"
+    url = "https://github.com/tmelliott"
+[[menu.main]]
+    name = "Twitter"
+    pre = "twitter"
+    url = "https://twitter.com/tomelliottnz"
+
+[[menu.sidebar]]
+    name = "Research"
+    url = "/research/"
+    weight = 1
+[[menu.sidebar]]
+    name = "iNZight"
+    url = "/inzight/"
+    weight = 2
+[[menu.sidebar]]
+    name = "Talks"
+    url = "/talks/"
+    weight = 3
+
+
+[params]
+    description = "I like data science, data vis, and computing, as well as wine, gardening, food, and music."
+    author = "Tom Elliott"
+
+    # options for highlight.js (version, additional languages, and theme)
+    highlightjsVersion = "9.12.0"
+    highlightjsCDN = "//cdnjs.cloudflare.com/ajax/libs"
+    highlightjsLang = ["r", "yaml"]
+    highlightjsTheme = "github"
+
+    MathJaxCDN = "//cdnjs.cloudflare.com/ajax/libs"
+    MathJaxVersion = "2.7.5"
+
+    # path to the favicon, under "static"
+    favicon = "favicon.ico"
+
+    [params.logo]
+    url = "images/photo.jpg"
+    width = 100
+    height = 100
+    alt = "Logo"

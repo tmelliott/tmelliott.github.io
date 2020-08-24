@@ -1,0 +1,7 @@
+<section id="site-sidebar">
+    <ul>
+        {{ range .Site.Menus.sidebar }}
+        <li><a class="nav-link" href="{{ .URL }}">{{ .Name }}</a></li>
+        {{ end }}
+    </ul>
+</section>

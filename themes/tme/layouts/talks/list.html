@@ -1,0 +1,14 @@
+{{ define "main" }}
+
+    {{ .Render "list-header" }}
+
+    <ul id="talk-list" class="timeline">
+        {{ range .Pages.ByPublishDate.Reverse }}
+        <li data-date="{{ .Date.Format "January 2, 2006" }}">
+            <a href="{{ .Permalink }}">{{ .Title }}</a>
+            {{ with .Description }}<p>{{ . }}</p>{{ end }}
+        </li>
+        {{ end }}
+    </ul>
+
+{{ end }}
