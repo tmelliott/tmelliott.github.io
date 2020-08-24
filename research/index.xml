@@ -2,34 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Research on Tom Elliott</title>
-    <link>/hugosite/research/</link>
+    <link>http://tomelliott.co.nz/hugosite/research/</link>
     <description>Recent content in Research on Tom Elliott</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-gb</language>
     <lastBuildDate>Wed, 12 Aug 2020 12:00:00 +0000</lastBuildDate>
     
-	<atom:link href="/hugosite/research/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="http://tomelliott.co.nz/hugosite/research/index.xml" rel="self" type="application/rss+xml" />
     
-    
-    <item>
-      <title>Predicting bus arrival</title>
-      <link>/hugosite/research/predicting-bus-arrival/</link>
-      <pubDate>Mon, 24 Aug 2020 09:31:00 +0000</pubDate>
-      
-      <guid>/hugosite/research/predicting-bus-arrival/</guid>
-      <description>
-
-
-&lt;p&gt;For half a decade, I explored ways of predicting bus arrival with improved reliability. I came up with a framework that uses the GTFS information to construct a &lt;em&gt;transit network&lt;/em&gt;, allowing buses to share information about traffic conditions, even between routes.&lt;/p&gt;
-</description>
-    </item>
     
     <item>
       <title>Modelling fishing gear</title>
-      <link>/hugosite/research/modelling-fishing-gear/</link>
+      <link>http://tomelliott.co.nz/hugosite/research/modelling-fishing-gear/</link>
       <pubDate>Sun, 24 Aug 2014 09:31:00 +0000</pubDate>
       
-      <guid>/hugosite/research/modelling-fishing-gear/</guid>
+      <guid>http://tomelliott.co.nz/hugosite/research/modelling-fishing-gear/</guid>
       <description>There&#39;s fishing gear, and then there&#39;s not.</description>
     </item>
     
