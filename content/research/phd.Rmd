@@ -1,7 +1,7 @@
 ---
 title: 'Predicting bus arrival'
 date: '2020-08-22T09:31:00'
-draft: false
+draft: true
 ---
 
 For half a decade, I explored ways of predicting bus arrival with improved reliability. I came up with a framework that uses the GTFS information to construct a _transit network_, allowing buses to share information about traffic conditions, even between routes.
