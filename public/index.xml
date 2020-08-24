@@ -29,5 +29,14 @@
       <description>This is a &amp;ldquo;hello world&amp;rdquo; example website for the blogdown package. The theme was forked from @jrutheiser/hugo-lithium-theme and modified by Yihui Xie.</description>
     </item>
     
+    <item>
+      <title>Modelling fishing gear</title>
+      <link>http://tomelliott.co.nz/hugosite/research/modelling-fishing-gear/</link>
+      <pubDate>Sun, 24 Aug 2014 09:31:00 +0000</pubDate>
+      
+      <guid>http://tomelliott.co.nz/hugosite/research/modelling-fishing-gear/</guid>
+      <description>There&#39;s fishing gear, and then there&#39;s not.</description>
+    </item>
+    
   </channel>
 </rss>
