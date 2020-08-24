@@ -6,6 +6,9 @@
     {{ .Render "header" }}
 
     <div class="content">
+        {{ if strings.Contains .RawContent "<!--more-->" }}
+            {{ .Summary }}
+        {{ end }}
         {{ .Content }}
     </div>
 </article>

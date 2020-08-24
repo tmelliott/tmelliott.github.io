@@ -1,8 +1,18 @@
 ---
-title: 'Predicing bus arrival'
+title: 'Predicting bus arrival'
 date: '2020-08-24T09:31:00'
 ---
 
 
 
-<p>The question is: can it be done?</p>
+<p>For half a decade, I explored ways of predicting bus arrival with improved reliability. I came up with a framework that uses the GTFS information to construct a <em>transit network</em>, allowing buses to share information about traffic conditions, even between routes.</p>
+<!--more-->
+<pre class="r"><code>library(magrittr)
+library(dplyr)
+x &lt;- data.frame(x = 10)
+
+x %&gt;% mutate(x = 2 * x)</code></pre>
+<pre><code>##    x
+## 1 20</code></pre>
+<pre class="r"><code>x &lt;- x$x + 2</code></pre>
+<p>I then implement a particle filter to estimate vehicle state and ultimately road speeds which are passed to the network model, a Kalman filter running in real-time estimating current traffic conditions. From there, using a particle filter, it's fairly straightforward to estimate arrival time distributions.</p>

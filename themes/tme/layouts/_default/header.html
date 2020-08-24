@@ -4,10 +4,11 @@
   </div>
 
   {{ with .Description }}
-    <p>{{ . }}</p>
+    <p class="desc">{{ . }}</p>
   {{ end }}
 
   <div class="meta">
+    <i class="fi-xnluxl-calendar"></i>
     <time datetime="{{ .Date }}">{{ .Date.Format "January 2, 2006" }}</time>
 
   </div>

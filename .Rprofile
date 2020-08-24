@@ -4,9 +4,9 @@ options(
     blogdown.ext = ".Rmd"
 )
 
-publish <- function(commit) {
+publish <- function(msg = "Build site for publishing.") {
     blogdown::build_site()
-    system("git commit -am 'Build site for publishing.'")
+    system(sprintf("git commit -am '%s'", msg))
     system("git subtree push --prefix public origin gh-pages")
 }
 

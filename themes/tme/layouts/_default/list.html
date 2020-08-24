@@ -3,12 +3,16 @@
     {{ .Render "list-header" }}
 
     {{ range .Pages.ByPublishDate.Reverse }}
-    <article class="post">
+    <article class="list-post">
         {{ .Render "header" }}
 
         <div class="content">
-            {{ .Content }}
+            <p>{{ .Summary }}</p>
         </div>
+
+        <footer>
+            <a href="{{ .Permalink }}">Read more</a>
+        </footer>
     </article>
     {{ end }}
 

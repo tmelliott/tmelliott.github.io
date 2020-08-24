@@ -1,16 +1,19 @@
 #site-main {
-  a {
-    border-bottom: dotted 1px $link-color;
 
-    &:visited {
-      border-bottom-color: $link-visited-color;
-    }
+  .content {
+    a {
+      border-bottom: dotted 1px $link-color;
 
-    &:hover {
-      text-decoration: none;
-      border-bottom-style: solid;
-      color: $link-color;
-      border-bottom-color: $link-color;
+      &:visited {
+        border-bottom-color: $link-visited-color;
+      }
+
+      &:hover {
+        text-decoration: none;
+        border-bottom-style: solid;
+        color: $link-color;
+        border-bottom-color: $link-color;
+      }
     }
   }
 
