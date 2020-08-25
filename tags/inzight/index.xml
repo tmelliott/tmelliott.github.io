@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>iNZight on Tom Elliott</title>
+    <link>http://tomelliott.co.nz/hugosite/tags/inzight/</link>
+    <description>Recent content in iNZight on Tom Elliott</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-gb</language>
+    <lastBuildDate>Sat, 22 Feb 2020 09:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="http://tomelliott.co.nz/hugosite/tags/inzight/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>iNZight: Behind the Scenes</title>
+      <link>http://tomelliott.co.nz/hugosite/talks/satrday-akl-2020/</link>
+      <pubDate>Sat, 22 Feb 2020 09:00:00 +0000</pubDate>
+      
+      <guid>http://tomelliott.co.nz/hugosite/talks/satrday-akl-2020/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

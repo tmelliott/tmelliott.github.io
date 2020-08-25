@@ -18,13 +18,38 @@
   </url>
   
   <url>
+    <loc>http://tomelliott.co.nz/hugosite/tags/conference/</loc>
+    <lastmod>2020-02-22T09:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://tomelliott.co.nz/hugosite/tags/inzight/</loc>
+    <lastmod>2020-02-22T09:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>http://tomelliott.co.nz/hugosite/talks/satrday-akl-2020/</loc>
+    <lastmod>2020-02-22T09:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://tomelliott.co.nz/hugosite/tags/</loc>
+    <lastmod>2020-02-22T09:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://tomelliott.co.nz/hugosite/tags/talk/</loc>
     <lastmod>2020-02-22T09:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>http://tomelliott.co.nz/hugosite/talks/</loc>
     <lastmod>2020-02-22T09:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://tomelliott.co.nz/hugosite/tags/phd/</loc>
+    <lastmod>2019-06-10T15:20:55+12:00</lastmod>
   </url>
   
   <url>
@@ -39,6 +64,11 @@
   
   <url>
     <loc>http://tomelliott.co.nz/hugosite/talks/isba-conf-2018/</loc>
+    <lastmod>2018-06-28T15:15:53+12:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://tomelliott.co.nz/hugosite/tags/poster/</loc>
     <lastmod>2018-06-28T15:15:53+12:00</lastmod>
   </url>
   
@@ -64,10 +94,6 @@
   
   <url>
     <loc>http://tomelliott.co.nz/hugosite/categories/</loc>
-  </url>
-  
-  <url>
-    <loc>http://tomelliott.co.nz/hugosite/tags/</loc>
   </url>
   
 </urlset>
