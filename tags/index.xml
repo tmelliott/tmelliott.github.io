@@ -6,10 +6,28 @@
     <description>Recent content in Tags on Tom Elliott</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-gb</language>
-    <lastBuildDate>Sat, 22 Feb 2020 09:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 25 Aug 2020 10:00:00 +0000</lastBuildDate>
     
 	<atom:link href="http://tomelliott.co.nz/hugosite/tags/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>phd</title>
+      <link>http://tomelliott.co.nz/hugosite/tags/phd/</link>
+      <pubDate>Tue, 25 Aug 2020 10:00:00 +0000</pubDate>
+      
+      <guid>http://tomelliott.co.nz/hugosite/tags/phd/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>talk</title>
+      <link>http://tomelliott.co.nz/hugosite/tags/talk/</link>
+      <pubDate>Tue, 25 Aug 2020 10:00:00 +0000</pubDate>
+      
+      <guid>http://tomelliott.co.nz/hugosite/tags/talk/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>conference</title>
@@ -26,24 +44,6 @@
       <pubDate>Sat, 22 Feb 2020 09:00:00 +0000</pubDate>
       
       <guid>http://tomelliott.co.nz/hugosite/tags/inzight/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>talk</title>
-      <link>http://tomelliott.co.nz/hugosite/tags/talk/</link>
-      <pubDate>Sat, 22 Feb 2020 09:00:00 +0000</pubDate>
-      
-      <guid>http://tomelliott.co.nz/hugosite/tags/talk/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>phd</title>
-      <link>http://tomelliott.co.nz/hugosite/tags/phd/</link>
-      <pubDate>Mon, 10 Jun 2019 15:20:55 +1200</pubDate>
-      
-      <guid>http://tomelliott.co.nz/hugosite/tags/phd/</guid>
       <description></description>
     </item>
     
