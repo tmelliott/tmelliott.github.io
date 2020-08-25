@@ -6,10 +6,19 @@
     <description>Recent content in Talks on Tom Elliott</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-gb</language>
-    <lastBuildDate>Sat, 22 Feb 2020 09:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 25 Aug 2020 10:00:00 +0000</lastBuildDate>
     
 	<atom:link href="http://tomelliott.co.nz/hugosite/talks/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Improving the prediction of bus arrival using real-time network state</title>
+      <link>http://tomelliott.co.nz/hugosite/talks/phd-defense/</link>
+      <pubDate>Tue, 25 Aug 2020 10:00:00 +0000</pubDate>
+      
+      <guid>http://tomelliott.co.nz/hugosite/talks/phd-defense/</guid>
+      <description>My PhD defense presentation is linked below. You possibly won&#39;t understand most of it, however, since there&#39;s no recording available and most of the text needs to be accompanied by talking!</description>
+    </item>
     
     <item>
       <title>iNZight: Behind the Scenes</title>
