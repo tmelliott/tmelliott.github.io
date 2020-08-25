@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Welcome on Tom Elliott</title>
+    <title>Hello and welcome to my blog-profile-thing. on Tom Elliott</title>
     <link>http://tomelliott.co.nz/hugosite/</link>
-    <description>Recent content in Welcome on Tom Elliott</description>
+    <description>Recent content in Hello and welcome to my blog-profile-thing. on Tom Elliott</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-gb</language>
     <lastBuildDate>Tue, 25 Aug 2020 10:00:00 +0000</lastBuildDate>
@@ -13,83 +13,74 @@
     
     <item>
       <title>Improving the prediction of bus arrival using real-time network state</title>
-      <link>http://tomelliott.co.nz/hugosite/talks/phd-defense/</link>
+      <link>http://tomelliott.co.nz/hugosite/publications/phd-defense/</link>
       <pubDate>Tue, 25 Aug 2020 10:00:00 +0000</pubDate>
       
-      <guid>http://tomelliott.co.nz/hugosite/talks/phd-defense/</guid>
+      <guid>http://tomelliott.co.nz/hugosite/publications/phd-defense/</guid>
       <description>My PhD defense presentation is linked below. You possibly won&#39;t understand most of it, however, since there&#39;s no recording available and most of the text needs to be accompanied by talking!</description>
     </item>
     
     <item>
       <title>iNZight: Behind the Scenes</title>
-      <link>http://tomelliott.co.nz/hugosite/talks/satrday-akl-2020/</link>
+      <link>http://tomelliott.co.nz/hugosite/publications/satrday-akl-2020/</link>
       <pubDate>Sat, 22 Feb 2020 09:00:00 +0000</pubDate>
       
-      <guid>http://tomelliott.co.nz/hugosite/talks/satrday-akl-2020/</guid>
+      <guid>http://tomelliott.co.nz/hugosite/publications/satrday-akl-2020/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Travel times and bus prediction</title>
-      <link>http://tomelliott.co.nz/hugosite/talks/phd-talks-day-2019/</link>
+      <link>http://tomelliott.co.nz/hugosite/publications/phd-talks-day-2019/</link>
       <pubDate>Mon, 10 Jun 2019 15:20:55 +1200</pubDate>
       
-      <guid>http://tomelliott.co.nz/hugosite/talks/phd-talks-day-2019/</guid>
+      <guid>http://tomelliott.co.nz/hugosite/publications/phd-talks-day-2019/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Historical data based priors for better bus arrival-time prediction</title>
-      <link>http://tomelliott.co.nz/hugosite/talks/user-conf-2018/</link>
+      <link>http://tomelliott.co.nz/hugosite/publications/user-conf-2018/</link>
       <pubDate>Thu, 12 Jul 2018 15:17:34 +1200</pubDate>
       
-      <guid>http://tomelliott.co.nz/hugosite/talks/user-conf-2018/</guid>
+      <guid>http://tomelliott.co.nz/hugosite/publications/user-conf-2018/</guid>
       <description></description>
     </item>
     
     <item>
       <title>How can we improve bus ETAs?</title>
-      <link>http://tomelliott.co.nz/hugosite/talks/isba-conf-2018/</link>
+      <link>http://tomelliott.co.nz/hugosite/publications/isba-conf-2018/</link>
       <pubDate>Thu, 28 Jun 2018 15:15:53 +1200</pubDate>
       
-      <guid>http://tomelliott.co.nz/hugosite/talks/isba-conf-2018/</guid>
+      <guid>http://tomelliott.co.nz/hugosite/publications/isba-conf-2018/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Real-time transit network modeling for improved arrival time predictions</title>
-      <link>http://tomelliott.co.nz/hugosite/talks/nzsa-2017/</link>
+      <link>http://tomelliott.co.nz/hugosite/publications/nzsa-2017/</link>
       <pubDate>Mon, 11 Dec 2017 15:11:45 +1200</pubDate>
       
-      <guid>http://tomelliott.co.nz/hugosite/talks/nzsa-2017/</guid>
+      <guid>http://tomelliott.co.nz/hugosite/publications/nzsa-2017/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Predicting bus arrival using estimated road network state</title>
-      <link>http://tomelliott.co.nz/hugosite/talks/phd-talks-day-2017/</link>
+      <link>http://tomelliott.co.nz/hugosite/publications/phd-talks-day-2017/</link>
       <pubDate>Fri, 01 Dec 2017 15:08:39 +1200</pubDate>
       
-      <guid>http://tomelliott.co.nz/hugosite/talks/phd-talks-day-2017/</guid>
+      <guid>http://tomelliott.co.nz/hugosite/publications/phd-talks-day-2017/</guid>
       <description></description>
     </item>
     
     <item>
       <title>The path to computational statistics</title>
-      <link>http://tomelliott.co.nz/hugosite/talks/statistics-teachers-day-2017/</link>
+      <link>http://tomelliott.co.nz/hugosite/publications/statistics-teachers-day-2017/</link>
       <pubDate>Tue, 28 Nov 2017 09:05:20 +1200</pubDate>
       
-      <guid>http://tomelliott.co.nz/hugosite/talks/statistics-teachers-day-2017/</guid>
+      <guid>http://tomelliott.co.nz/hugosite/publications/statistics-teachers-day-2017/</guid>
       <description></description>
-    </item>
-    
-    <item>
-      <title>About</title>
-      <link>http://tomelliott.co.nz/hugosite/about/</link>
-      <pubDate>Thu, 05 May 2016 21:48:51 -0700</pubDate>
-      
-      <guid>http://tomelliott.co.nz/hugosite/about/</guid>
-      <description>This is a &amp;ldquo;hello world&amp;rdquo; example website for the blogdown package. The theme was forked from @jrutheiser/hugo-lithium-theme and modified by Yihui Xie.</description>
     </item>
     
   </channel>

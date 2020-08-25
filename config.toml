@@ -32,8 +32,8 @@ ignoreFiles = ["\\.Rmd$", "\\.Rmarkdown$", "_files$", "_cache$"]
     url = "/inzight/"
     weight = 2
 [[menu.sidebar]]
-    name = "Talks"
-    url = "/talks/"
+    name = "Publications"
+    url = "/publications/"
     weight = 3
 
 

@@ -92,12 +92,24 @@
 $triangle-size: 20px;
 .intro {
   position: relative;
+  padding: 2*$post-content-padding;
+  border-radius: 3px;
+  border-top-right-radius: $post-content-padding;
+  border-bottom-left-radius: $post-content-padding;
+
+  .lead {
+    font-size: 1.2em;
+  }
+
+  p:last-of-type {
+    margin-bottom: 0;
+  }
 
   &:before {
     content: "";
     position: absolute;
     top: -2 * $triangle-size;
-    left: $post-content-padding;
+    left: 2*$post-content-padding;
     display: block;
     width: 0;
     height: 0;
@@ -107,14 +119,97 @@ $triangle-size: 20px;
   }
 
   @include for-desktop-up {
-    max-width: 30em;
+    max-width: 40em;
     margin-left: 2em;
 
     &:before {
-      top: $post-content-padding;
+      top: 2*$post-content-padding;
       left: -2 * $triangle-size;
       border-bottom-color: transparent;
       border-right-color: $post-background-color;
+    }
+  }
+}
+
+.recent-posts {
+  max-width: 55em;
+  margin: 5em auto 0;
+
+  @include for-tablet-up {
+    .recent-posts-cont {
+      max-width: 100%;
+      display: grid;
+      grid-template-areas:
+        "a a a"
+        "b c d";
+      grid-template-rows: auto auto;
+      grid-template-columns: 1fr 1fr 1fr;
+      row-gap: 0em;
+      column-gap: 1em;
+
+      .list-post-1 {
+        grid-area: a;
+      }
+      .list-post-2 {
+        grid-area: b;
+      }
+      .list-post-3 {
+        grid-area: c;
+      }
+      .list-post-4 {
+        grid-area: d;
+      }
+    }
+  }
+}
+
+.list-post-intro {
+  @extend .list-post;
+
+  header {
+    // display: block;
+    grid-template-areas:
+      "title"
+      "desc"
+      "meta";
+    grid-template-rows: auto auto auto;
+    grid-template-columns: 1fr;
+
+    h2 {
+      font-size: 1.25em;
+    }
+    .desc {
+      margin-bottom: 0.5em;
+      font-size: 1em;
+    }
+    .meta {
+      margin-bottom: 1em;
+      font-size: 0.65em;
+      text-align: left;
+    }
+  }
+  .content {
+    font-size: 0.8em;
+  }
+
+  &:first-of-type {
+    header {
+      @include for-tablet-up {
+        grid-template-areas:
+          "title title"
+          "desc meta";
+          grid-template-rows: auto auto;
+          grid-template-columns: auto auto;
+      }
+      h2 {
+        font-size: 1.4em;
+      }
+      .meta {
+        text-align: right;
+      }
+    }
+    .content {
+      font-size: 1em;
     }
   }
 }
