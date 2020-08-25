@@ -19,6 +19,16 @@
 
     .title {
       grid-area: title;
+      margin-bottom: 1em;
+
+      h2, h4 {
+        margin-bottom: 0;
+      }
+
+      h4 {
+        font-size: 1.2em;
+        font-weight: bold;
+      }
     }
     .meta {
       grid-area: meta;

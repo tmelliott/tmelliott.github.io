@@ -4,7 +4,10 @@
 
     <ul id="talk-list" class="timeline">
         {{ range .Pages.ByPublishDate.Reverse }}
-        <li data-date="{{ .Date.Format "January 2, 2006" }}">
+        <li
+            data-date="{{ .Date.Format "2 January, 2006" }}"
+            data-date-short="{{ .Date.Format "01/02/2006"}}"
+            >
             <a href="{{ .Permalink }}">{{ .Title }}</a>
             {{ with .Description }}<p>{{ . }}</p>{{ end }}
         </li>

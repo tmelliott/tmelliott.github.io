@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html><head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  
+  <link rel="stylesheet" type="text/css" href="/hugosite/css/main.min.41174d2e73da7a4311f44f31350478bc4a967d805e209e7a8a6c4d906460cdcc.css" media="screen">
+
+  
+
+
+<link href='//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/atom-one-dark.min.css' rel='stylesheet' type='text/css' />
+
+
+
+
+  
+  
+  <title>Tom Elliott | Predicting bus arrival</title>
+</head>
+<body>
+        
+        <div id="wrapper"><section id="site-intro">
+    
+    <a href="/hugosite/">
+        <img src="/hugosite/images/photo.jpg"
+            class="circle"
+            width="100"
+            alt="Logo"></a>
+    
+
+    <header>
+        <h1>Tom Elliott</h1>
+    </header>
+
+    <main>
+        <p class="blurb">I like data science, data vis, and computing, as well as wine, gardening, food, and music.</p>
+    </main>
+
+    <footer>
+        <ul class="social-icons">
+            
+            <a class="nav-link" href="https://github.com/tmelliott">
+                
+                
+                <i data-feather="github"></i> 
+                </a>
+            
+            <a class="nav-link" href="https://twitter.com/tomelliottnz">
+                
+                
+                <i data-feather="twitter"></i> 
+                </a>
+            
+        </ul>
+    </footer>
+</section>
+<main id="site-main">
+
+
+
+<article class="post">
+    <header>
+  <div class="title">
+    <h2>Predicting bus arrival</h2>
+    
+  </div>
+
+  
+
+  <div class="meta">
+    <i class="fi-xnluxl-calendar"></i>
+    <time datetime="2020-08-22 09:31:00 &#43;0000 UTC">August 22, 2020</time>
+
+  </div>
+</header>
+
+
+    <div class="content">
+        
+            
+
+
+<p>For half a decade, I explored ways of predicting bus arrival with improved reliability. I came up with a framework that uses the GTFS information to construct a <em>transit network</em>, allowing buses to share information about traffic conditions, even between routes.</p>
+
+        
+        <pre class="r"><code>library(magrittr)
+library(dplyr)
+x &lt;- data.frame(x = 10)
+
+x %&gt;% mutate(x = 2 * x)</code></pre>
+<pre><code>##    x
+## 1 20</code></pre>
+<pre class="r"><code>x &lt;- x$x + 2</code></pre>
+<p>I then implement a particle filter to estimate vehicle state and ultimately road speeds which are passed to the network model, a Kalman filter running in real-time estimating current traffic conditions. From there, using a particle filter, it's fairly straightforward to estimate arrival time distributions.</p>
+
+    </div>
+</article>
+
+
+            </main><section id="site-sidebar">
+    <ul>
+        
+        <li><a class="nav-link" href="/hugosite/research/">Research</a></li>
+        
+        <li><a class="nav-link" href="/hugosite/inzight/">iNZight</a></li>
+        
+        <li><a class="nav-link" href="/hugosite/talks/">Talks</a></li>
+        
+    </ul>
+</section>
+<footer id="site-footer">
+    <p class="copyright">
+        &copy; 2020 Tom Elliott
+    </p>
+</footer>
+<script defer src="https://friconix.com/cdn/friconix.js"> </script></div>
+
+        
+
+
+
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+
+
+
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/r.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/yaml.min.js"></script>
+<script>hljs.configure({languages: []}); hljs.initHighlightingOnLoad();</script>
+
+
+
+    </body>
+</html>

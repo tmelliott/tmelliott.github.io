@@ -1,0 +1,8 @@
+---
+title: "How can we improve bus ETAs?"
+subtitle: "Using real-time position data to estimate road state"
+description: "A poster presented at ISBA 2018 in Edinburgh."
+date: 2018-06-28T15:15:53+12:00
+filename: "talks/2018-06_isba/poster.pdf"
+draft: false
+---

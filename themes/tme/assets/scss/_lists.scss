@@ -1,6 +1,6 @@
 ul.timeline {
 
-  $date-width: 180px;
+  $date-width: 140px;
   $timeline-padding: 20px;
   $timeline-linewidth: 4px;
   $timeline-fontsize: 0.8rem;
@@ -8,18 +8,23 @@ ul.timeline {
 
   /* a list with dots and lines etc */
 
-  border-left: solid $timeline-linewidth $link-color;
+  border-left: {
+    style: solid;
+    width: $timeline-linewidth;
+    color: $link-color;
+  }
   position: relative;
   list-style: none;
-  max-width: 50%;
-  margin: 2em auto;
+  margin: 2em auto 2em;
   padding-left: $timeline-padding;
   padding-bottom: 5em;
+
 
   li {
     position: relative;
     font-size: $timeline-fontsize;
     margin-top: 2em;
+    padding-top: 1.5em;
 
     &:before, &:after {
       position: absolute;
@@ -28,10 +33,10 @@ ul.timeline {
     }
 
     &:before {
-      left: ($date-width + 2*$timeline-padding + $timeline-linewidth) * -1;
+      left: 0;
       content: attr(data-date);
       min-width: $date-width;
-      text-align: right;
+      text-align: left;
       font-size: 0.8em;
       line-height: 1.5*$timeline-fontsize;
     }
@@ -47,6 +52,20 @@ ul.timeline {
       top: 10px;
     }
 
+  }
+
+  @include for-tablet-up {
+    margin: 2em auto 2em $date-width;
+    padding-left: $timeline-padding;
+
+    li {
+      padding-top: 0;
+
+      &:before {
+        left: ($date-width + 2*$timeline-padding + $timeline-linewidth) * -1;
+        text-align: right;
+      }
+    }
   }
 
 }
