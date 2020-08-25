@@ -1,6 +1,10 @@
 ---
 title: "Historical data based priors for better bus arrival-time prediction"
 description: "A lightening talk for useR! 2018 in Brisbane."
+tags:
+  - talk
+  - conference
+  - phd
 date: 2018-07-12T15:17:34+12:00
 filename: "talks/2018-07_useR"
 draft: false

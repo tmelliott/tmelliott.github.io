@@ -33,4 +33,8 @@
       border: 0;
     }
   }
+
+  .chip {
+    background: transparentize($link-color, 0.8);
+  }
 }

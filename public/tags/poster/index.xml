@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>poster on Tom Elliott</title>
+    <link>http://tomelliott.co.nz/hugosite/tags/poster/</link>
+    <description>Recent content in poster on Tom Elliott</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-gb</language>
+    <lastBuildDate>Thu, 28 Jun 2018 15:15:53 +1200</lastBuildDate>
+    
+	<atom:link href="http://tomelliott.co.nz/hugosite/tags/poster/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>How can we improve bus ETAs?</title>
+      <link>http://tomelliott.co.nz/hugosite/talks/isba-conf-2018/</link>
+      <pubDate>Thu, 28 Jun 2018 15:15:53 +1200</pubDate>
+      
+      <guid>http://tomelliott.co.nz/hugosite/talks/isba-conf-2018/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>
