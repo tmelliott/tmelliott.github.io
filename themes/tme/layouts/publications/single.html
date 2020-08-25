@@ -1,12 +1,10 @@
 {{ define "main" }}
 
-
-
 <article class="post">
     {{ .Render "header" }}
 
     <div class="content">
-        {{ .Content }}
+        {{ .Summary }}
 
         {{ if .Params.filename }}
         <div class="frame-container">
@@ -18,6 +16,8 @@
 
         <p>To navigate, click on the slide and then use arrow keys. Press <kbd>f</kbd> to enter full screen.</p>
         {{ end }}
+
+        {{ .Content }}
     </div>
 </article>
 

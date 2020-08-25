@@ -9,3 +9,14 @@ date: '2020-02-22T9:00:00'
 filename: "talks/2020-01_satRdays"
 draft: false
 ---
+
+I gave a talk about iNZight.
+
+<!--more-->
+
+You can also watch the talk:
+
+<iframe width="560" height="315"
+  src="http://www.youtube.com/embed/xL_KYPcrxBQ?rel=0"
+  frameborder="0"
+  allowfullscreen></iframe>
