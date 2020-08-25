@@ -3,86 +3,71 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>/hugosite/talks/phd-defense/</loc>
-    <lastmod>2020-08-25T10:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/hugosite/talks/</loc>
-    <lastmod>2020-08-25T10:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/hugosite/</loc>
-    <lastmod>2020-08-25T10:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/hugosite/research/predicting-bus-arrival/</loc>
-    <lastmod>2020-08-22T09:31:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/hugosite/inzight/</loc>
+    <loc>http://tomelliott.co.nz/hugosite/inzight/</loc>
     <lastmod>2020-08-12T12:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/hugosite/research/</loc>
+    <loc>http://tomelliott.co.nz/hugosite/research/</loc>
     <lastmod>2020-08-12T12:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/hugosite/talks/satrday-akl-2020/</loc>
+    <loc>http://tomelliott.co.nz/hugosite/</loc>
+    <lastmod>2020-08-12T12:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://tomelliott.co.nz/hugosite/talks/satrday-akl-2020/</loc>
     <lastmod>2020-02-22T09:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/hugosite/talks/phd-talks-day-2019/</loc>
+    <loc>http://tomelliott.co.nz/hugosite/talks/</loc>
+    <lastmod>2020-02-22T09:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://tomelliott.co.nz/hugosite/talks/phd-talks-day-2019/</loc>
     <lastmod>2019-06-10T15:20:55+12:00</lastmod>
   </url>
   
   <url>
-    <loc>/hugosite/talks/user-conf-2018/</loc>
+    <loc>http://tomelliott.co.nz/hugosite/talks/user-conf-2018/</loc>
     <lastmod>2018-07-12T15:17:34+12:00</lastmod>
   </url>
   
   <url>
-    <loc>/hugosite/talks/isba-conf-2018/</loc>
+    <loc>http://tomelliott.co.nz/hugosite/talks/isba-conf-2018/</loc>
     <lastmod>2018-06-28T15:15:53+12:00</lastmod>
   </url>
   
   <url>
-    <loc>/hugosite/talks/nzsa-2017/</loc>
+    <loc>http://tomelliott.co.nz/hugosite/talks/nzsa-2017/</loc>
     <lastmod>2017-12-11T15:11:45+12:00</lastmod>
   </url>
   
   <url>
-    <loc>/hugosite/talks/phd-talks-day-2017/</loc>
+    <loc>http://tomelliott.co.nz/hugosite/talks/phd-talks-day-2017/</loc>
     <lastmod>2017-12-01T15:08:39+12:00</lastmod>
   </url>
   
   <url>
-    <loc>/hugosite/talks/statistics-teachers-day-2017/</loc>
+    <loc>http://tomelliott.co.nz/hugosite/talks/statistics-teachers-day-2017/</loc>
     <lastmod>2017-11-28T09:05:20+12:00</lastmod>
   </url>
   
   <url>
-    <loc>/hugosite/about/</loc>
+    <loc>http://tomelliott.co.nz/hugosite/about/</loc>
     <lastmod>2016-05-05T21:48:51-07:00</lastmod>
   </url>
   
   <url>
-    <loc>/hugosite/research/modelling-fishing-gear/</loc>
-    <lastmod>2014-08-24T09:31:00+00:00</lastmod>
+    <loc>http://tomelliott.co.nz/hugosite/categories/</loc>
   </url>
   
   <url>
-    <loc>/hugosite/categories/</loc>
-  </url>
-  
-  <url>
-    <loc>/hugosite/tags/</loc>
+    <loc>http://tomelliott.co.nz/hugosite/tags/</loc>
   </url>
   
 </urlset>
