@@ -18,6 +18,10 @@ ignoreFiles = ["\\.Rmd$", "\\.Rmarkdown$", "_files$", "_cache$"]
     name = "Twitter"
     pre = "twitter"
     url = "https://twitter.com/tomelliottnz"
+[[menu.main]]
+    name = "Linkedin"
+    pre = "linkedin"
+    url = "https://www.linkedin.com/in/tmelliott"
 
 [[menu.sidebar]]
     name = "Research"

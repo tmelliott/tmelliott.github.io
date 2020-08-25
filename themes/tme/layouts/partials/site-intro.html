@@ -20,7 +20,7 @@
             {{ range .Site.Menus.main }}
             <a class="nav-link" href="{{ .URL }}">
                 {{ if .Pre }}
-                {{ $icon := printf "<i data-feather=\"%s\"></i> " .Pre | safeHTML }}
+                {{ $icon := printf "<i class=\"fi-xnluxl-%s\"></i> " .Pre | safeHTML }}
                 {{ $icon }}
                 {{ end }}</a>
             {{ end }}
