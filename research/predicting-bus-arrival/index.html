@@ -10,9 +10,14 @@
   
 
 
+<link href='//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/atom-one-dark.min.css' rel='stylesheet' type='text/css' />
+
+
+
+
   
   
-  <title>Tom Elliott | About</title>
+  <title>Tom Elliott | Predicting bus arrival</title>
 </head>
 <body>
         
@@ -58,7 +63,7 @@
 <article class="post">
     <header>
   <div class="title">
-    <h2>About</h2>
+    <h2>Predicting bus arrival</h2>
     
   </div>
 
@@ -66,7 +71,7 @@
 
   <div class="meta">
     <i class="fi-xnluxl-calendar"></i>
-    <time datetime="2016-05-05 21:48:51 -0700 -0700">May 5, 2016</time>
+    <time datetime="2020-08-22 09:31:00 &#43;0000 UTC">August 22, 2020</time>
 
   </div>
 </header>
@@ -74,7 +79,21 @@
 
     <div class="content">
         
-        <p>This is a &ldquo;hello world&rdquo; example website for the <a href="https://github.com/rstudio/blogdown"><strong>blogdown</strong></a> package. The theme was forked from <a href="https://github.com/jrutheiser/hugo-lithium-theme">@jrutheiser/hugo-lithium-theme</a> and modified by <a href="https://github.com/yihui/hugo-lithium">Yihui Xie</a>.</p>
+            
+
+
+<p>For half a decade, I explored ways of predicting bus arrival with improved reliability. I came up with a framework that uses the GTFS information to construct a <em>transit network</em>, allowing buses to share information about traffic conditions, even between routes.</p>
+
+        
+        <pre class="r"><code>library(magrittr)
+library(dplyr)
+x &lt;- data.frame(x = 10)
+
+x %&gt;% mutate(x = 2 * x)</code></pre>
+<pre><code>##    x
+## 1 20</code></pre>
+<pre class="r"><code>x &lt;- x$x + 2</code></pre>
+<p>I then implement a particle filter to estimate vehicle state and ultimately road speeds which are passed to the network model, a Kalman filter running in real-time estimating current traffic conditions. From there, using a particle filter, it's fairly straightforward to estimate arrival time distributions.</p>
 
     </div>
 </article>
@@ -99,6 +118,18 @@
 <script defer src="https://friconix.com/cdn/friconix.js"> </script></div>
 
         
+
+
+
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+
+
+
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/r.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/yaml.min.js"></script>
+<script>hljs.configure({languages: []}); hljs.initHighlightingOnLoad();</script>
+
+
 
     </body>
 </html>
