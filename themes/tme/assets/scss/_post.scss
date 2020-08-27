@@ -227,9 +227,11 @@ $triangle-size: 20px;
   display: flex;
   flex-direction: row;
   justify-content: center;
+  flex-wrap: wrap;
 
   img {
-    height: 30em;
+    max-height: 30em;
+    max-width: 80%;
     margin: 0.5em;
     box-shadow: 0px 3px 10px 0px #33333330;
     transition: transform linear 200ms;
