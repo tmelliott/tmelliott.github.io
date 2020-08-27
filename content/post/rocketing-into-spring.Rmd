@@ -2,7 +2,7 @@
 title: "Rocketing Into Spring"
 description: My rocket suddenly grew a stem and started flowering!
 images:
-- /post/20200827_rocket_flower1.jpg
+- /post/20200827_rocket_flower2.jpg
 date: 2020-08-27T14:21:40+12:00
 tags:
 - gardening
