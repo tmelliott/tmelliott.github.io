@@ -1,4 +1,4 @@
-baseurl = "http://tomelliott.co.nz/"
+baseurl = "https://tomelliott.co.nz/"
 languageCode = "en-gb"
 title = "Tom Elliott"
 theme = "tme"
