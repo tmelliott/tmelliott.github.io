@@ -14,7 +14,7 @@
   <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
   <link rel="manifest" href="/site.webmanifest">
 
-  {{ if .Site.IsServer }}
+  {{ if not .Site.BuildDrafts }}
     {{ template "_internal/google_analytics_async.html" . }}
   {{ end }}
   {{ template "_internal/twitter_cards.html" . }}
