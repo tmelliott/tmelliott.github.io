@@ -219,3 +219,23 @@ $triangle-size: 20px;
     }
   }
 }
+
+
+
+/******************* IMAGES */
+.gallery p {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+
+  img {
+    height: 30em;
+    margin: 0.5em;
+    box-shadow: 0px 3px 10px 0px #33333330;
+    transition: transform linear 200ms;
+
+    &:hover {
+      transform: scale(1.01);
+    }
+  }
+}

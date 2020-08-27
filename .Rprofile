@@ -1,7 +1,8 @@
 # set some options
 options(
     blogdown.author = "Tom Elliott",
-    blogdown.ext = ".Rmd"
+    blogdown.ext = ".Rmd",
+    editor = Sys.getenv("VISUAL")
 )
 
 publish <- function(msg = "Build site for publishing.") {
@@ -11,6 +12,16 @@ publish <- function(msg = "Build site for publishing.") {
     system(sprintf("git commit -am '%s'", msg))
     system("git push")
     system("git subtree push --prefix public origin gh-pages")
+}
+
+new_content <- function(filename, type = "post", ext = "Rmd") {
+    blogdown::new_content(
+        file.path(type, paste(filename, ext, sep = "."))
+    )
+}
+
+relurl <- function(url) {
+    paste0(blogdown:::site_base_dir(), url)
 }
 
 if (interactive() && toupper(readline('Serve site? [Y,n] ')) %in% c("", "Y"))
