@@ -2,66 +2,66 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tags on Tom Elliott</title>
-    <link>http://tomelliott.co.nz/tags/</link>
+    <link>https://tomelliott.co.nz/tags/</link>
     <description>Recent content in Tags on Tom Elliott</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-gb</language>
     <lastBuildDate>Thu, 27 Aug 2020 14:21:40 +1200</lastBuildDate>
     
-	<atom:link href="http://tomelliott.co.nz/tags/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://tomelliott.co.nz/tags/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>gardening</title>
-      <link>http://tomelliott.co.nz/tags/gardening/</link>
+      <link>https://tomelliott.co.nz/tags/gardening/</link>
       <pubDate>Thu, 27 Aug 2020 14:21:40 +1200</pubDate>
       
-      <guid>http://tomelliott.co.nz/tags/gardening/</guid>
+      <guid>https://tomelliott.co.nz/tags/gardening/</guid>
       <description></description>
     </item>
     
     <item>
       <title>phd</title>
-      <link>http://tomelliott.co.nz/tags/phd/</link>
+      <link>https://tomelliott.co.nz/tags/phd/</link>
       <pubDate>Tue, 25 Aug 2020 10:00:00 +0000</pubDate>
       
-      <guid>http://tomelliott.co.nz/tags/phd/</guid>
+      <guid>https://tomelliott.co.nz/tags/phd/</guid>
       <description></description>
     </item>
     
     <item>
       <title>talk</title>
-      <link>http://tomelliott.co.nz/tags/talk/</link>
+      <link>https://tomelliott.co.nz/tags/talk/</link>
       <pubDate>Tue, 25 Aug 2020 10:00:00 +0000</pubDate>
       
-      <guid>http://tomelliott.co.nz/tags/talk/</guid>
+      <guid>https://tomelliott.co.nz/tags/talk/</guid>
       <description></description>
     </item>
     
     <item>
       <title>conference</title>
-      <link>http://tomelliott.co.nz/tags/conference/</link>
+      <link>https://tomelliott.co.nz/tags/conference/</link>
       <pubDate>Sat, 22 Feb 2020 09:00:00 +0000</pubDate>
       
-      <guid>http://tomelliott.co.nz/tags/conference/</guid>
+      <guid>https://tomelliott.co.nz/tags/conference/</guid>
       <description></description>
     </item>
     
     <item>
       <title>iNZight</title>
-      <link>http://tomelliott.co.nz/tags/inzight/</link>
+      <link>https://tomelliott.co.nz/tags/inzight/</link>
       <pubDate>Sat, 22 Feb 2020 09:00:00 +0000</pubDate>
       
-      <guid>http://tomelliott.co.nz/tags/inzight/</guid>
+      <guid>https://tomelliott.co.nz/tags/inzight/</guid>
       <description></description>
     </item>
     
     <item>
       <title>poster</title>
-      <link>http://tomelliott.co.nz/tags/poster/</link>
+      <link>https://tomelliott.co.nz/tags/poster/</link>
       <pubDate>Thu, 28 Jun 2018 15:15:53 +1200</pubDate>
       
-      <guid>http://tomelliott.co.nz/tags/poster/</guid>
+      <guid>https://tomelliott.co.nz/tags/poster/</guid>
       <description></description>
     </item>
     

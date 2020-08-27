@@ -2,40 +2,40 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Hello and welcome to my blog-profile-thing. on Tom Elliott</title>
-    <link>http://tomelliott.co.nz/</link>
+    <link>https://tomelliott.co.nz/</link>
     <description>Recent content in Hello and welcome to my blog-profile-thing. on Tom Elliott</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-gb</language>
     <lastBuildDate>Thu, 27 Aug 2020 14:21:40 +1200</lastBuildDate>
     
-	<atom:link href="http://tomelliott.co.nz/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://tomelliott.co.nz/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Rocketing Into Spring</title>
-      <link>http://tomelliott.co.nz/2020/08/rocketing-into-spring/</link>
+      <link>https://tomelliott.co.nz/2020/08/rocketing-into-spring/</link>
       <pubDate>Thu, 27 Aug 2020 14:21:40 +1200</pubDate>
       
-      <guid>http://tomelliott.co.nz/2020/08/rocketing-into-spring/</guid>
+      <guid>https://tomelliott.co.nz/2020/08/rocketing-into-spring/</guid>
       <description>During the first Kiwi lockdown, I planted some rocket seeds. I&#39;ve enjoyed several harvests, but it appears that lengthening days have triggered baby-making-mode. Suddenly my stubby rocket plants have sent a long proboscis-like stem into the sky and have started to produce little flowers.
  In the photos you can see the long main stem (left) shooting up to over 30 cm tall! The last week has been very rainy in Auckland (and I was a little preoccupied with my PhD defense) so I was a little surprised to see everything booming (and even blooming!</description>
     </item>
     
     <item>
       <title>Improving the prediction of bus arrival using real-time network state</title>
-      <link>http://tomelliott.co.nz/publications/phd-defense/</link>
+      <link>https://tomelliott.co.nz/publications/phd-defense/</link>
       <pubDate>Tue, 25 Aug 2020 10:00:00 +0000</pubDate>
       
-      <guid>http://tomelliott.co.nz/publications/phd-defense/</guid>
+      <guid>https://tomelliott.co.nz/publications/phd-defense/</guid>
       <description>My PhD defense presentation is linked below. You possibly won&#39;t understand most of it, however, since there&#39;s no recording available and most of the text needs to be accompanied by talking!</description>
     </item>
     
     <item>
       <title>iNZight: Behind the Scenes</title>
-      <link>http://tomelliott.co.nz/publications/satrday-akl-2020/</link>
+      <link>https://tomelliott.co.nz/publications/satrday-akl-2020/</link>
       <pubDate>Sat, 22 Feb 2020 09:00:00 +0000</pubDate>
       
-      <guid>http://tomelliott.co.nz/publications/satrday-akl-2020/</guid>
+      <guid>https://tomelliott.co.nz/publications/satrday-akl-2020/</guid>
       <description>
 
 
@@ -45,55 +45,55 @@
     
     <item>
       <title>Travel times and bus prediction</title>
-      <link>http://tomelliott.co.nz/publications/phd-talks-day-2019/</link>
+      <link>https://tomelliott.co.nz/publications/phd-talks-day-2019/</link>
       <pubDate>Mon, 10 Jun 2019 15:20:55 +1200</pubDate>
       
-      <guid>http://tomelliott.co.nz/publications/phd-talks-day-2019/</guid>
+      <guid>https://tomelliott.co.nz/publications/phd-talks-day-2019/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Historical data based priors for better bus arrival-time prediction</title>
-      <link>http://tomelliott.co.nz/publications/user-conf-2018/</link>
+      <link>https://tomelliott.co.nz/publications/user-conf-2018/</link>
       <pubDate>Thu, 12 Jul 2018 15:17:34 +1200</pubDate>
       
-      <guid>http://tomelliott.co.nz/publications/user-conf-2018/</guid>
+      <guid>https://tomelliott.co.nz/publications/user-conf-2018/</guid>
       <description></description>
     </item>
     
     <item>
       <title>How can we improve bus ETAs?</title>
-      <link>http://tomelliott.co.nz/publications/isba-conf-2018/</link>
+      <link>https://tomelliott.co.nz/publications/isba-conf-2018/</link>
       <pubDate>Thu, 28 Jun 2018 15:15:53 +1200</pubDate>
       
-      <guid>http://tomelliott.co.nz/publications/isba-conf-2018/</guid>
+      <guid>https://tomelliott.co.nz/publications/isba-conf-2018/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Real-time transit network modeling for improved arrival time predictions</title>
-      <link>http://tomelliott.co.nz/publications/nzsa-2017/</link>
+      <link>https://tomelliott.co.nz/publications/nzsa-2017/</link>
       <pubDate>Mon, 11 Dec 2017 15:11:45 +1200</pubDate>
       
-      <guid>http://tomelliott.co.nz/publications/nzsa-2017/</guid>
+      <guid>https://tomelliott.co.nz/publications/nzsa-2017/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Predicting bus arrival using estimated road network state</title>
-      <link>http://tomelliott.co.nz/publications/phd-talks-day-2017/</link>
+      <link>https://tomelliott.co.nz/publications/phd-talks-day-2017/</link>
       <pubDate>Fri, 01 Dec 2017 15:08:39 +1200</pubDate>
       
-      <guid>http://tomelliott.co.nz/publications/phd-talks-day-2017/</guid>
+      <guid>https://tomelliott.co.nz/publications/phd-talks-day-2017/</guid>
       <description></description>
     </item>
     
     <item>
       <title>The path to computational statistics</title>
-      <link>http://tomelliott.co.nz/publications/statistics-teachers-day-2017/</link>
+      <link>https://tomelliott.co.nz/publications/statistics-teachers-day-2017/</link>
       <pubDate>Tue, 28 Nov 2017 09:05:20 +1200</pubDate>
       
-      <guid>http://tomelliott.co.nz/publications/statistics-teachers-day-2017/</guid>
+      <guid>https://tomelliott.co.nz/publications/statistics-teachers-day-2017/</guid>
       <description></description>
     </item>
     
