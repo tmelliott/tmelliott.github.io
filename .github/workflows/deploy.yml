@@ -17,10 +17,6 @@ on:
 jobs:
   build:
     runs-on: macOS-latest
-    strategy:
-      matrix:
-        r-version: latest
-
     steps:
       - uses: actions/checkout@v2
       - name: Set up R ${{ matrix.r-version }}
