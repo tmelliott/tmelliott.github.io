@@ -7,6 +7,7 @@ if (Sys.getenv("VISUAL") != "")
     options(editor =  Sys.getenv("VISUAL"))
 
 publish <- function(msg = "Build site for publishing.") {
+    system("git subtree pull --prefix public origin gh-pages")
     unlink("public", TRUE, TRUE)
     blogdown::build_site()
     system("git add .")
