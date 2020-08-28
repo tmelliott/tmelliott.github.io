@@ -2,22 +2,22 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>poster on Tom Elliott</title>
-    <link>/tags/poster/</link>
+    <link>https://tomelliott.co.nz/tags/poster/</link>
     <description>Recent content in poster on Tom Elliott</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-gb</language>
     <lastBuildDate>Thu, 28 Jun 2018 15:15:53 +1200</lastBuildDate>
     
-	<atom:link href="/tags/poster/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://tomelliott.co.nz/tags/poster/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>How can we improve bus ETAs?</title>
-      <link>/publications/isba-conf-2018/</link>
+      <link>https://tomelliott.co.nz/publications/isba-conf-2018/</link>
       <pubDate>Thu, 28 Jun 2018 15:15:53 +1200</pubDate>
       
-      <guid>/publications/isba-conf-2018/</guid>
-      <description></description>
+      <guid>https://tomelliott.co.nz/publications/isba-conf-2018/</guid>
+      <description></description>
     </item>
     
   </channel>
