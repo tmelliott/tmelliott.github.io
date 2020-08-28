@@ -24,7 +24,7 @@ jobs:
       - name: Install dependencies
         run: |
           options(repos = "https://cran.rstudio.com")
-          install.packages(c("blogdown"))
+          install.packages(c("blogdown", readLines("dependencies.txt"))
         shell: Rscript {0}
       - name: Build
         run: publish("Build for deploy")
