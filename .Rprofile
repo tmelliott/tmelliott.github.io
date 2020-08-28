@@ -1,9 +1,10 @@
 # set some options
 options(
     blogdown.author = "Tom Elliott",
-    blogdown.ext = ".Rmd",
-    editor = if (!is.null(Sys.getenv("VISUAL"))) Sys.getenv("VISUAL") else ""
+    blogdown.ext = ".Rmd"
 )
+if (!is.null(Sys.getenv("VISUAL")))
+    options(editor =  Sys.getenv("VISUAL"))
 
 publish <- function(msg = "Build site for publishing.") {
     unlink("public", TRUE, TRUE)
