@@ -2,42 +2,66 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Hello and welcome to my blog-profile-thing. on Tom Elliott</title>
-    <link>https://tomelliott.co.nz/</link>
+    <link>/</link>
     <description>Recent content in Hello and welcome to my blog-profile-thing. on Tom Elliott</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-gb</language>
-    <lastBuildDate>Thu, 27 Aug 2020 14:21:40 +1200</lastBuildDate>
+    <lastBuildDate>Thu, 27 Aug 2020 21:23:41 +1200</lastBuildDate>
     
-	<atom:link href="https://tomelliott.co.nz/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
+      <title>Building My New Website</title>
+      <link>/2020/08/building-my-new-website/</link>
+      <pubDate>Thu, 27 Aug 2020 21:23:41 +1200</pubDate>
+      
+      <guid>/2020/08/building-my-new-website/</guid>
+      <description>Several years ago I decided to redesign my website (mostly as a way of learning new web technologies), but what I came up with was … rather uninspiring. Ever since reading about Hugo, I’ve wanted to build my website using it (including designing my own theme and templates), but between the PhD and iNZight, I seldom felt like spending my free time doing even more coding!</description>
+    </item>
+    
+    <item>
       <title>Rocketing Into Spring</title>
-      <link>https://tomelliott.co.nz/2020/08/rocketing-into-spring/</link>
+      <link>/2020/08/rocketing-into-spring/</link>
       <pubDate>Thu, 27 Aug 2020 14:21:40 +1200</pubDate>
       
-      <guid>https://tomelliott.co.nz/2020/08/rocketing-into-spring/</guid>
-      <description>During the first Kiwi lockdown, I planted some rocket seeds. I&#39;ve enjoyed several harvests, but it appears that lengthening days have triggered baby-making-mode. Suddenly my stubby rocket plants have sent a long proboscis-like stem into the sky and have started to produce little flowers.
- 
- In the photos you can see the long main stem (left) shooting up to over 30 cm tall! The last week has been very rainy in Auckland (and I was a little preoccupied with my PhD defense) so I was a little surprised to see everything booming (and even blooming!</description>
+      <guid>/2020/08/rocketing-into-spring/</guid>
+      <description>During the first Kiwi lockdown, I planted some rocket seeds. I’ve enjoyed several harvests, but it appears that lengthening days have triggered baby-making-mode. Suddenly my stubby rocket plants have sent a long proboscis-like stem into the sky and have started to produce little flowers.
+
+In the photos you can see the long main stem (left) shooting up to over 30 cm tall! The last week has been very rainy in Auckland (and I was a little preoccupied with my PhD defense) so I was a little surprised to see everything booming (and even blooming!</description>
     </item>
     
     <item>
       <title>Improving the prediction of bus arrival using real-time network state</title>
-      <link>https://tomelliott.co.nz/publications/phd-defense/</link>
+      <link>/publications/phd-defense/</link>
       <pubDate>Tue, 25 Aug 2020 10:00:00 +0000</pubDate>
       
-      <guid>https://tomelliott.co.nz/publications/phd-defense/</guid>
-      <description>My PhD defense presentation is linked below. You possibly won&#39;t understand most of it, however, since there&#39;s no recording available and most of the text needs to be accompanied by talking!</description>
+      <guid>/publications/phd-defense/</guid>
+      <description>My PhD defense presentation is linked below. You possibly won’t understand most of it, however, since there’s no recording available and most of the text needs to be accompanied by talking!</description>
+    </item>
+    
+    <item>
+      <title>Predicting bus arrival</title>
+      <link>/research/predicting-bus-arrival/</link>
+      <pubDate>Sat, 22 Aug 2020 09:31:00 +0000</pubDate>
+      
+      <guid>/research/predicting-bus-arrival/</guid>
+      <description>
+&lt;script src=&#34;/rmarkdown-libs/header-attrs/header-attrs.js&#34;&gt;&lt;/script&gt;
+
+
+&lt;p&gt;For half a decade, I explored ways of predicting bus arrival with improved reliability. I came up with a framework that uses the GTFS information to construct a &lt;em&gt;transit network&lt;/em&gt;, allowing buses to share information about traffic conditions, even between routes.&lt;/p&gt;
+</description>
     </item>
     
     <item>
       <title>iNZight: Behind the Scenes</title>
-      <link>https://tomelliott.co.nz/publications/satrday-akl-2020/</link>
+      <link>/publications/satrday-akl-2020/</link>
       <pubDate>Sat, 22 Feb 2020 09:00:00 +0000</pubDate>
       
-      <guid>https://tomelliott.co.nz/publications/satrday-akl-2020/</guid>
+      <guid>/publications/satrday-akl-2020/</guid>
       <description>
+&lt;script src=&#34;/rmarkdown-libs/header-attrs/header-attrs.js&#34;&gt;&lt;/script&gt;
 
 
 &lt;p&gt;I gave a talk about iNZight.&lt;/p&gt;
@@ -46,56 +70,65 @@
     
     <item>
       <title>Travel times and bus prediction</title>
-      <link>https://tomelliott.co.nz/publications/phd-talks-day-2019/</link>
+      <link>/publications/phd-talks-day-2019/</link>
       <pubDate>Mon, 10 Jun 2019 15:20:55 +1200</pubDate>
       
-      <guid>https://tomelliott.co.nz/publications/phd-talks-day-2019/</guid>
-      <description></description>
+      <guid>/publications/phd-talks-day-2019/</guid>
+      <description></description>
     </item>
     
     <item>
       <title>Historical data based priors for better bus arrival-time prediction</title>
-      <link>https://tomelliott.co.nz/publications/user-conf-2018/</link>
+      <link>/publications/user-conf-2018/</link>
       <pubDate>Thu, 12 Jul 2018 15:17:34 +1200</pubDate>
       
-      <guid>https://tomelliott.co.nz/publications/user-conf-2018/</guid>
-      <description></description>
+      <guid>/publications/user-conf-2018/</guid>
+      <description></description>
     </item>
     
     <item>
       <title>How can we improve bus ETAs?</title>
-      <link>https://tomelliott.co.nz/publications/isba-conf-2018/</link>
+      <link>/publications/isba-conf-2018/</link>
       <pubDate>Thu, 28 Jun 2018 15:15:53 +1200</pubDate>
       
-      <guid>https://tomelliott.co.nz/publications/isba-conf-2018/</guid>
-      <description></description>
+      <guid>/publications/isba-conf-2018/</guid>
+      <description></description>
     </item>
     
     <item>
       <title>Real-time transit network modeling for improved arrival time predictions</title>
-      <link>https://tomelliott.co.nz/publications/nzsa-2017/</link>
+      <link>/publications/nzsa-2017/</link>
       <pubDate>Mon, 11 Dec 2017 15:11:45 +1200</pubDate>
       
-      <guid>https://tomelliott.co.nz/publications/nzsa-2017/</guid>
-      <description></description>
+      <guid>/publications/nzsa-2017/</guid>
+      <description></description>
     </item>
     
     <item>
       <title>Predicting bus arrival using estimated road network state</title>
-      <link>https://tomelliott.co.nz/publications/phd-talks-day-2017/</link>
+      <link>/publications/phd-talks-day-2017/</link>
       <pubDate>Fri, 01 Dec 2017 15:08:39 +1200</pubDate>
       
-      <guid>https://tomelliott.co.nz/publications/phd-talks-day-2017/</guid>
-      <description></description>
+      <guid>/publications/phd-talks-day-2017/</guid>
+      <description></description>
     </item>
     
     <item>
       <title>The path to computational statistics</title>
-      <link>https://tomelliott.co.nz/publications/statistics-teachers-day-2017/</link>
+      <link>/publications/statistics-teachers-day-2017/</link>
       <pubDate>Tue, 28 Nov 2017 09:05:20 +1200</pubDate>
       
-      <guid>https://tomelliott.co.nz/publications/statistics-teachers-day-2017/</guid>
-      <description></description>
+      <guid>/publications/statistics-teachers-day-2017/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Modelling fishing gear</title>
+      <link>/research/modelling-fishing-gear/</link>
+      <pubDate>Sun, 24 Aug 2014 09:31:00 +0000</pubDate>
+      
+      <guid>/research/modelling-fishing-gear/</guid>
+      <description>There’s fishing gear, and then there’s not.</description>
     </item>
     
   </channel>

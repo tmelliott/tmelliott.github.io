@@ -2,24 +2,33 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Posts on Tom Elliott</title>
-    <link>https://tomelliott.co.nz/post/</link>
+    <link>/post/</link>
     <description>Recent content in Posts on Tom Elliott</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-gb</language>
-    <lastBuildDate>Thu, 27 Aug 2020 14:21:40 +1200</lastBuildDate>
+    <lastBuildDate>Thu, 27 Aug 2020 21:23:41 +1200</lastBuildDate>
     
-	<atom:link href="https://tomelliott.co.nz/post/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="/post/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
+      <title>Building My New Website</title>
+      <link>/2020/08/building-my-new-website/</link>
+      <pubDate>Thu, 27 Aug 2020 21:23:41 +1200</pubDate>
+      
+      <guid>/2020/08/building-my-new-website/</guid>
+      <description>Several years ago I decided to redesign my website (mostly as a way of learning new web technologies), but what I came up with was … rather uninspiring. Ever since reading about Hugo, I’ve wanted to build my website using it (including designing my own theme and templates), but between the PhD and iNZight, I seldom felt like spending my free time doing even more coding!</description>
+    </item>
+    
+    <item>
       <title>Rocketing Into Spring</title>
-      <link>https://tomelliott.co.nz/2020/08/rocketing-into-spring/</link>
+      <link>/2020/08/rocketing-into-spring/</link>
       <pubDate>Thu, 27 Aug 2020 14:21:40 +1200</pubDate>
       
-      <guid>https://tomelliott.co.nz/2020/08/rocketing-into-spring/</guid>
-      <description>During the first Kiwi lockdown, I planted some rocket seeds. I&#39;ve enjoyed several harvests, but it appears that lengthening days have triggered baby-making-mode. Suddenly my stubby rocket plants have sent a long proboscis-like stem into the sky and have started to produce little flowers.
- 
- In the photos you can see the long main stem (left) shooting up to over 30 cm tall! The last week has been very rainy in Auckland (and I was a little preoccupied with my PhD defense) so I was a little surprised to see everything booming (and even blooming!</description>
+      <guid>/2020/08/rocketing-into-spring/</guid>
+      <description>During the first Kiwi lockdown, I planted some rocket seeds. I’ve enjoyed several harvests, but it appears that lengthening days have triggered baby-making-mode. Suddenly my stubby rocket plants have sent a long proboscis-like stem into the sky and have started to produce little flowers.
+
+In the photos you can see the long main stem (left) shooting up to over 30 cm tall! The last week has been very rainy in Auckland (and I was a little preoccupied with my PhD defense) so I was a little surprised to see everything booming (and even blooming!</description>
     </item>
     
   </channel>
