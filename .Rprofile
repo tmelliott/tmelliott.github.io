@@ -3,7 +3,7 @@ options(
     blogdown.author = "Tom Elliott",
     blogdown.ext = ".Rmd"
 )
-if (!is.null(Sys.getenv("VISUAL")))
+if (Sys.getenv("VISUAL") != "")
     options(editor =  Sys.getenv("VISUAL"))
 
 publish <- function(msg = "Build site for publishing.") {
