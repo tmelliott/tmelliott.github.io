@@ -2,37 +2,14 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Research on Tom Elliott</title>
-    <link>/research/</link>
+    <link>https://tomelliott.co.nz/research/</link>
     <description>Recent content in Research on Tom Elliott</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-gb</language>
     <lastBuildDate>Wed, 12 Aug 2020 12:00:00 +0000</lastBuildDate>
     
-	<atom:link href="/research/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://tomelliott.co.nz/research/index.xml" rel="self" type="application/rss+xml" />
     
-    
-    <item>
-      <title>Predicting bus arrival</title>
-      <link>/research/predicting-bus-arrival/</link>
-      <pubDate>Sat, 22 Aug 2020 09:31:00 +0000</pubDate>
-      
-      <guid>/research/predicting-bus-arrival/</guid>
-      <description>
-&lt;script src=&#34;/rmarkdown-libs/header-attrs/header-attrs.js&#34;&gt;&lt;/script&gt;
-
-
-&lt;p&gt;For half a decade, I explored ways of predicting bus arrival with improved reliability. I came up with a framework that uses the GTFS information to construct a &lt;em&gt;transit network&lt;/em&gt;, allowing buses to share information about traffic conditions, even between routes.&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Modelling fishing gear</title>
-      <link>/research/modelling-fishing-gear/</link>
-      <pubDate>Sun, 24 Aug 2014 09:31:00 +0000</pubDate>
-      
-      <guid>/research/modelling-fishing-gear/</guid>
-      <description>There’s fishing gear, and then there’s not.</description>
-    </item>
     
   </channel>
 </rss>
