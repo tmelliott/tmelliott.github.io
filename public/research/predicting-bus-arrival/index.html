@@ -10,6 +10,11 @@
   
 
 
+<link href='//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/atom-one-dark.min.css' rel='stylesheet' type='text/css' />
+
+
+
+
   
   <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
   <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
@@ -17,16 +22,18 @@
   <link rel="manifest" href="/site.webmanifest">
 
   
-  <meta name="twitter:card" content="summary_large_image"/>
-<meta name="twitter:image" content="/post/20200827_rocket_flower2.jpg"/>
+  <meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Predicting bus arrival"/>
+<meta name="twitter:description" content="
 
-<meta name="twitter:title" content="Rocketing Into Spring"/>
-<meta name="twitter:description" content="My rocket suddenly grew a stem and started flowering!"/>
+
+For half a decade, I explored ways of predicting bus arrival with improved reliability. I came up with a framework that uses the GTFS information to construct a transit network, allowing buses to share information about traffic conditions, even between routes.
+"/>
 
 
   
   
-  <title>Tom Elliott | Rocketing Into Spring</title>
+  <title>Tom Elliott | Predicting bus arrival</title>
 </head>
 <body>
         
@@ -78,17 +85,15 @@
 <article class="post">
     <header>
   <div class="title">
-    <h2>Rocketing Into Spring</h2>
+    <h2>Predicting bus arrival</h2>
     
   </div>
 
   
-    <p class="desc">My rocket suddenly grew a stem and started flowering!</p>
-  
 
   <div class="meta">
     <i class="fi-xnluxl-calendar"></i>
-    <time datetime="2020-08-27 14:21:40 &#43;1200 NZST">August 27, 2020</time>
+    <time datetime="2020-08-22 09:31:00 &#43;0000 UTC">August 22, 2020</time>
 
   </div>
 </header>
@@ -96,15 +101,21 @@
 
     <div class="content">
         
+            
+
+
+<p>For half a decade, I explored ways of predicting bus arrival with improved reliability. I came up with a framework that uses the GTFS information to construct a <em>transit network</em>, allowing buses to share information about traffic conditions, even between routes.</p>
+
         
+        <pre class="r"><code>library(magrittr)
+library(dplyr)
+x &lt;- data.frame(x = 10)
 
-
-<p>During the first Kiwi lockdown, I planted some rocket seeds. I've enjoyed several harvests, but it appears that lengthening days have triggered baby-making-mode. Suddenly my stubby rocket plants have sent a long proboscis-like stem into the sky and have started to produce little flowers.</p>
-<div class="gallery">
-<p><a href="/post/20200827_rocket_flower1.jpg"><img src="/post/20200827_rocket_flower1.jpg" alt="Rocket proboscis" /></a> <a href="/post/20200827_rocket_flower2.jpg"><img src="/post/20200827_rocket_flower2.jpg" alt="Rocket flower" /></a></p>
-</div>
-<p>In the photos you can see the long main stem (left) shooting up to over 30 cm tall! The last week has been very rainy in Auckland (and I was a little preoccupied with <a href="/publications/phd-defense/">my PhD defense</a>) so I was a little surprised to see everything booming (and even blooming!) this morning.</p>
-<p>I believe the flowers are edible, so while I wont be able to enjoy the leaves of these rocket (I do have some others in the garden, but close inspection suggests they too are preparing to bolt) I might be able to add some fancy colourations to salads and the likes.</p>
+x %&gt;% mutate(x = 2 * x)</code></pre>
+<pre><code>##    x
+## 1 20</code></pre>
+<pre class="r"><code>x &lt;- x$x + 2</code></pre>
+<p>I then implement a particle filter to estimate vehicle state and ultimately road speeds which are passed to the network model, a Kalman filter running in real-time estimating current traffic conditions. From there, using a particle filter, it's fairly straightforward to estimate arrival time distributions.</p>
 
     </div>
 </article>
@@ -132,6 +143,18 @@
 <script defer src="https://friconix.com/cdn/friconix.js"> </script></div>
 
         
+
+
+
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+
+
+
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/r.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/yaml.min.js"></script>
+<script>hljs.configure({languages: []}); hljs.initHighlightingOnLoad();</script>
+
+
 
     </body>
 </html>
