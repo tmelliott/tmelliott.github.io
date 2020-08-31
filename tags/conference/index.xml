@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>conference on Tom Elliott</title>
-    <link>https://tomelliott.co.nz/tags/conference/</link>
+    <link>/tags/conference/</link>
     <description>Recent content in conference on Tom Elliott</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-gb</language>
     <lastBuildDate>Sat, 22 Feb 2020 09:00:00 +0000</lastBuildDate>
     
-	<atom:link href="https://tomelliott.co.nz/tags/conference/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="/tags/conference/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>iNZight: Behind the Scenes</title>
-      <link>https://tomelliott.co.nz/publications/satrday-akl-2020/</link>
+      <link>/publications/satrday-akl-2020/</link>
       <pubDate>Sat, 22 Feb 2020 09:00:00 +0000</pubDate>
       
-      <guid>https://tomelliott.co.nz/publications/satrday-akl-2020/</guid>
+      <guid>/publications/satrday-akl-2020/</guid>
       <description>
 
 
@@ -26,28 +26,28 @@
     
     <item>
       <title>Historical data based priors for better bus arrival-time prediction</title>
-      <link>https://tomelliott.co.nz/publications/user-conf-2018/</link>
+      <link>/publications/user-conf-2018/</link>
       <pubDate>Thu, 12 Jul 2018 15:17:34 +1200</pubDate>
       
-      <guid>https://tomelliott.co.nz/publications/user-conf-2018/</guid>
+      <guid>/publications/user-conf-2018/</guid>
       <description></description>
     </item>
     
     <item>
       <title>How can we improve bus ETAs?</title>
-      <link>https://tomelliott.co.nz/publications/isba-conf-2018/</link>
+      <link>/publications/isba-conf-2018/</link>
       <pubDate>Thu, 28 Jun 2018 15:15:53 +1200</pubDate>
       
-      <guid>https://tomelliott.co.nz/publications/isba-conf-2018/</guid>
+      <guid>/publications/isba-conf-2018/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Real-time transit network modeling for improved arrival time predictions</title>
-      <link>https://tomelliott.co.nz/publications/nzsa-2017/</link>
+      <link>/publications/nzsa-2017/</link>
       <pubDate>Mon, 11 Dec 2017 15:11:45 +1200</pubDate>
       
-      <guid>https://tomelliott.co.nz/publications/nzsa-2017/</guid>
+      <guid>/publications/nzsa-2017/</guid>
       <description></description>
     </item>
     
