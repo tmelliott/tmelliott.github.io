@@ -1,11 +1,118 @@
----
-title: "Building my new website"
-subtitle: "with R ... sort of"
-description: "I finally got around to building a new website; here's a (brief) overview of why and how I did it."
-date: 2020-09-01T09:00:41+12:00
-draft: false
----
+<!DOCTYPE html>
+<html><head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
+  
+  
+  <link rel="stylesheet" type="text/css" href="/css/main.min.f940fabaa2751899818036403933989fb51b61818b1ec87be29430b19e16e488.css" media="screen">
+
+  
+
+
+<link href='//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/atom-one-dark.min.css' rel='stylesheet' type='text/css' />
+
+
+
+
+  
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">
+
+  
+    
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-69555072-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+  
+  <meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Building my new website"/>
+<meta name="twitter:description" content="I finally got around to building a new website; here&#39;s a (brief) overview of why and how I did it."/>
+
+
+  
+  
+  <title>Tom Elliott | Building my new website</title>
+</head>
+<body>
+        
+        <div id="wrapper"><section id="site-intro">
+    
+    <a href="/">
+        <img src="https://tomelliott.co.nz/images/photo.jpg"
+            class="circle"
+            width="100"
+            alt="Logo"></a>
+    
+
+    <header>
+        <h1>Tom Elliott</h1>
+    </header>
+
+    <main>
+        <p class="blurb">I like data science, data vis, and computing, as well as wine, gardening, food, and music.</p>
+    </main>
+
+    <footer>
+        <ul class="social-icons">
+            
+            <a class="nav-link" href="https://github.com/tmelliott">
+                
+                
+                <i class="fi-xnluxl-github"></i> 
+                </a>
+            
+            <a class="nav-link" href="https://www.linkedin.com/in/tmelliott">
+                
+                
+                <i class="fi-xnluxl-linkedin"></i> 
+                </a>
+            
+            <a class="nav-link" href="https://twitter.com/tomelliottnz">
+                
+                
+                <i class="fi-xnluxl-twitter"></i> 
+                </a>
+            
+        </ul>
+    </footer>
+</section>
+<main id="site-main">
+
+
+
+<article class="post">
+    <header>
+  <div class="title">
+    <h2>Building my new website</h2>
+    <h4>with R ... sort of</h4>
+  </div>
+
+  
+    <p class="desc">I finally got around to building a new website; here&#39;s a (brief) overview of why and how I did it.</p>
+  
+
+  <div class="meta">
+    
+    <time datetime="2020-09-01 09:00:41 &#43;1200 NZST">1 September 2020</time>
+
+  </div>
+</header>
+
+
+    <div class="content">
+        
+        
 
 
 <p>Several years ago I decided to redesign my website (mostly as a way of learning new web technologies), but what I came up with was ... rather uninspiring. Ever since reading about <a href="gohugo.io">Hugo</a>, I've wanted to build my website using it (including designing my own theme and templates), but between the PhD and iNZight, I seldom felt like spending my free time doing even more coding! In recent weeks, I've had a slight break from working and found the inspiration to finally get around to the website.</p>
@@ -91,3 +198,58 @@ new_content(&quot;building-my-new-website&quot;)
 publish(&quot;Added a new post about building my new website&quot;)</code></pre>
 <p>And we're done! As well as the <code>draft</code> option, Hugo also includes some other options to deploying content, such as specify a (future) date to make a post go live (<code>publishDate</code>), or setting an expiry on a post (<code>expiryDate</code>). I'm not sure how those work (I presume you need a build-daily workflow?) but I may investigate some time.</p>
 </div>
+
+    </div>
+</article>
+
+
+            </main><section id="site-sidebar">
+    <ul>
+        
+        <li><a class="nav-link" href="/research/">Research</a></li>
+        
+        <li><a class="nav-link" href="/inzight/">iNZight</a></li>
+        
+        <li><a class="nav-link" href="/publications/">Publications</a></li>
+        
+    </ul>
+</section>
+<footer id="site-footer">
+    <p class="copyright">
+        &copy; 2020 Tom Elliott<br>
+        Developed with
+        <a href="https://github.com/rstudio/blogdown">blogdown</a>
+        and <a href="https://gohugo.io/">Hugo</a>.
+    </p>
+</footer>
+<script defer src="https://friconix.com/cdn/friconix.js"></script>
+
+<script>
+  addEventListener('load', function() {
+    var blocks = document.querySelectorAll('pre code.hljs');
+    Array.prototype.forEach.call(blocks, function(block) {
+      var language = block.result.language;
+      block.insertAdjacentHTML("afterbegin",`<label>${language}</label>`)
+    });
+  })
+</script></div>
+
+        
+
+
+
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+
+
+
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/r.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/yaml.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/bash.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/scss.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/html.min.js"></script>
+<script>hljs.configure({languages: []}); hljs.initHighlightingOnLoad();</script>
+
+
+
+    </body>
+</html>

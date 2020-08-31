@@ -12,5 +12,15 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 pre {
-  // margin: 0;
+  code {
+    position: relative;
+    label {
+      position: absolute;
+      right: 4px;
+      top: 4px;
+      font-size: 0.8em;
+      background: #282c34;
+      text-transform: capitalize;
+    }
+  }
 }

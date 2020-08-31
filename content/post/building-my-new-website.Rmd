@@ -1,8 +1,121 @@
 ---
 title: "Building my new website"
-description: "I finally got around to building a new website, so here's a (brief) overview of why and how."
-date: 2020-08-27T21:23:41+12:00
-draft: true
+subtitle: "with R ... sort of"
+description: "I finally got around to building a new website; here's a (brief) overview of why and how I did it."
+date: 2020-09-01T09:00:41+12:00
+draft: false
 ---
 
-Several years ago I decided to redesign my website (mostly as a way of learning new web technologies), but what I came up with was ... rather uninspiring. Ever since reading about [Hugo](gohugo.io), I've wanted to build my website using it (including designing my own theme and templates), but between the PhD and iNZight, I seldom felt like spending my free time doing even more coding!
+Several years ago I decided to redesign my website (mostly as a way of learning new web technologies), but what I came up with was ... rather uninspiring. Ever since reading about [Hugo](gohugo.io), I've wanted to build my website using it (including designing my own theme and templates), but between the PhD and iNZight, I seldom felt like spending my free time doing even more coding! In recent weeks, I've had a slight break from working and found the inspiration to finally get around to the website.
+
+To start with, I needed to figure out how [blogdown]() works (I had to use R, surely!) and, most importantly, how it manages Hugo behind-the-scenes. Turns out it's all pretty simple. You run a few commands and your basic Hugo site is setup:
+```{r,eval=F}
+install.packages("blogdown")
+blogdown::new_site()
+```
+That leaves you with the default 'blogdown' starter template, which is fine and all, but I went ahead and deleted everything in the `themes` directory, and started a theme template from scratch:
+```bash
+hugo new theme tme
+```
+If you don't know much about Hugo's themes, they essentially specify the design of the site, and include templates which are filled in magically from sources, such as Markdown or Rmarkdown. It's quite complex, and takes a wee while to understand the hierarchy, but it's all very logical. I also copied a few of the base files from the default theme, since they would come in handy&mdash;[highlightjs]() and [mathjax]().
+
+## Theming the site together
+From there, it came down to putting together the theme styles and template. The templates are pretty easy&mdash;you have your overall page structure, then individual templates for _list pages_ (i.e., a list of content) and _single pages_ (i.e., this one blog post). To code the theme, I browsed a lot of [Hugo themes]() and chose a few that I liked, and then went about coding them myself using [Scss]().
+
+For the theme base, I used the CSS framework [spectre](https://picturepan2.github.io/spectre/) because it looked nice and simple (simple is good; it means you can modify it much easier). I still haven't changed the default colour scheme, but I'm terrible with colours so suggestions please!
+
+The more exciting aspect of this was that, by looking at the source code of a bunch of themes, I discovered [CSS grid templates]()!!! These are somewhat new, and totally revolutionary! It makes designing website templates so much easier (once you figure out how they work), particularly for response design (i.e., it looks different on desktop and mobile). Here's an example:
+```html
+<div class="container">
+  <div class="header"></div>
+  <div class="sidebar"></div>
+  <div class="main"></div>
+  <div class="footer"></div>
+</div>
+```
+```scss
+.container {
+  grid-template:
+    "header"
+    "main"
+    "sidebar"
+    "footer";
+
+  .header { grid-area: header; }
+  .sidebar { grid-area: sidebar; }
+  .main { grid-area: main; }
+  .footer { grid-area: footer; }
+
+  /* for bigger screens */
+  @media (min-width: 800px) {
+    grid-template:
+      "header" "header"
+      "sidebar" "main"
+      "footer" "footer";
+    grid-template-rows: 50px 1fr 30px;
+    grid-template-columns: 100px 1fr;
+  }
+}
+```
+On mobile, this just shows all the content in the order of header/main/sidebar/footer, so you can easily scroll through everything. But on bigger screens, we make use of the horizontal space by putting the sidebar ... on the side! This is a pretty simple example, but you can have it as complex as you like, and you can completely re-specify where content goes depending on screensize (or orientation).
+
+## My workflow
+After making the theme (see `themes/tme` directory), I could go about adding content. But I wanted to use R where possible, so I added a `.Rprofile` with some functions I can call, and also it automatically serves up the local dev server when starting R!
+
+__Editor__:
+When creating a new file, I wanted it ot automatically open in my chosen editor (VS Code), which is easily done by specifing the environment variable in my `.zshrc` file,
+```bash
+export VISUAL=/path/to/editor
+```
+which is set in my `.Rprofile` using
+```r
+if (Sys.getenv("VISUAL") != "")
+    options(editor =  Sys.getenv("VISUAL"))
+```
+
+__Creating content__:
+Now I can create new content using my own wrapper function:
+```r
+new_content <- function(filename, type = "post", ext = "Rmd") {
+    blogdown::new_content(
+        file.path(type, paste(filename, ext, sep = "."))
+    )
+}
+```
+and it opens automatically in VSCode.
+
+__Deploy__:
+Lastly is deployment to a server. I'm using [Github Pages]() because they're free and it makes serving _subcontent_ easy (e.g., if you have another repository with a website also using Gighub Pages, you can access it via `www.mysite.com/other-repo`). To deploy to Gihub Pages, we need to serve from the base directory `/`; however, Hugo builds to the `/public` directory:
+```r
+blogdown::build_site()
+```
+so I had to run off and learn about `git subtree`, allowing me to push the `public` directory to its own branch called `gh-pages`:
+```bash
+git subtree push --prefix public origin gh-pages
+```
+But of course this requires first building the site, ensuring that you have _removed_ the local-only files (i.e., draft content), then commiting everything to master, and finally pushing to the subtree!! So, I just wrote an R function to wrap that all up and call within my R session (which is already serving the local version of my site).
+```r
+publish <- function(msg = "Build site for publishing.") {
+    system("git subtree pull --prefix public origin gh-pages")
+    unlink("public", TRUE, TRUE)
+    blogdown::build_site()
+    system("git add .")
+    system(sprintf("git commit -am '%s'", msg))
+    system("git push")
+    system("git subtree push --prefix public origin gh-pages")
+}
+```
+Yeah ... I could probably use the `git2r` package (and likely will at some stage), but I went for cheap and nasty. This first pulls the subtree (incase I updated it elsewhere), fully removes the `public` build directory before building the site, adding everything (new posts, etc), commiting with either the specified or default message, pushing to master and _finally deploying the site to the `gh-pages` branch_!
+
+
+## Writing a new post
+After all that, I can now write a new post and publish it in a few easy steps (all from R, of course!):
+```r
+# start the R session from the site base directory so .Rprofile is loaded. This prompts me to run the local server - I just hit Enter for yes
+new_content("building-my-new-website")
+# creates `content/post/building-my-new-website.Rmd` and opens it in VSCode
+# I can now add content and set `draft: false` once it's ready to go public
+publish("Added a new post about building my new website")
+```
+
+And we're done! As well as the `draft` option, Hugo also includes some other options to deploying content, such as specify a (future) date to make a post go live (`publishDate`), or setting an expiry on a post (`expiryDate`). I'm not sure how those work (I presume you need a build-daily workflow?) but I may investigate some time.
