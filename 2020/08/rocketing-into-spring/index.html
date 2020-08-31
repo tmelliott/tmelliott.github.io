@@ -5,7 +5,7 @@
 
   
   
-  <link rel="stylesheet" type="text/css" href="/css/main.min.9858d47441d17d7a6964e28460a1f643639f69ae635a3683eeba352727d0b891.css" media="screen">
+  <link rel="stylesheet" type="text/css" href="/css/main.min.f940fabaa2751899818036403933989fb51b61818b1ec87be29430b19e16e488.css" media="screen">
 
   
 
@@ -17,8 +17,21 @@
   <link rel="manifest" href="/site.webmanifest">
 
   
+    
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-69555072-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+  
   <meta name="twitter:card" content="summary_large_image"/>
-<meta name="twitter:image" content="/post/20200827_rocket_flower2.jpg"/>
+<meta name="twitter:image" content="https://tomelliott.co.nz/post/20200827_rocket_flower2.jpg"/>
 
 <meta name="twitter:title" content="Rocketing Into Spring"/>
 <meta name="twitter:description" content="My rocket suddenly grew a stem and started flowering!"/>
@@ -33,7 +46,7 @@
         <div id="wrapper"><section id="site-intro">
     
     <a href="/">
-        <img src="/images/photo.jpg"
+        <img src="https://tomelliott.co.nz/images/photo.jpg"
             class="circle"
             width="100"
             alt="Logo"></a>
@@ -87,8 +100,8 @@
   
 
   <div class="meta">
-    <i class="fi-xnluxl-calendar"></i>
-    <time datetime="2020-08-27 14:21:40 &#43;1200 NZST">August 27, 2020</time>
+    
+    <time datetime="2020-08-27 14:21:40 &#43;1200 NZST">27 August 2020</time>
 
   </div>
 </header>
@@ -129,7 +142,17 @@
         and <a href="https://gohugo.io/">Hugo</a>.
     </p>
 </footer>
-<script defer src="https://friconix.com/cdn/friconix.js"> </script></div>
+<script defer src="https://friconix.com/cdn/friconix.js"></script>
+
+<script>
+  addEventListener('load', function() {
+    var blocks = document.querySelectorAll('pre code.hljs');
+    Array.prototype.forEach.call(blocks, function(block) {
+      var language = block.result.language;
+      block.insertAdjacentHTML("afterbegin",`<label>${language}</label>`)
+    });
+  })
+</script></div>
 
         
 
