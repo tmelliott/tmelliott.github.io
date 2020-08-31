@@ -6,19 +6,10 @@
     <description>Recent content in Posts on Tom Elliott</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-gb</language>
-    <lastBuildDate>Tue, 01 Sep 2020 09:00:41 +1200</lastBuildDate>
+    <lastBuildDate>Thu, 27 Aug 2020 14:21:40 +1200</lastBuildDate>
     
 	<atom:link href="https://tomelliott.co.nz/post/index.xml" rel="self" type="application/rss+xml" />
     
-    
-    <item>
-      <title>Building my new website</title>
-      <link>https://tomelliott.co.nz/2020/09/building-my-new-website/</link>
-      <pubDate>Tue, 01 Sep 2020 09:00:41 +1200</pubDate>
-      
-      <guid>https://tomelliott.co.nz/2020/09/building-my-new-website/</guid>
-      <description>Several years ago I decided to redesign my website (mostly as a way of learning new web technologies), but what I came up with was ... rather uninspiring. Ever since reading about Hugo, I&#39;ve wanted to build my website using it (including designing my own theme and templates), but between the PhD and iNZight, I seldom felt like spending my free time doing even more coding! In recent weeks, I&#39;ve had a slight break from working and found the inspiration to finally get around to the website.</description>
-    </item>
     
     <item>
       <title>Rocketing Into Spring</title>
