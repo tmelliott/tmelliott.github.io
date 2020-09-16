@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html><head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  
+  <link rel="stylesheet" type="text/css" href="/css/main.min.f940fabaa2751899818036403933989fb51b61818b1ec87be29430b19e16e488.css" media="screen">
+
+  
+
+
+  
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">
+
+  
+    
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-69555072-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+  
+  <meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Modelling the travel time of transit vehicles in real-time through a GTFS-based road network using GPS vehicle locations"/>
+<meta name="twitter:description" content="A paper published in the Australian &amp; New Zealand Journal of Statistics"/>
+
+
+  
+  
+  <title>Tom Elliott | Modelling the travel time of transit vehicles in real-time through a GTFS-based road network using GPS vehicle locations</title>
+</head>
+<body>
+        
+        <div id="wrapper"><section id="site-intro">
+    
+    <a href="/">
+        <img src="https://tomelliott.co.nz/images/photo.jpg"
+            class="circle"
+            width="100"
+            alt="Logo"></a>
+    
+
+    <header>
+        <h1>Tom Elliott</h1>
+    </header>
+
+    <main>
+        <p class="blurb">I like data science, data vis, and computing, as well as wine, gardening, food, and music.</p>
+    </main>
+
+    <footer>
+        <ul class="social-icons">
+            
+            <a class="nav-link" href="https://github.com/tmelliott">
+                
+                
+                <i class="fi-xnluxl-github"></i> 
+                </a>
+            
+            <a class="nav-link" href="https://www.linkedin.com/in/tmelliott">
+                
+                
+                <i class="fi-xnluxl-linkedin"></i> 
+                </a>
+            
+            <a class="nav-link" href="https://twitter.com/tomelliottnz">
+                
+                
+                <i class="fi-xnluxl-twitter"></i> 
+                </a>
+            
+        </ul>
+    </footer>
+</section>
+<main id="site-main">
+
+<article class="post">
+    <header>
+  <div class="title">
+    <h2>Modelling the travel time of transit vehicles in real-time through a GTFS-based road network using GPS vehicle locations</h2>
+    
+  </div>
+
+  
+    <p class="desc">A paper published in the Australian &amp; New Zealand Journal of Statistics</p>
+  
+
+  <div class="meta">
+    
+    <time datetime="2020-07-04 11:11:33 &#43;1200 NZST">4 July 2020</time>
+
+  </div>
+</header>
+
+
+    <div class="content">
+        Predicting the arrival time of a transit vehicle involves not only knowledge of its current position and schedule adherence, but also traffic conditions along the remainder of the route. Road networks are dynamic and can quickly change from free‐flowing to highly congested, which impacts the arrival time of transit vehicles, particularly buses which often share the road with other vehicles, so reliable predictions need to account for real‐time and future traffic conditions.
+
+        
+
+        
+
+
+<p>Predicting the arrival time of a transit vehicle involves not only knowledge of its current position and schedule adherence, but also traffic conditions along the remainder of the route. Road networks are dynamic and can quickly change from free‐flowing to highly congested, which impacts the arrival time of transit vehicles, particularly buses which often share the road with other vehicles, so reliable predictions need to account for real‐time and future traffic conditions. The first step in this process is to construct a framework with which road state (traffic conditions) can be estimated using real‐time transit vehicle position data. Our proposed framework implements a vehicle model using a particle filter to estimate road travel times, which are used in a second model to estimate real‐time traffic conditions. Although development and testing took place in Auckland, New Zealand, we generalised each component to make the framework compatible with other public transport systems around the world. We demonstrate the real‐time feasibility and performance of our approach in real‐time, where a combination of R and C++ was used to obtain the necessary performance results. Future work will use these estimated traffic conditions in combination with historical data to obtain reliable arrival time predictions of transit vehicles.</p>
+<p>You can (try to) read more here: <a href="https://onlinelibrary.wiley.com/doi/abs/10.1111/anzs.12294" class="uri">https://onlinelibrary.wiley.com/doi/abs/10.1111/anzs.12294</a>.</p>
+
+    </div>
+</article>
+
+
+            </main><section id="site-sidebar">
+    <ul>
+        
+        <li><a class="nav-link" href="/research/">Research</a></li>
+        
+        <li><a class="nav-link" href="/inzight/">iNZight</a></li>
+        
+        <li><a class="nav-link" href="/publications/">Publications</a></li>
+        
+    </ul>
+</section>
+<footer id="site-footer">
+    <p class="copyright">
+        &copy; 2020 Tom Elliott<br>
+        Developed with
+        <a href="https://github.com/rstudio/blogdown">blogdown</a>
+        and <a href="https://gohugo.io/">Hugo</a>.
+    </p>
+</footer>
+<script defer src="https://friconix.com/cdn/friconix.js"></script>
+
+<script>
+  addEventListener('load', function() {
+    var blocks = document.querySelectorAll('pre code.hljs');
+    Array.prototype.forEach.call(blocks, function(block) {
+      var language = block.result.language;
+      block.insertAdjacentHTML("afterbegin",`<label>${language}</label>`)
+    });
+  })
+</script></div>
+
+        
+
+    </body>
+</html>
