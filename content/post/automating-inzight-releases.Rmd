@@ -42,6 +42,55 @@ Now repeat that for all package releases (iNZight consists of 11 packages, so th
 
 ## Step 2: build binaries and installer
 
-Previously, this was all done manually. But from there, it's completely automated with one single trigger by updating the `iNZightVIT/builder` repository.
+Previously, this was all done manually. Now it's fully automated with one single trigger by updating the `iNZightVIT/builder` repository. This uses the magic of git submodules to fix release versions for packages, and GitHub Actions to build sources, binaries, installers, and trigger an update of the website!
 
-### git modules
+Once a package has been updated (with a new version number on the master branch, and optionally published to CRAN), we enter the `iNZightVIT/builder` repository. Within, there is a `library` directory which contains all of the self-managed packages we want to host on our repository. They key here is that they are *submodules* which point to a particular state of another git repository. For example,
+```
+library/
+  iNZight -> iNZightVIT/iNZight@4.0.2
+  iNZightPlots -> iNZightVIT/iNZightPlots@2.12.4
+  ...etc...
+```
+This makes it easy to maintain fixed version of the packages (and undo any bad decisions we might make in the future...). All of the automation uses the selected *tags* (as described above) to build sources/binaries. To trigger an update and release, we simply update where a package is pointing:
+```bash
+cd library/iNZight
+git fetch -p # clean up and get latest changes
+git tag -l # list tags
+git checkout 4.0.3
+
+cd ../.. # return to base directory
+# repeat for any other packages that need updating
+git commit -am 'Update iNZight to 4.0.3 (... and other updates? ...)'
+git push
+```
+The rest is magic (or at least the magic of automation).
+
+
+### Phase I: Building and release source and binary packages
+
+I'm not going to go into too much detail here. Essentially, I need to create **source** and **binary** files for each of the packages in the `library` directory. First, we just use the usual tools in the [devtools]() package and install the packages on the virtual machine.
+
+GitHub Actions lets us specify a sequence of steps to do just this, on a range of operating systems. I use Linux to build the source files, and Windows to build the Windows binaries (we currently don't support macOS). Essentially, for each package:
+
+1. install ("local") package along with its dependencies
+2. run `R CMD build` to generate the source files
+3. run `R CMD INSTALL -l .` to create a binary version of the package
+4. move the files into the appropriate location for a CRAN repository (e.g., `bin/windows/contrib/4.0/`)
+5. create the `PACKAGES` file with `tools::write_PACKAGES()`
+6. push the directory to the live R package repository
+
+That's basically it - of course, it's more complicated than that, but if you're really interested, just head over to the repository and take a look at [the build script](https://github.com/iNZightVIT/builder/blob/master/build.R).
+
+
+### Phase II: Build and deploy installer
+
+Once the sources and binaries are live, GitHub Actions will allow the next step to continue (we control this by having the installer build step depending on the previous ones). This uses [iNZightVIT/win-installer](https://github.com/iNZightVIT/win-installer) to install R, iNZight (and all of its dependencies), package them up into a single folder, and uses [NSIS]() to create the installer.
+
+The installer then gets pushed onto the AWS container hosting our repository, and ... that's all, really. It was a little tricky figuring out the versioning, but I eventually just went with a `VERSION` file sitting in the `downloads` directory, and incrementing the patch number (the P in `x.y.z.P`) if there have been updates (for example, if I fix a bug in iNZightPlots, this will result in a patch update to the installer, but wont affect the overall iNZight version).
+
+
+### Phase III: Trigger a website update
+
+Lastly, we need to update the website so it states the correct version on the home page. To do this, I simply added a GitHub action to the website repository [iNZightVIT/inzight-www]() that responds to a "workflow_dispatch" event, which I can trigger from the `builder` repository once the installer has been build and deployed.
+
+The website server has a webhook which is triggered whenever the master branch is updated, triggering an update of the live website.
