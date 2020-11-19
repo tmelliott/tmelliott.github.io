@@ -1,0 +1,61 @@
+---
+title: "Ubuntu R Binaries With BSPM"
+# subtitle: ""
+# description: ""
+images:
+# - /post/image.jpg
+date: 2020-11-20T10:54:23+13:00
+draft: true
+---
+
+Installing R packages on Linux is usually a big task, especially when you upgrade your version of R and need to re-install all the packages you use for a range of projects in one go. You need to compile them all from source (and remember to add the `Ncpus=X` argument to speed things up a little). And when you're setting up a new system, it's even worse because half of the packages fail to install because of missing system dependencies. You gotta scroll through that list and find them---one by one---and then figure out what the library is *probably* called, install it using your package manager, and then re-compile the package.
+
+But no longer! I recently saw [Dirk Eddelbeuttel](dirk.eddelbuettel.com) tweet about BSPM, a package manager for Linux R packages. Essentially, it means you can just use `install.packages("package")` to install a **binary** version (if available) of the package, **and its system dependencies**!! Of course, I had trouble getting it to work on Ubuntu, so I thought I'd just write a quick little post for anyone else who might miss the simple steps.
+
+
+### Step 1: ~~install R~~ install everything
+
+No, not from source. From your package repository (i.e., apt on Ubuntu). But don't do a me and forget another crucial step: you gotta add an essential reposititory first (which I had to hunt around for when directly install `r-base-bspm` didn't work):
+```bash
+sudo add-apt-repository ppa:marutter/rrutter4.0    # base R (and packages)
+sudo add-apt-repository ppa:c2d4u.team/c2d4u4.0+   # 4000+ R binaries from CRAN!
+sudo apt-get update
+```
+Now you can install everything in just about one go:
+```bash
+sudo apt-get install r-base-bspm
+```
+In theory, that will install the binary version of R plus all the dependencies.
+
+
+### Step 2: install packages
+
+For me, the main reason this is a fantastic resource is that, in developing [iNZight](https://inzight.nz), I need to install the 'RGtk2' package, which has a suite of dependencies, as do many of the other packages 'iNZight' depends on. But now:
+```{r,eval=FALSE}
+bspm::enable() # enable BSPM
+install.packages('RGtk2')
+```
+Tada!
+
+
+### Step 3: make it automatic
+
+I just use the following `.Rprofile` in my home directory:
+```{r,eval=FALSE}
+# ~/.Rprofile
+suppressMessages(bspm::enable())
+```
+
+Now every time you start R, it'll automatically activate BSPM and everything will be installed quickly and without breaking because of missing system dependencies!
+
+
+### Disclaimer
+
+There's probably better ways of doing all of the above, but it works for me.
+
+
+I particularly like this setup because it also works with `devtools::install` from a local package. For example, when locally installing my development version of 'iNZight' (not on CRAN) for the first time,
+```{r,eval=FALSE}
+devtools::install('/path/to/iNZight')
+```
+automatically grabs all the system dependencies (GTK included!) and away we go.
