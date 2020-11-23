@@ -7,7 +7,7 @@ tags:
   - conference
 date: 2018-06-28T15:15:53+12:00
 filename: "talks/2020-11_nzsa"
-draft: true
+draft: false
 ---
 
 In which I give a very basic overview of my main methods and results in a quick 15-minute presentation at the 2020 NZSA UnConference! For more details, you may consult my thesis (code and PDF available from [tmelliott/phd-thesis](https://github.com/tmelliott/phd-thesis)).

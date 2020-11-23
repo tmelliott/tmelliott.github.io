@@ -6,20 +6,22 @@ date: 2020-09-16T09:00:41+12:00
 draft: false
 ---
 
+<link href="/rmarkdown-libs/anchor-sections/anchor-sections.css" rel="stylesheet" />
+<script src="/rmarkdown-libs/anchor-sections/anchor-sections.js"></script>
 
 
-<p>Several years ago I decided to redesign my website (mostly as a way of learning new web technologies), but what I came up with was ... rather uninspiring. Ever since reading about <a href="gohugo.io">Hugo</a>, I've wanted to build my website using it (including designing my own theme and templates), but between the PhD and iNZight, I seldom felt like spending my free time doing even more coding! In recent weeks, I've had a slight break from working and found the inspiration to finally get around to the website.</p>
-<p>To start with, I needed to figure out how <a href="https://bookdown.org/yihui/blogdown/">blogdown</a> works (I had to use R, surely!) and, most importantly, how it manages Hugo behind-the-scenes. Turns out it's all pretty simple. You run a few commands and your basic Hugo site is setup:</p>
+<p>Several years ago I decided to redesign my website (mostly as a way of learning new web technologies), but what I came up with was … rather uninspiring. Ever since reading about <a href="gohugo.io">Hugo</a>, I’ve wanted to build my website using it (including designing my own theme and templates), but between the PhD and iNZight, I seldom felt like spending my free time doing even more coding! In recent weeks, I’ve had a slight break from working and found the inspiration to finally get around to the website.</p>
+<p>To start with, I needed to figure out how <a href="https://bookdown.org/yihui/blogdown/">blogdown</a> works (I had to use R, surely!) and, most importantly, how it manages Hugo behind-the-scenes. Turns out it’s all pretty simple. You run a few commands and your basic Hugo site is setup:</p>
 <pre class="r"><code>install.packages(&quot;blogdown&quot;)
 blogdown::new_site()</code></pre>
-<p>That leaves you with the default 'blogdown' starter template, which is fine and all, but I went ahead and deleted everything in the <code>themes</code> directory, and started a theme template from scratch:</p>
+<p>That leaves you with the default ‘blogdown’ starter template, which is fine and all, but I went ahead and deleted everything in the <code>themes</code> directory, and started a theme template from scratch:</p>
 <pre class="bash"><code>hugo new theme tme</code></pre>
-<p>If you don't know much about Hugo's themes, they essentially specify the design of the site, and include templates which are filled in magically from sources, such as Markdown or Rmarkdown. It's quite complex, and takes a wee while to understand the hierarchy, but it's all very logical. I also copied a few of the base files from the default theme, since they would come in handy—<a href="https://highlightjs.org/">highlightjs</a> and <a href="https://www.mathjax.org/">mathjax</a>.</p>
+<p>If you don’t know much about Hugo’s themes, they essentially specify the design of the site, and include templates which are filled in magically from sources, such as Markdown or Rmarkdown. It’s quite complex, and takes a wee while to understand the hierarchy, but it’s all very logical. I also copied a few of the base files from the default theme, since they would come in handy—<a href="https://highlightjs.org/">highlightjs</a> and <a href="https://www.mathjax.org/">mathjax</a>.</p>
 <div id="theming-the-site-together" class="section level2">
 <h2>Theming the site together</h2>
 <p>From there, it came down to putting together the theme styles and template. The templates are pretty easy—you have your overall page structure, then individual templates for <em>list pages</em> (i.e., a list of content) and <em>single pages</em> (i.e., this one blog post). To code the theme, I browsed a lot of <a href="https://themes.gohugo.io/">Hugo themes</a> and chose a few that I liked, and then went about coding them myself using <a href="https://sass-lang.com/">Scss</a>.</p>
-<p>For the theme base, I used the CSS framework <a href="https://picturepan2.github.io/spectre/">spectre</a> because it looked nice and simple (simple is good; it means you can modify it much easier). I still haven't changed the default colour scheme, but I'm terrible with colours so suggestions please!</p>
-<p>The more exciting aspect of this was that, by looking at the source code of a bunch of themes, I discovered <a href="https://css-tricks.com/snippets/css/complete-guide-grid/">CSS grid templates</a>!!! These are somewhat new, and totally revolutionary! It makes designing website templates so much easier (once you figure out how they work), particularly for response design (i.e., it looks different on desktop and mobile). Here's an example:</p>
+<p>For the theme base, I used the CSS framework <a href="https://picturepan2.github.io/spectre/">spectre</a> because it looked nice and simple (simple is good; it means you can modify it much easier). I still haven’t changed the default colour scheme, but I’m terrible with colours so suggestions please!</p>
+<p>The more exciting aspect of this was that, by looking at the source code of a bunch of themes, I discovered <a href="https://css-tricks.com/snippets/css/complete-guide-grid/">CSS grid templates</a>!!! These are somewhat new, and totally revolutionary! It makes designing website templates so much easier (once you figure out how they work), particularly for response design (i.e., it looks different on desktop and mobile). Here’s an example:</p>
 <pre class="html"><code>&lt;div class=&quot;container&quot;&gt;
   &lt;div class=&quot;header&quot;&gt;&lt;/div&gt;
   &lt;div class=&quot;sidebar&quot;&gt;&lt;/div&gt;
@@ -48,24 +50,27 @@ blogdown::new_site()</code></pre>
     grid-template-columns: 100px 1fr;
   }
 }</code></pre>
-<p>On mobile, this just shows all the content in the order of header/main/sidebar/footer, so you can easily scroll through everything. But on bigger screens, we make use of the horizontal space by putting the sidebar ... on the side! This is a pretty simple example, but you can have it as complex as you like, and you can completely re-specify where content goes depending on screensize (or orientation).</p>
+<p>On mobile, this just shows all the content in the order of header/main/sidebar/footer, so you can easily scroll through everything. But on bigger screens, we make use of the horizontal space by putting the sidebar … on the side! This is a pretty simple example, but you can have it as complex as you like, and you can completely re-specify where content goes depending on screensize (or orientation).</p>
 </div>
 <div id="my-workflow" class="section level2">
 <h2>My workflow</h2>
 <p>After making the theme (see <code>themes/tme</code> directory), I could go about adding content. But I wanted to use R where possible, so I added a <code>.Rprofile</code> with some functions I can call, and also it automatically serves up the local dev server when starting R!</p>
-<p><strong>Editor</strong>: When creating a new file, I wanted it ot automatically open in my chosen editor (VS Code), which is easily done by specifing the environment variable in my <code>.zshrc</code> file,</p>
+<p><strong>Editor</strong>:
+When creating a new file, I wanted it ot automatically open in my chosen editor (VS Code), which is easily done by specifing the environment variable in my <code>.zshrc</code> file,</p>
 <pre class="bash"><code>export VISUAL=/path/to/editor</code></pre>
 <p>which is set in my <code>.Rprofile</code> using</p>
 <pre class="r"><code>if (Sys.getenv(&quot;VISUAL&quot;) != &quot;&quot;)
     options(editor =  Sys.getenv(&quot;VISUAL&quot;))</code></pre>
-<p><strong>Creating content</strong>: Now I can create new content using my own wrapper function:</p>
+<p><strong>Creating content</strong>:
+Now I can create new content using my own wrapper function:</p>
 <pre class="r"><code>new_content &lt;- function(filename, type = &quot;post&quot;, ext = &quot;Rmd&quot;) {
     blogdown::new_content(
         file.path(type, paste(filename, ext, sep = &quot;.&quot;))
     )
 }</code></pre>
 <p>and it opens automatically in VSCode.</p>
-<p><strong>Deploy</strong>: Lastly is deployment to a server. I'm using <a href="https://pages.github.com/">Github Pages</a> because they're free and it makes serving <em>subcontent</em> easy (e.g., if you have another repository with a website also using Gighub Pages, you can access it via <code>www.mysite.com/other-repo</code>). To deploy to Gihub Pages, we need to serve from the base directory <code>/</code>; however, Hugo builds to the <code>/public</code> directory:</p>
+<p><strong>Deploy</strong>:
+Lastly is deployment to a server. I’m using <a href="https://pages.github.com/">Github Pages</a> because they’re free and it makes serving <em>subcontent</em> easy (e.g., if you have another repository with a website also using Gighub Pages, you can access it via <code>www.mysite.com/other-repo</code>). To deploy to Gihub Pages, we need to serve from the base directory <code>/</code>; however, Hugo builds to the <code>/public</code> directory:</p>
 <pre class="r"><code>blogdown::build_site()</code></pre>
 <p>so I had to run off and learn about <code>git subtree</code>, allowing me to push the <code>public</code> directory to its own branch called <code>gh-pages</code>:</p>
 <pre class="bash"><code>git subtree push --prefix public origin gh-pages</code></pre>
@@ -79,7 +84,7 @@ blogdown::new_site()</code></pre>
     system(&quot;git push&quot;)
     system(&quot;git subtree push --prefix public origin gh-pages&quot;)
 }</code></pre>
-<p>Yeah ... I could probably use the <code>git2r</code> package (and likely will at some stage), but I went for cheap and nasty. This first pulls the subtree (incase I updated it elsewhere), fully removes the <code>public</code> build directory before building the site, adding everything (new posts, etc), commiting with either the specified or default message, pushing to master and <em>finally deploying the site to the <code>gh-pages</code> branch</em>!</p>
+<p>Yeah … I could probably use the <code>git2r</code> package (and likely will at some stage), but I went for cheap and nasty. This first pulls the subtree (incase I updated it elsewhere), fully removes the <code>public</code> build directory before building the site, adding everything (new posts, etc), commiting with either the specified or default message, pushing to master and <em>finally deploying the site to the <code>gh-pages</code> branch</em>!</p>
 </div>
 <div id="writing-a-new-post" class="section level2">
 <h2>Writing a new post</h2>
@@ -89,5 +94,5 @@ new_content(&quot;building-my-new-website&quot;)
 # creates `content/post/building-my-new-website.Rmd` and opens it in VSCode
 # I can now add content and set `draft: false` once it&#39;s ready to go public
 publish(&quot;Added a new post about building my new website&quot;)</code></pre>
-<p>And we're done! As well as the <code>draft</code> option, Hugo also includes some other options to deploying content, such as specify a (future) date to make a post go live (<code>publishDate</code>), or setting an expiry on a post (<code>expiryDate</code>). I'm not sure how those work (I presume you need a build-daily workflow?) but I may investigate some time.</p>
+<p>And we’re done! As well as the <code>draft</code> option, Hugo also includes some other options to deploying content, such as specify a (future) date to make a post go live (<code>publishDate</code>), or setting an expiry on a post (<code>expiryDate</code>). I’m not sure how those work (I presume you need a build-daily workflow?) but I may investigate some time.</p>
 </div>

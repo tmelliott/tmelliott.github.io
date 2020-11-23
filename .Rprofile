@@ -9,7 +9,7 @@ if (Sys.getenv("VISUAL") != "")
 publish <- function(msg = "Build site for publishing.") {
     system("git subtree pull --prefix public origin gh-pages")
     unlink("public", TRUE, TRUE)
-    blogdown::build_site()
+    blogdown::build_site(build_rmd = TRUE)
     system("git add .")
     system(sprintf("git commit -am '%s'", msg))
     system("git push")
