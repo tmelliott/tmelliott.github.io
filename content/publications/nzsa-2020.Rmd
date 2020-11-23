@@ -1,9 +1,13 @@
 ---
 title: "Predicting bus arrival in real-time (is hard)"
 description: "NZSA UnConference 2020"
-date: 2020-11-24T16:10:00+13:00
+tags:
+  - talk
+  - phd
+  - conference
+date: 2018-06-28T15:15:53+12:00
 filename: "talks/2020-11_nzsa"
-draft: false
+draft: true
 ---
 
 In which I give a very basic overview of my main methods and results in a quick 15-minute presentation at the 2020 NZSA UnConference! For more details, you may consult my thesis (code and PDF available from [tmelliott/phd-thesis](https://github.com/tmelliott/phd-thesis)).
