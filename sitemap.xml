@@ -3,12 +3,42 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>https://tomelliott.co.nz/2020/09/building-my-new-website/</loc>
-    <lastmod>2020-09-16T09:00:41+12:00</lastmod>
+    <loc>https://tomelliott.co.nz/tags/conference/</loc>
+    <lastmod>2020-11-24T16:10:00+12:00</lastmod>
   </url>
   
   <url>
     <loc>https://tomelliott.co.nz/</loc>
+    <lastmod>2020-11-24T16:10:00+12:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://tomelliott.co.nz/tags/phd/</loc>
+    <lastmod>2020-11-24T16:10:00+12:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://tomelliott.co.nz/publications/nzsa-2020/</loc>
+    <lastmod>2020-11-24T16:10:00+12:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://tomelliott.co.nz/publications/</loc>
+    <lastmod>2020-11-24T16:10:00+12:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://tomelliott.co.nz/tags/</loc>
+    <lastmod>2020-11-24T16:10:00+12:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://tomelliott.co.nz/tags/talk/</loc>
+    <lastmod>2020-11-24T16:10:00+12:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://tomelliott.co.nz/2020/09/building-my-new-website/</loc>
     <lastmod>2020-09-16T09:00:41+12:00</lastmod>
   </url>
   
@@ -28,27 +58,7 @@
   </url>
   
   <url>
-    <loc>https://tomelliott.co.nz/tags/</loc>
-    <lastmod>2020-08-27T14:21:40+12:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://tomelliott.co.nz/publications/phd-defense/</loc>
-    <lastmod>2020-08-25T10:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://tomelliott.co.nz/tags/phd/</loc>
-    <lastmod>2020-08-25T10:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://tomelliott.co.nz/publications/</loc>
-    <lastmod>2020-08-25T10:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://tomelliott.co.nz/tags/talk/</loc>
     <lastmod>2020-08-25T10:00:00+00:00</lastmod>
   </url>
   
@@ -70,11 +80,6 @@
   <url>
     <loc>https://tomelliott.co.nz/tags/paper/</loc>
     <lastmod>2020-07-04T11:11:33+12:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://tomelliott.co.nz/tags/conference/</loc>
-    <lastmod>2020-02-22T09:00:00+00:00</lastmod>
   </url>
   
   <url>
@@ -104,11 +109,6 @@
   
   <url>
     <loc>https://tomelliott.co.nz/tags/poster/</loc>
-    <lastmod>2018-06-28T15:15:53+12:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://tomelliott.co.nz/publications/nzsa-2020/</loc>
     <lastmod>2018-06-28T15:15:53+12:00</lastmod>
   </url>
   
