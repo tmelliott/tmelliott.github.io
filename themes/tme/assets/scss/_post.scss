@@ -245,6 +245,11 @@ $triangle-size: 20px;
     text-align: center;
   }
 
+  p > img {
+    width: 100%;
+    box-shadow: 0px 3px 10px 0px #33333330;
+  }
+
   .gallery p {
     text-align: center;
 

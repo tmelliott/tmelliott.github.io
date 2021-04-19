@@ -1,0 +1,55 @@
+---
+title: "Bus Display V2 with React, D3, and Mapbox"
+# subtitle: ""
+# description: ""
+images:
+- /post/busdisplay.png
+date: 2021-04-20T08:57:24+12:00
+tags:
+- web
+- react
+- buses
+draft: true
+---
+
+
+
+<p>Recently I’ve been learning <a href="https://reactjs.org">React</a>, a javascript framework for building responsive user interfaces (the long game is iNZight-build-with-React, but that’s a long way off). The best way of learning something is by mini-projects, so recently that’s what I’ve been doing! Coincidentally, it was pointed out to me last week that my <a href="">bus display in the University of Auckland’s Science Buildling</a> is broken—turns out it has been since January! Oops…</p>
+<p>So—React to the rescue!</p>
+<p>The previous build of the display used the old <a href="">Mapbox</a> and drew the points with that directly. Everything else was javascript and <a href="">Sass</a> (big thanks to <span class="citation">[@consindo]</span>() for <a href="">making it pretty</a>). But the other huge huge problem with that build was that the system was overly complicated (as I was both learning several technologies, trying to deploy as quickly as possible, and to get around access control issues within the UoA network). That process was something like this:</p>
+<ol style="list-style-type: decimal">
+<li>Office desktop fetches latest GTFS updates, saves to dropbox</li>
+<li>VM running on UoA systems processes the updates to calculate some stats (and smoothing-values-over-time), and places a file back into the dropbox</li>
+<li>Javascript app fetches data from the dropbox and displays the data using mapbox+javascript</li>
+</ol>
+<p>At some point, the office desktop stopped sending new data to the dropbox, and the VM is no longer processing the updates, so the app has been displaying the same data for about 4 months. My bad; let’s fix it!</p>
+<div id="react" class="section level3">
+<h3>React</h3>
+<p>Simply, react lets you write an interface with small component pieces, and data (!!) is passed from parent to child. When the child recieves new data, it re-renders to display the new data. React is used (was developed by) by Facebook, and many other apps, and works pretty well. It’s fairly easy to learn, and there are loads of tutorials on the internet (particularly Youtube) with follow-along project builds. Essentially you can think of it as a “data-driven interface” (where usually the data is comments, posts, likes, etc, but could be, for example, bus locations).</p>
+<p>Using React, I fetch the latest public transport data from Auckland every 20 seconds and process the data by filtering out feries, vehicles more than 5 minutes old, vehicles without positions, etc. This is mapped into a nice array which can be passed around.</p>
+</div>
+<div id="mapbox" class="section level3">
+<h3>Mapbox</h3>
+<p>Mapbox is a javascript library for displaying maps. Simple. It has some pretty cool features, and while integration with React wasn’t super straightfoward, there are tutorials out there and it was easy enough. So, I created a component (I’m not going into details here) and passed the vehicle location data to it. It looks something like this:</p>
+<pre class="jsx"><code>&lt;AppContainer&gt;
+    &lt;VehicleMap data={vehicles} /&gt;
+&lt;/AppContainer&gt;</code></pre>
+<p>The <code>VehicleMap</code> component uses Mapbox to create a full-screen map of Auckland, zoomed in on the central city, and styles it nicely. Then we need to draw the points …</p>
+</div>
+<div id="d3" class="section level3">
+<h3>d3</h3>
+<p>D3 is another javascript library for data-driven graphics. With it, you can design a graph with points/bars/whatever-you-like, and map that to some data. The exciting part comes when you <em>change</em> the data (which is what is happening here): D3 lets you specify <em>how</em> the visualisation should change, in my case transitioning points from their old location to a new one.</p>
+<p>The d3 map uses functions from Mapbox to create a container overlaying the map, and a projection function to project points from latitude-longitude to x-y coordinates. Within the <code>VehicleMap</code> component, I use React’s <code>useEffect()</code> method to handle changes to the <code>vehicles</code> data object. When that happens, the points are projected into x-y coordinates and the d3 circle elements are updated with the new data—new vehicles fade in, old vehicles fade away, and all the rest transition (linearly) from the previous position to the new one.</p>
+</div>
+<div id="react-bar-graphs" class="section level3">
+<h3>React Bar graphs</h3>
+<p>On the right hand panel, there are a couple of bar graphs. These just use React all by itself. When new vehicle data is obtained, I cycle through and create two table array: <code>occupancy</code> and <code>delays</code>. These are then passed to bar graph components. The app now looks a little like this:</p>
+<pre class="jsx"><code>&lt;AppContainer&gt;
+    &lt;VehicleMap data={vehicles} /&gt;
+    &lt;Sidebar&gt;
+        &lt;Bargraph data={occupancy} label=&quot;Occupancy Status&quot; /&gt;
+        &lt;Bargraph data={delays} label=&quot;Arrival and Departure Delays&quot; /&gt;
+    &lt;/Sidebar&gt;
+&lt;/AppContainer&gt;</code></pre>
+<p><a href=""><img src="/post/busdisplay.png" /></a></p>
+</div>
