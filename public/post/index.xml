@@ -6,7 +6,16 @@
     <description>Recent content in Posts on Tom Elliott</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-gb</language>
-    <lastBuildDate>Wed, 16 Sep 2020 09:00:41 +1200</lastBuildDate><atom:link href="https://tomelliott.co.nz/post/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 21 Apr 2021 21:37:24 +1200</lastBuildDate><atom:link href="https://tomelliott.co.nz/post/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Bus Display v2 with React, D3, and Mapbox</title>
+      <link>https://tomelliott.co.nz/2021/04/bus-display-v2-with-react-d3-and-mapbox/</link>
+      <pubDate>Wed, 21 Apr 2021 21:37:24 +1200</pubDate>
+      
+      <guid>https://tomelliott.co.nz/2021/04/bus-display-v2-with-react-d3-and-mapbox/</guid>
+      <description>Recently I&amp;rsquo;ve been learning React, a javascript framework for building responsive user interfaces (the long game is iNZight-built-with-React, but that&amp;rsquo;s a long way off). The best way of learning something is by mini-projects, so recently that&amp;rsquo;s what I&amp;rsquo;ve been doing! So, when it was pointed out to me last week that my bus display in the University of Auckland&amp;rsquo;s Science Buildling is broken&amp;mdash;turns out it has been since January!&amp;mdash;I thought &amp;ldquo;Ooh, another mini-react-project!</description>
+    </item>
+    
     <item>
       <title>Building my new website</title>
       <link>https://tomelliott.co.nz/2020/09/building-my-new-website/</link>

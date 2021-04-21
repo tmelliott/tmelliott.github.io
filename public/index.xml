@@ -6,7 +6,16 @@
     <description>Recent content in Hello and welcome to my blog-profile-thing. on Tom Elliott</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-gb</language>
-    <lastBuildDate>Tue, 24 Nov 2020 16:10:00 +1200</lastBuildDate><atom:link href="https://tomelliott.co.nz/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 21 Apr 2021 21:37:24 +1200</lastBuildDate><atom:link href="https://tomelliott.co.nz/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Bus Display v2 with React, D3, and Mapbox</title>
+      <link>https://tomelliott.co.nz/2021/04/bus-display-v2-with-react-d3-and-mapbox/</link>
+      <pubDate>Wed, 21 Apr 2021 21:37:24 +1200</pubDate>
+      
+      <guid>https://tomelliott.co.nz/2021/04/bus-display-v2-with-react-d3-and-mapbox/</guid>
+      <description>Recently I&amp;rsquo;ve been learning React, a javascript framework for building responsive user interfaces (the long game is iNZight-built-with-React, but that&amp;rsquo;s a long way off). The best way of learning something is by mini-projects, so recently that&amp;rsquo;s what I&amp;rsquo;ve been doing! So, when it was pointed out to me last week that my bus display in the University of Auckland&amp;rsquo;s Science Buildling is broken&amp;mdash;turns out it has been since January!&amp;mdash;I thought &amp;ldquo;Ooh, another mini-react-project!</description>
+    </item>
+    
     <item>
       <title>Predicting bus arrival in real-time (is hard)</title>
       <link>https://tomelliott.co.nz/publications/nzsa-2020/</link>
@@ -14,8 +23,6 @@
       
       <guid>https://tomelliott.co.nz/publications/nzsa-2020/</guid>
       <description>
-&lt;link href=&#34;https://tomelliott.co.nz/rmarkdown-libs/anchor-sections/anchor-sections.css&#34; rel=&#34;stylesheet&#34; /&gt;
-&lt;script src=&#34;https://tomelliott.co.nz/rmarkdown-libs/anchor-sections/anchor-sections.js&#34;&gt;&lt;/script&gt;
 
 
 &lt;p&gt;In which I give a very basic overview of my main methods and results in a quick 15-minute presentation at the 2020 NZSA UnConference! For more details, you may consult my thesis (code and PDF available from &lt;a href=&#34;https://github.com/tmelliott/phd-thesis&#34;&gt;tmelliott/phd-thesis&lt;/a&gt;).&lt;/p&gt;
@@ -99,7 +106,7 @@
       <pubDate>Thu, 28 Jun 2018 15:15:53 +1200</pubDate>
       
       <guid>https://tomelliott.co.nz/publications/isba-conf-2018/</guid>
-      <description>  </description>
+      <description></description>
     </item>
     
     <item>
@@ -108,7 +115,7 @@
       <pubDate>Mon, 11 Dec 2017 15:11:45 +1200</pubDate>
       
       <guid>https://tomelliott.co.nz/publications/nzsa-2017/</guid>
-      <description>  </description>
+      <description></description>
     </item>
     
     <item>
