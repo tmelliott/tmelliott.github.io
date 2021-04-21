@@ -15,17 +15,17 @@ draft: true
 ![](/post/busdisplay.png)
 
 
-Recently I've been learning [React](https://reactjs.org), a javascript framework for building responsive user interfaces (the long game is iNZight-build-with-React, but that's a long way off). The best way of learning something is by mini-projects, so recently that's what I've been doing! Coincidentally, it was pointed out to me last week that my [bus display in the University of Auckland's Science Buildling]() is broken---turns out it has been since January! Oops...
+Recently I've been learning [React](https://reactjs.org), a javascript framework for building responsive user interfaces (the long game is iNZight-built-with-React, but that's a long way off). The best way of learning something is by mini-projects, so recently that's what I've been doing! So, when it was pointed out to me last week that my [bus display in the University of Auckland's Science Buildling]() is broken---turns out it has been since January!---I thought "Ooh, another mini-react-project!".
 
-So---React to the rescue!
-
-The previous build of the display used the old [Mapbox]() and drew the points with that directly. Everything else was javascript and [Sass]() (big thanks to [@consindo]() for [making it pretty]()). But the other huge huge problem with that build was that the system was overly complicated (as I was both learning several technologies, trying to deploy as quickly as possible, and to get around access control issues within the UoA network). That process was something like this:
+The previous build of the display (shown below) used the old [Mapbox]() and drew the points with that directly. Everything else was javascript and [Sass]() (big thanks to [@consindo]() for [making it pretty]()). But the other huge huge problem with that build was that the system was overly complicated (as I was both learning several technologies, trying to deploy as quickly as possible, and to get around access control issues within the UoA network). That process was something like this:
 
 1. Office desktop fetches latest GTFS updates, saves to dropbox
 2. VM running on UoA systems processes the updates to calculate some stats (and smoothing-values-over-time), and places a file back into the dropbox
 3. Javascript app fetches data from the dropbox and displays the data using mapbox+javascript
 
 At some point, the office desktop stopped sending new data to the dropbox, and the VM is no longer processing the updates, so the app has been displaying the same data for about 4 months. My bad; let's fix it!
+
+![](/post/busdisplay-old.png)
 
 ### React
 
