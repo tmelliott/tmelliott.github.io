@@ -5,7 +5,7 @@
 
   
   
-  <link rel="stylesheet" type="text/css" href="/css/main.min.271dad17aca1f061176ac191dbe710c8bc64884b82da118d7bfababbe9959aa2.css" media="screen">
+  <link rel="stylesheet" type="text/css" href="/css/main.min.6166d0f5367672313649e3c34cfd96a02d0974df5aff4fce4343814f6a424ac4.css" media="screen">
 
   
 
@@ -35,9 +35,7 @@ if (!doNotTrack) {
 <script async src='https://www.google-analytics.com/analytics.js'></script>
 
   
-  <meta name="twitter:card" content="summary_large_image"/>
-<meta name="twitter:image" content="https://tomelliott.co.nz/post/busdisplay.png"/>
-
+  <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Bus Display v2 with React, D3, and Mapbox"/>
 <meta name="twitter:description" content="Recently I&rsquo;ve been learning React, a javascript framework for building responsive user interfaces (the long game is iNZight-built-with-React, but that&rsquo;s a long way off). The best way of learning something is by mini-projects, so recently that&rsquo;s what I&rsquo;ve been doing! So, when it was pointed out to me last week that my bus display in the University of Auckland&rsquo;s Science Buildling is broken&mdash;turns out it has been since January!&mdash;I thought &ldquo;Ooh, another mini-react-project!"/>
 
@@ -48,12 +46,13 @@ if (!doNotTrack) {
 </head>
 <body>
         
-        <div id="wrapper"><section id="site-intro">
+        <div id="wrapper">
+            <aside class="sidebar"><section id="site-intro">
     
     <a href="/">
         <img src="https://tomelliott.co.nz/images/photo.jpg"
             class="circle"
-            width="100"
+            
             alt="Logo"></a>
     
 
@@ -89,11 +88,40 @@ if (!doNotTrack) {
         </ul>
     </footer>
 </section>
-<main id="site-main">
+<section id="site-sidebar">
+    <ul>
+        
+        <li><a class="nav-link" href="/research/">Research</a></li>
+        
+        <li><a class="nav-link" href="/inzight/">iNZight</a></li>
+        
+        <li><a class="nav-link" href="/publications/">Publications</a></li>
+        
+        <li><a class="nav-link" href="/post/">All posts</a></li>
+        
+    </ul>
+</section>
+<footer id="site-footer">
+    <p class="copyright">
+        &copy; 2021 Tom Elliott<br>
+        Developed with
+        <a href="https://github.com/rstudio/blogdown">blogdown</a>
+        and <a href="https://gohugo.io/">Hugo</a>.
+    </p>
+</footer>
+</aside>
+
+            <main id="site-main">
 
 
 
 <article class="post">
+    
+        <div class="hero-image">
+            <img src="/post/busdisplay.png" />
+        </div>
+    
+
     <header>
   <div class="title">
     <h2>Bus Display v2 with React, D3, and Mapbox</h2>
@@ -112,7 +140,7 @@ if (!doNotTrack) {
 
     <div class="content">
         
-        <p><img src="/post/busdisplay.png" alt=""></p>
+        <!-- raw HTML omitted -->
 <p>Recently I&rsquo;ve been learning <a href="https://reactjs.org">React</a>, a javascript framework for building responsive user interfaces (the long game is iNZight-built-with-React, but that&rsquo;s a long way off). The best way of learning something is by mini-projects, so recently that&rsquo;s what I&rsquo;ve been doing! So, when it was pointed out to me last week that my bus display in the University of Auckland&rsquo;s Science Buildling is broken&mdash;turns out it has been since January!&mdash;I thought &ldquo;Ooh, another mini-react-project!&rdquo;.</p>
 <p>The previous build of the display used an old version of <a href="https://www.mapbox.com/">Mapbox</a> and drew the points with that directly. Everything else was javascript and <a href="https://sass-lang.com/">Sass</a> (big thanks to <a href="https://twitter.com/consindo">@consindo</a> for making it pretty). But the other huge huge problem with that build was that the system was overly complicated (as I was both learning several technologies, trying to deploy as quickly as possible, and to get around access control issues within the UoA network). That process was something like this:</p>
 <ol>
@@ -201,26 +229,7 @@ if (!doNotTrack) {
 </div>
 
 
-            </main><section id="site-sidebar">
-    <ul>
-        
-        <li><a class="nav-link" href="/research/">Research</a></li>
-        
-        <li><a class="nav-link" href="/inzight/">iNZight</a></li>
-        
-        <li><a class="nav-link" href="/publications/">Publications</a></li>
-        
-    </ul>
-</section>
-<footer id="site-footer">
-    <p class="copyright">
-        &copy; 2021 Tom Elliott<br>
-        Developed with
-        <a href="https://github.com/rstudio/blogdown">blogdown</a>
-        and <a href="https://gohugo.io/">Hugo</a>.
-    </p>
-</footer>
-<script defer src="https://friconix.com/cdn/friconix.js"></script>
+            </main><script defer src="https://friconix.com/cdn/friconix.js"></script>
 
 <script>
   addEventListener('load', function() {
