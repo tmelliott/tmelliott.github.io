@@ -1,0 +1,24 @@
+{{ define "main" }}
+
+<article class="post">
+    {{ .Render "header" }}
+
+    <div class="content">
+        {{ .Summary }}
+
+        {{ if .Params.filename }}
+        <div class="frame-container">
+          <iframe src="https://tomelliott.co.nz/{{ .Params.filename }}"
+            allowfullscreen
+            title="{{ .Title }}">
+          </iframe>
+        </div>
+
+        <p>To navigate, click on the slide and then use arrow keys. Press <kbd>f</kbd> to enter full screen.</p>
+        {{ end }}
+
+        {{ .Content }}
+    </div>
+</article>
+
+{{ end }}

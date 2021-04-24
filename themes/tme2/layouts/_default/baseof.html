@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+    {{- partial "head.html" . -}}
+    <body>
+        <!-- header here -->
+        <div id="wrapper">
+            <aside class="sidebar">
+                {{- partial "site-intro" . -}}
+                {{- partial "site-sidebar" . -}}
+                {{- partial "site-footer" . -}}
+            </aside>
+
+            <main id="site-main">
+                {{- block "main" . }}{{- end }}
+            </main>
+
+            {{- partial "scripts" . -}}
+        </div>
+
+        {{ partial "footer_highlightjs" . }}
+    </body>
+</html>

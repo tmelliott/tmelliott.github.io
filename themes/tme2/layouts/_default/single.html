@@ -1,0 +1,26 @@
+{{ define "main" }}
+
+
+
+<article class="post">
+    {{ with .Params.image }}
+        <div class="hero-image">
+            <img src="{{.}}" />
+        </div>
+    {{ end }}
+
+    {{ .Render "header" }}
+
+    <div class="content">
+        {{ if strings.Contains .RawContent "<!--more-->" }}
+            {{ .Summary }}
+        {{ end }}
+        {{ .Content }}
+    </div>
+</article>
+
+<div class="post comments">
+    {{ template "_internal/disqus.html" . }}
+</div>
+
+{{ end }}

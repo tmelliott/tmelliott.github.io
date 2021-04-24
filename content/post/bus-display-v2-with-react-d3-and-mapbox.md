@@ -2,8 +2,7 @@
 title: "Bus Display v2 with React, D3, and Mapbox"
 # subtitle: ""
 # description: ""
-images:
-- /post/busdisplay.png
+image: /post/busdisplay.png
 date: 2021-04-21T21:37:24+12:00
 tags:
 - web
@@ -11,7 +10,7 @@ tags:
 - buses
 ---
 
-![](/post/busdisplay.png)
+<!-- ![](/post/busdisplay.png) -->
 
 
 Recently I've been learning [React](https://reactjs.org), a javascript framework for building responsive user interfaces (the long game is iNZight-built-with-React, but that's a long way off). The best way of learning something is by mini-projects, so recently that's what I've been doing! So, when it was pointed out to me last week that my bus display in the University of Auckland's Science Buildling is broken---turns out it has been since January!---I thought "Ooh, another mini-react-project!".
