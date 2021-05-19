@@ -1,19 +1,12 @@
 ---
 title: 'Predicting bus arrival'
-date: '2020-08-22T09:31:00'
+date: '2020-08-01T09:31:00'
 draft: true
+url: /phd
 ---
 
+<script src="/rmarkdown-libs/header-attrs/header-attrs.js"></script>
 
 
-<p>For half a decade, I explored ways of predicting bus arrival with improved reliability. I came up with a framework that uses the GTFS information to construct a <em>transit network</em>, allowing buses to share information about traffic conditions, even between routes.</p>
-<!--more-->
-<pre class="r"><code>library(magrittr)
-library(dplyr)
-x &lt;- data.frame(x = 10)
-
-x %&gt;% mutate(x = 2 * x)</code></pre>
-<pre><code>##    x
-## 1 20</code></pre>
-<pre class="r"><code>x &lt;- x$x + 2</code></pre>
-<p>I then implement a particle filter to estimate vehicle state and ultimately road speeds which are passed to the network model, a Kalman filter running in real-time estimating current traffic conditions. From there, using a particle filter, it's fairly straightforward to estimate arrival time distributions.</p>
+<p>The real-time prediction of bus arrival time has been a central focus of real-time transit information research over the past few decades. Much of this research has shown that the most important predictors of bus arrival time are travel time between and dwell time at bus stops. Despite this,  available in Auckland, New Zealand, make no account of real-time traffic state information. As road networks are dynamic and congestion can change quickly, we present a generalised prediction procedure that uses buses to estimate traffic conditions, which are in turn used in the prediction of arrival times for all other buses travelling along the same roads, irrespective of the route they are servicing. We construct a road network from data in the  format, allowing us to estimate real-time traffic conditions along physical roads. We use a particle filter to estimate vehicle states and road speeds, and a Kalman filter to update the road network state, together allowing us to predict bus arrival times that account for real-time traffic conditions. We use a simplified, discrete arrival time  to make point and interval estimates, as well as estimate the probabilities of events pertinent to journey planning. Throughout, we assess the real-time feasibility of the application and show that our method, despite being computationally complex, can provide arrival time estimates for all active vehicles in 6–10~seconds.</p>
+<p>My thesis is <a href="https://github.com/tmelliott/phd-thesis/raw/master/thesis.pdf">available to download</a>.</p>
