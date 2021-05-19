@@ -1,7 +1,7 @@
 {
 	"version": 3,
 	"file": "main.css",
-	"sourceRoot": "/home/emperor/Sites/tmelliott.github.io",
+	"sourceRoot": "/home/tom/Documents/tmelliott.github.io",
 	"sources": [
 		"themes/tme2/assets/scss/main.scss",
 		"themes/tme2/assets/scss/_base.scss",
