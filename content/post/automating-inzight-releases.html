@@ -8,40 +8,38 @@ date: 2020-09-17T11:29:44+12:00
 draft: true
 ---
 
+<script src="/rmarkdown-libs/header-attrs/header-attrs.js"></script>
 
 
-<p>For several years now, the process by which iNZight gets deployed consisted of manually building the package binaries for Windows (and macOS, but that's now dead due to Apple making things excessively difficult) on my office desktop and uploading them to our self-hosted R package repository. Then I had to run the installer build script (which uses <a href="">NSIS</a>) and upload the installer, and finally remember to update the version number on the website. This all took place over about a few days, with package release preparation taking place over a week and the deployment process happening over a Monday and/or Tuesday.</p>
-<p>Of course, since it's impossible to test everything, there were always bugs cropping up in the first few days after a release (never deploy on a Friday)...</p>
-<div class="figure">
-<img src="/post/nodeployfriday.jpg" />
-
-</div>
-<p>... so then of course I had to repeat the whole procedure. As a result, I tended not to get around to updating the installer as often (users could still update using iNZight's built-in updater).</p>
-<p>For years, I've wanted to make it automated, particularly since GitHub Actions got going and it became a more plausible possibility. And now, finally, I have done just that! Here's an overview of what happens.</p>
+<p>For several years now, the process by which iNZight gets deployed consisted of manually building the package binaries for Windows (and macOS, but that’s now dead due to Apple making things excessively difficult) on my office desktop and uploading them to our self-hosted R package repository. Then I had to run the installer build script (which uses <a href="">NSIS</a>) and upload the installer, and finally remember to update the version number on the website. This all took place over about a few days, with package release preparation taking place over a week and the deployment process happening over a Monday and/or Tuesday.</p>
+<p>Of course, since it’s impossible to test everything, there were always bugs cropping up in the first few days after a release (never deploy on a Friday)…</p>
+<p><img src="/post/nodeployfriday.jpg" /></p>
+<p>… so then of course I had to repeat the whole procedure. As a result, I tended not to get around to updating the installer as often (users could still update using iNZight’s built-in updater).</p>
+<p>For years, I’ve wanted to make it automated, particularly since GitHub Actions got going and it became a more plausible possibility. And now, finally, I have done just that! Here’s an overview of what happens.</p>
 <div id="step-1-prepare-package-releases" class="section level2">
 <h2>Step 1: prepare package releases</h2>
-<p>For a couple of years now, I've been using the <a href=""><code>git flow</code></a> branch management framework, which effectively uses <code>master</code> for the stable release, <code>develop</code> for the &quot;nightly build&quot; or unstable release, plus <strong>feature</strong> branches of the form <code>feature/my-cool-new-feature</code> (based on <code>develop</code>), <strong>bugfix</strong> brances (<code>bugfix/a-weird-bug</code>, also based on <code>develop</code>), and <strong>release</strong> brances (<code>release/1.0.2</code>, also based on <code>develop</code> but merged into <code>master</code>). Occasionally there's also a <strong>hotfix</strong> based on the <code>master</code> branch, which fixes a critial bug in the release version.</p>
-<p>After merging in any <code>feature/</code> and <code>bugfix/</code> branches that we want in the next release, I create a new release branch (let's assume the new version is 1.2.3):</p>
+<p>For a couple of years now, I’ve been using the <a href=""><code>git flow</code></a> branch management framework, which effectively uses <code>master</code> for the stable release, <code>develop</code> for the “nightly build” or unstable release, plus <strong>feature</strong> branches of the form <code>feature/my-cool-new-feature</code> (based on <code>develop</code>), <strong>bugfix</strong> brances (<code>bugfix/a-weird-bug</code>, also based on <code>develop</code>), and <strong>release</strong> brances (<code>release/1.0.2</code>, also based on <code>develop</code> but merged into <code>master</code>). Occasionally there’s also a <strong>hotfix</strong> based on the <code>master</code> branch, which fixes a critial bug in the release version.</p>
+<p>After merging in any <code>feature/</code> and <code>bugfix/</code> branches that we want in the next release, I create a new release branch (let’s assume the new version is 1.2.3):</p>
 <pre class="bash"><code>git flow release start 1.2.3
 # which is the equivalent of `git checkout dev &amp;&amp; git checkout -b release/1.2.3`</code></pre>
-<p>On this new branch, you do things like bump the version in the <code>DESCRIPTION</code> file, update the <code>NEWS.md</code> file, plus check things work and fix any final bugs. Once complete, you can either finialise the release using <code>git flow release finish</code>, which will automatically merge the release into *both master and develop, <strong>or</strong> you head over to GitHub and create two pull requests: <code>release/1.2.3 -&gt; master</code> and <code>release/1.2.3 -&gt; develop</code>. Let all your continuous integration (I'm using GitHub Actions for iNZight) pass and then merge those PRs! The last step is to tag the new release and clean up:</p>
+<p>On this new branch, you do things like bump the version in the <code>DESCRIPTION</code> file, update the <code>NEWS.md</code> file, plus check things work and fix any final bugs. Once complete, you can either finialise the release using <code>git flow release finish</code>, which will automatically merge the release into *both master and develop, <strong>or</strong> you head over to GitHub and create two pull requests: <code>release/1.2.3 -&gt; master</code> and <code>release/1.2.3 -&gt; develop</code>. Let all your continuous integration (I’m using GitHub Actions for iNZight) pass and then merge those PRs! The last step is to tag the new release and clean up:</p>
 <pre class="bash"><code>git checkout master
 git fetch -p # the release branch is now deleted
 git merge origin master
 git tag 1.2.3
 git push --tags
 git checkout dev &amp;&amp; git merge origin/dev &amp;&amp; git branch -d release/1.2.3</code></pre>
-<p>Now repeat that for all package releases (iNZight consists of 11 packages, so this takes the better part of a day if we're doing a big update, but it's pretty straightforward).</p>
+<p>Now repeat that for all package releases (iNZight consists of 11 packages, so this takes the better part of a day if we’re doing a big update, but it’s pretty straightforward).</p>
 </div>
 <div id="step-2-build-binaries-and-installer" class="section level2">
 <h2>Step 2: build binaries and installer</h2>
-<p>Previously, this was all done manually. Now it's fully automated with one single trigger by updating the <code>iNZightVIT/builder</code> repository. This uses the magic of git submodules to fix release versions for packages, and GitHub Actions to build sources, binaries, installers, and trigger an update of the website!</p>
+<p>Previously, this was all done manually. Now it’s fully automated with one single trigger by updating the <code>iNZightVIT/builder</code> repository. This uses the magic of git submodules to fix release versions for packages, and GitHub Actions to build sources, binaries, installers, and trigger an update of the website!</p>
 <p>Once a package has been updated (with a new version number on the master branch, and optionally published to CRAN), we enter the <code>iNZightVIT/builder</code> repository. Within, there is a <code>library</code> directory which contains all of the self-managed packages we want to host on our repository. They key here is that they are <em>submodules</em> which point to a particular state of another git repository. For example,</p>
 <pre><code>library/
   iNZight -&gt; iNZightVIT/iNZight@4.0.2
   iNZightPlots -&gt; iNZightVIT/iNZightPlots@2.12.4
   ...etc...</code></pre>
-<p>This makes it easy to maintain fixed version of the packages (and undo any bad decisions we might make in the future...). All of the automation uses the selected <em>tags</em> (as described above) to build sources/binaries. To trigger an update and release, we simply update where a package is pointing:</p>
+<p>This makes it easy to maintain fixed version of the packages (and undo any bad decisions we might make in the future…). All of the automation uses the selected <em>tags</em> (as described above) to build sources/binaries. To trigger an update and release, we simply update where a package is pointing:</p>
 <pre class="bash"><code>cd library/iNZight
 git fetch -p # clean up and get latest changes
 git tag -l # list tags
@@ -54,26 +52,26 @@ git push</code></pre>
 <p>The rest is magic (or at least the magic of automation).</p>
 <div id="phase-i-building-and-release-source-and-binary-packages" class="section level3">
 <h3>Phase I: Building and release source and binary packages</h3>
-<p>I'm not going to go into too much detail here. Essentially, I need to create <strong>source</strong> and <strong>binary</strong> files for each of the packages in the <code>library</code> directory. First, we just use the usual tools in the <a href="">devtools</a> package and install the packages on the virtual machine.</p>
-<p>GitHub Actions lets us specify a sequence of steps to do just this, on a range of operating systems. I use Linux to build the source files, and Windows to build the Windows binaries (we currently don't support macOS). Essentially, for each package:</p>
+<p>I’m not going to go into too much detail here. Essentially, I need to create <strong>source</strong> and <strong>binary</strong> files for each of the packages in the <code>library</code> directory. First, we just use the usual tools in the <a href="">devtools</a> package and install the packages on the virtual machine.</p>
+<p>GitHub Actions lets us specify a sequence of steps to do just this, on a range of operating systems. I use Linux to build the source files, and Windows to build the Windows binaries (we currently don’t support macOS). Essentially, for each package:</p>
 <ol style="list-style-type: decimal">
-<li>install (&quot;local&quot;) package along with its dependencies</li>
+<li>install (“local”) package along with its dependencies</li>
 <li>run <code>R CMD build</code> to generate the source files</li>
 <li>run <code>R CMD INSTALL -l .</code> to create a binary version of the package</li>
 <li>move the files into the appropriate location for a CRAN repository (e.g., <code>bin/windows/contrib/4.0/</code>)</li>
 <li>create the <code>PACKAGES</code> file with <code>tools::write_PACKAGES()</code></li>
 <li>push the directory to the live R package repository</li>
 </ol>
-<p>That's basically it - of course, it's more complicated than that, but if you're really interested, just head over to the repository and take a look at <a href="https://github.com/iNZightVIT/builder/blob/master/build.R">the build script</a>.</p>
+<p>That’s basically it - of course, it’s more complicated than that, but if you’re really interested, just head over to the repository and take a look at <a href="https://github.com/iNZightVIT/builder/blob/master/build.R">the build script</a>.</p>
 </div>
 <div id="phase-ii-build-and-deploy-installer" class="section level3">
 <h3>Phase II: Build and deploy installer</h3>
 <p>Once the sources and binaries are live, GitHub Actions will allow the next step to continue (we control this by having the installer build step depending on the previous ones). This uses <a href="https://github.com/iNZightVIT/win-installer">iNZightVIT/win-installer</a> to install R, iNZight (and all of its dependencies), package them up into a single folder, and uses <a href="">NSIS</a> to create the installer.</p>
-<p>The installer then gets pushed onto the AWS container hosting our repository, and ... that's all, really. It was a little tricky figuring out the versioning, but I eventually just went with a <code>VERSION</code> file sitting in the <code>downloads</code> directory, and incrementing the patch number (the P in <code>x.y.z.P</code>) if there have been updates (for example, if I fix a bug in iNZightPlots, this will result in a patch update to the installer, but wont affect the overall iNZight version).</p>
+<p>The installer then gets pushed onto the AWS container hosting our repository, and … that’s all, really. It was a little tricky figuring out the versioning, but I eventually just went with a <code>VERSION</code> file sitting in the <code>downloads</code> directory, and incrementing the patch number (the P in <code>x.y.z.P</code>) if there have been updates (for example, if I fix a bug in iNZightPlots, this will result in a patch update to the installer, but wont affect the overall iNZight version).</p>
 </div>
 <div id="phase-iii-trigger-a-website-update" class="section level3">
 <h3>Phase III: Trigger a website update</h3>
-<p>Lastly, we need to update the website so it states the correct version on the home page. To do this, I simply added a GitHub action to the website repository <a href="">iNZightVIT/inzight-www</a> that responds to a &quot;workflow_dispatch&quot; event, which I can trigger from the <code>builder</code> repository once the installer has been build and deployed.</p>
+<p>Lastly, we need to update the website so it states the correct version on the home page. To do this, I simply added a GitHub action to the website repository <a href="">iNZightVIT/inzight-www</a> that responds to a “workflow_dispatch” event, which I can trigger from the <code>builder</code> repository once the installer has been build and deployed.</p>
 <p>The website server has a webhook which is triggered whenever the master branch is updated, triggering an update of the live website.</p>
 </div>
 </div>

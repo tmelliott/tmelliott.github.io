@@ -23,6 +23,7 @@
       
       <guid>https://tomelliott.co.nz/publications/nzsa-2020/</guid>
       <description>
+&lt;script src=&#34;https://tomelliott.co.nz/rmarkdown-libs/header-attrs/header-attrs.js&#34;&gt;&lt;/script&gt;
 
 
 &lt;p&gt;In which I give a very basic overview of my main methods and results in a quick 15-minute presentation at the 2020 NZSA UnConference! For more details, you may consult my thesis (code and PDF available from &lt;a href=&#34;https://github.com/tmelliott/phd-thesis&#34;&gt;tmelliott/phd-thesis&lt;/a&gt;).&lt;/p&gt;
@@ -35,7 +36,7 @@
       <pubDate>Wed, 16 Sep 2020 09:00:41 +1200</pubDate>
       
       <guid>https://tomelliott.co.nz/2020/09/building-my-new-website/</guid>
-      <description>Several years ago I decided to redesign my website (mostly as a way of learning new web technologies), but what I came up with was ... rather uninspiring. Ever since reading about Hugo, I&#39;ve wanted to build my website using it (including designing my own theme and templates), but between the PhD and iNZight, I seldom felt like spending my free time doing even more coding! In recent weeks, I&#39;ve had a slight break from working and found the inspiration to finally get around to the website.</description>
+      <description>Several years ago I decided to redesign my website (mostly as a way of learning new web technologies), but what I came up with was … rather uninspiring. Ever since reading about Hugo, I’ve wanted to build my website using it (including designing my own theme and templates), but between the PhD and iNZight, I seldom felt like spending my free time doing even more coding! In recent weeks, I’ve had a slight break from working and found the inspiration to finally get around to the website.</description>
     </item>
     
     <item>
@@ -44,7 +45,7 @@
       <pubDate>Thu, 27 Aug 2020 14:21:40 +1200</pubDate>
       
       <guid>https://tomelliott.co.nz/2020/08/rocketing-into-spring/</guid>
-      <description>During the first Kiwi lockdown, I planted some rocket seeds. I&#39;ve enjoyed several harvests, but it appears that lengthening days have triggered baby-making-mode. Suddenly my stubby rocket plants have sent a long proboscis-like stem into the sky and have started to produce little flowers.
+      <description>During the first Kiwi lockdown, I planted some rocket seeds. I’ve enjoyed several harvests, but it appears that lengthening days have triggered baby-making-mode. Suddenly my stubby rocket plants have sent a long proboscis-like stem into the sky and have started to produce little flowers.
  
  In the photos you can see the long main stem (left) shooting up to over 30 cm tall! The last week has been very rainy in Auckland (and I was a little preoccupied with my PhD defense) so I was a little surprised to see everything booming (and even blooming!</description>
     </item>
@@ -55,7 +56,16 @@
       <pubDate>Tue, 25 Aug 2020 10:00:00 +0000</pubDate>
       
       <guid>https://tomelliott.co.nz/publications/phd-defense/</guid>
-      <description>My PhD defense presentation is linked below. You possibly won&#39;t understand most of it, however, since there&#39;s no recording available and most of the text needs to be accompanied by talking!</description>
+      <description>My PhD defense presentation is linked below. You possibly won’t understand most of it, however, since there’s no recording available and most of the text needs to be accompanied by talking!</description>
+    </item>
+    
+    <item>
+      <title>Predicting bus arrival</title>
+      <link>https://tomelliott.co.nz/phd/</link>
+      <pubDate>Sat, 01 Aug 2020 09:31:00 +0000</pubDate>
+      
+      <guid>https://tomelliott.co.nz/phd/</guid>
+      <description>The real-time prediction of bus arrival time has been a central focus of real-time transit information research over the past few decades. Much of this research has shown that the most important predictors of bus arrival time are travel time between and dwell time at bus stops. Despite this, available in Auckland, New Zealand, make no account of real-time traffic state information. As road networks are dynamic and congestion can change quickly, we present a generalised prediction procedure that uses buses to estimate traffic conditions, which are in turn used in the prediction of arrival times for all other buses travelling along the same roads, irrespective of the route they are servicing.</description>
     </item>
     
     <item>
@@ -74,6 +84,7 @@
       
       <guid>https://tomelliott.co.nz/publications/satrday-akl-2020/</guid>
       <description>
+&lt;script src=&#34;https://tomelliott.co.nz/rmarkdown-libs/header-attrs/header-attrs.js&#34;&gt;&lt;/script&gt;
 
 
 &lt;p&gt;I gave a talk about iNZight.&lt;/p&gt;
@@ -86,7 +97,7 @@
       <pubDate>Mon, 10 Jun 2019 15:20:55 +1200</pubDate>
       
       <guid>https://tomelliott.co.nz/publications/phd-talks-day-2019/</guid>
-      <description></description>
+      <description>  </description>
     </item>
     
     <item>
@@ -95,7 +106,7 @@
       <pubDate>Thu, 12 Jul 2018 15:17:34 +1200</pubDate>
       
       <guid>https://tomelliott.co.nz/publications/user-conf-2018/</guid>
-      <description></description>
+      <description>  </description>
     </item>
     
     <item>
@@ -104,7 +115,7 @@
       <pubDate>Thu, 28 Jun 2018 15:15:53 +1200</pubDate>
       
       <guid>https://tomelliott.co.nz/publications/isba-conf-2018/</guid>
-      <description></description>
+      <description>  </description>
     </item>
     
     <item>
@@ -113,7 +124,7 @@
       <pubDate>Mon, 11 Dec 2017 15:11:45 +1200</pubDate>
       
       <guid>https://tomelliott.co.nz/publications/nzsa-2017/</guid>
-      <description></description>
+      <description>  </description>
     </item>
     
     <item>
@@ -122,7 +133,7 @@
       <pubDate>Fri, 01 Dec 2017 15:08:39 +1200</pubDate>
       
       <guid>https://tomelliott.co.nz/publications/phd-talks-day-2017/</guid>
-      <description></description>
+      <description>  </description>
     </item>
     
     <item>
@@ -131,7 +142,7 @@
       <pubDate>Tue, 28 Nov 2017 09:05:20 +1200</pubDate>
       
       <guid>https://tomelliott.co.nz/publications/statistics-teachers-day-2017/</guid>
-      <description></description>
+      <description>  </description>
     </item>
     
   </channel>

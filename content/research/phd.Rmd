@@ -1,7 +1,6 @@
 ---
 title: 'Predicting bus arrival'
 date: '2020-08-01T09:31:00'
-draft: true
 url: /phd
 ---
 
