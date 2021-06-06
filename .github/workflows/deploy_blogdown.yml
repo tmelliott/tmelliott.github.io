@@ -51,3 +51,4 @@ jobs:
        with:
           email: ${{ secrets.EMAIL }}               # must be a verified email
           build_dir: public/                     # "_site/" by default
+          branch: gh-pages
