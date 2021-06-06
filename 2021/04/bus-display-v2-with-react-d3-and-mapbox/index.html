@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html><head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  
+  <link rel="stylesheet" type="text/css" href="/css/main.min.6166d0f5367672313649e3c34cfd96a02d0974df5aff4fce4343814f6a424ac4.css" media="screen">
+
+  
+
+
+<link href='//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/atom-one-dark.min.css' rel='stylesheet' type='text/css' />
+
+
+
+
+  
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">
+
+  
+    
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-69555072-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+  
+  <meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Bus Display v2 with React, D3, and Mapbox"/>
+<meta name="twitter:description" content="Recently I&rsquo;ve been learning React, a javascript framework for building responsive user interfaces (the long game is iNZight-built-with-React, but that&rsquo;s a long way off). The best way of learning something is by mini-projects, so recently that&rsquo;s what I&rsquo;ve been doing! So, when it was pointed out to me last week that my bus display in the University of Auckland&rsquo;s Science Buildling is broken&mdash;turns out it has been since January!&mdash;I thought &ldquo;Ooh, another mini-react-project!"/>
+
+
+  
+  
+  <title>Tom Elliott | Bus Display v2 with React, D3, and Mapbox</title>
+</head>
+<body>
+        
+        <div id="wrapper">
+            <aside class="sidebar"><section id="site-intro">
+    
+    <a href="/">
+        <img src="https://tomelliott.co.nz/images/photo.jpg"
+            class="circle"
+            
+            alt="Logo"></a>
+    
+
+    <header>
+        <h1>Tom Elliott</h1>
+    </header>
+
+    <main>
+        <p class="blurb">I like data science, data vis, and computing, as well as wine, gardening, food, and music.</p>
+    </main>
+
+    <footer>
+        <ul class="social-icons">
+            
+            <a class="nav-link" href="https://github.com/tmelliott">
+                
+                
+                <i class="fi-xnluxl-github"></i> 
+                </a>
+            
+            <a class="nav-link" href="https://www.linkedin.com/in/tmelliott">
+                
+                
+                <i class="fi-xnluxl-linkedin"></i> 
+                </a>
+            
+            <a class="nav-link" href="https://twitter.com/tomelliottnz">
+                
+                
+                <i class="fi-xnluxl-twitter"></i> 
+                </a>
+            
+        </ul>
+    </footer>
+</section>
+<section id="site-sidebar">
+    <ul>
+        
+        <li><a class="nav-link" href="/research/">Research</a></li>
+        
+        <li><a class="nav-link" href="/inzight/">iNZight</a></li>
+        
+        <li><a class="nav-link" href="/publications/">Publications</a></li>
+        
+        <li><a class="nav-link" href="/post/">All posts</a></li>
+        
+    </ul>
+</section>
+<footer id="site-footer">
+    <p class="copyright">
+        &copy; 2021 Tom Elliott<br>
+        Developed with
+        <a href="https://github.com/rstudio/blogdown">blogdown</a>
+        and <a href="https://gohugo.io/">Hugo</a>.
+    </p>
+</footer>
+</aside>
+
+            <main id="site-main">
+
+
+
+<article class="post">
+    
+        <div class="hero-image">
+            <img src="/post/busdisplay.png" />
+        </div>
+    
+
+    <header>
+  <div class="title">
+    <h2>Bus Display v2 with React, D3, and Mapbox</h2>
+    
+  </div>
+
+  
+
+  <div class="meta">
+    
+    <time datetime="2021-04-21 21:37:24 &#43;1200 &#43;1200">21 April 2021</time>
+
+  </div>
+</header>
+
+
+    <div class="content">
+        
+        <!-- raw HTML omitted -->
+<p>Recently I&rsquo;ve been learning <a href="https://reactjs.org">React</a>, a javascript framework for building responsive user interfaces (the long game is iNZight-built-with-React, but that&rsquo;s a long way off). The best way of learning something is by mini-projects, so recently that&rsquo;s what I&rsquo;ve been doing! So, when it was pointed out to me last week that my bus display in the University of Auckland&rsquo;s Science Buildling is broken&mdash;turns out it has been since January!&mdash;I thought &ldquo;Ooh, another mini-react-project!&rdquo;.</p>
+<p>The previous build of the display used an old version of <a href="https://www.mapbox.com/">Mapbox</a> and drew the points with that directly. Everything else was javascript and <a href="https://sass-lang.com/">Sass</a> (big thanks to <a href="https://twitter.com/consindo">@consindo</a> for making it pretty). But the other huge huge problem with that build was that the system was overly complicated (as I was both learning several technologies, trying to deploy as quickly as possible, and to get around access control issues within the UoA network). That process was something like this:</p>
+<ol>
+<li>Office desktop fetches latest GTFS updates, saves to dropbox.</li>
+<li>VM running on UoA systems processes the updates to calculate some stats (and smoothing-values-over-time), and places a file back into the dropbox.</li>
+<li>Javascript app fetches data from the dropbox and displays it using mapbox+javascript.</li>
+</ol>
+<p>At some point, the office desktop stopped sending new data to the dropbox, so the VM is no longer processing new updates, thus the app has been displaying the same data for about 4 months.</p>
+<p>My bad!</p>
+<h3 id="react">React</h3>
+<p>Simply, react lets you write an interface with small component pieces, and data (!!) is passed from parent to child. When the child recieves new data, it re-renders to display the new data. React is used (and was developed) by Facebook, and seems to work pretty well. It&rsquo;s fairly easy to learn, and there are loads of tutorials on the internet (particularly Youtube) with follow-along project builds. Essentially you can think of it as a &ldquo;data-driven interface&rdquo; (where usually the data is comments, posts, likes, etc, but could be, for example, bus locations or a table of counts).</p>
+<p>Using React, I fetch the latest public transport data from Auckland every 20 seconds and process the data by filtering out feries, vehicles more than 5 minutes old, vehicles without positions, etc. This is mapped into a nice array which can be passed around the application.</p>
+<h3 id="mapbox">Mapbox</h3>
+<p>Mapbox is a javascript library for displaying maps. Simple. It has some pretty cool features, and while integration with React wasn&rsquo;t super straightfoward, there are tutorials out there and it was easy enough. So, I created a component (I&rsquo;m not going into details here) and passed the vehicle location data to it. It looks something like this:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-jsx" data-lang="jsx">&lt;<span style="color:#f92672">AppContainer</span>&gt;
+    &lt;<span style="color:#f92672">VehicleMap</span> <span style="color:#a6e22e">data</span><span style="color:#f92672">=</span>{<span style="color:#a6e22e">vehicles</span>} /&gt;
+&lt;/<span style="color:#f92672">AppContainer</span>&gt;
+</code></pre></div><p>The <code>VehicleMap</code> component uses Mapbox to create a full-screen map of Auckland, zoomed in on the central city, and styles it nicely. Then we need to draw the points &hellip;</p>
+<h3 id="d3">D3</h3>
+<p><a href="https://d3js.org/">D3</a> (<strong>D</strong>ata-<strong>D</strong>riven <strong>D</strong>ocuments) is another javascript library for writing reactive web documents, particularly graphs. You can design a graph with points/bars/whatever-you-like, and map it to some data. The exciting part comes when you <em>change</em> the data (which is what is happening here): D3 lets you specify <em>how</em> the visualisation should change&mdash;in my case transitioning points from their old location to a new one&mdash;and in the background, magic happens.</p>
+<p>The D3 &ldquo;scatter plot&rdquo; of bus locations uses functions from Mapbox to create a container overlaying the map, and a projection function to project points from longitude-latitude to x-y coordinates. Within the <code>VehicleMap</code> component, I use React&rsquo;s <code>useEffect()</code> method to handle changes to the <code>vehicles</code> data object. When that happens, the points are projected into x-y coordinates and the D3 circle elements are updated with the new data&mdash;new vehicles fade in, old vehicles fade away, and all the rest transition (linearly) from the previous position to the new one. This creates an effect of <strong>actual</strong> real-time bus positions (except when they drive off the Harbour Bridge into the sea).</p>
+<h3 id="react-bar-graphs">React Bar graphs</h3>
+<p>On the right hand panel, there are a couple of bar graphs. These just use React all by itself. When new vehicle data is obtained, I cycle through and create two table arrays: <code>occupancy</code> and <code>delays</code>. These are then passed to bar graph components. The app now looks a little like this:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-jsx" data-lang="jsx">&lt;<span style="color:#f92672">AppContainer</span>&gt;
+    &lt;<span style="color:#f92672">VehicleMap</span> <span style="color:#a6e22e">data</span><span style="color:#f92672">=</span>{<span style="color:#a6e22e">vehicles</span>} /&gt;
+    &lt;<span style="color:#f92672">Sidebar</span>&gt;
+        &lt;<span style="color:#f92672">Bargraph</span> <span style="color:#a6e22e">data</span><span style="color:#f92672">=</span>{<span style="color:#a6e22e">occupancy</span>} <span style="color:#a6e22e">label</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;Occupancy Status&#34;</span> /&gt;
+        &lt;<span style="color:#f92672">Bargraph</span> <span style="color:#a6e22e">data</span><span style="color:#f92672">=</span>{<span style="color:#a6e22e">delays</span>} <span style="color:#a6e22e">label</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;Arrival and Departure Delays&#34;</span> /&gt;
+    &lt;/<span style="color:#f92672">Sidebar</span>&gt;
+&lt;/<span style="color:#f92672">AppContainer</span>&gt;
+</code></pre></div><p>These are two calls to the same component: <code>Bargraph</code>. This component does some cool stuff using <a href="https://styled-components.com/">styled-components</a> and CSS positioning etc, but essentially this is how it looks inside:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-jsx" data-lang="jsx">&lt;<span style="color:#f92672">BargraphContainer</span>&gt;
+    &lt;<span style="color:#f92672">Label</span>&gt;{<span style="color:#a6e22e">label</span>}&lt;/<span style="color:#f92672">Label</span>&gt;
+
+    {<span style="color:#a6e22e">data</span>.<span style="color:#a6e22e">map</span>(<span style="color:#a6e22e">d</span> =&gt; (
+        &lt;<span style="color:#f92672">Row</span>&gt;
+            &lt;<span style="color:#f92672">Bar</span>
+                <span style="color:#a6e22e">size</span><span style="color:#f92672">=</span>{<span style="color:#ae81ff">100</span> <span style="color:#f92672">*</span> (<span style="color:#a6e22e">d</span>.<span style="color:#a6e22e">count</span> <span style="color:#f92672">/</span> <span style="color:#a6e22e">maxCount</span>)}
+                <span style="color:#a6e22e">colour</span><span style="color:#f92672">=</span>{<span style="color:#a6e22e">d</span>.<span style="color:#a6e22e">colour</span>}
+                /&gt;
+            &lt;<span style="color:#f92672">BarCount</span>&gt;{<span style="color:#a6e22e">d</span>.<span style="color:#a6e22e">count</span>}&lt;/<span style="color:#f92672">BarCount</span>&gt;
+            &lt;<span style="color:#f92672">BarLabel</span>&gt;{<span style="color:#a6e22e">d</span>.<span style="color:#a6e22e">label</span>}&lt;/<span style="color:#f92672">BarLabel</span>&gt;
+        &lt;/<span style="color:#f92672">Row</span>&gt;
+    ))}
+&lt;/<span style="color:#f92672">BargraphContainer</span>&gt;
+</code></pre></div><p>There&rsquo;s a lot happening here, but essentially what it&rsquo;s doing is iterating over the <code>data</code> (which is an array of counts with labels and a colour) and for each is creating a row containing the label, count, and the graphical bar element (R users, think of <code>x.map(d =&gt; (...))</code> as <code>lapply(x, function(d) ...)</code>). The element is a magical <em>styled component</em> and uses some pseudo-magic to get the bar size correct:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-jsx" data-lang="jsx"><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">Bar</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">styled</span>.<span style="color:#a6e22e">div</span><span style="color:#e6db74">`
+</span><span style="color:#e6db74">    /* A bunch of CSS */
+</span><span style="color:#e6db74">    &amp;:before {
+</span><span style="color:#e6db74">        content: &#39;&#39;;
+</span><span style="color:#e6db74">        /* More silly CSS stuff */
+</span><span style="color:#e6db74">        width: </span><span style="color:#e6db74">${</span><span style="color:#a6e22e">props</span> =&gt; <span style="color:#a6e22e">props</span>.<span style="color:#a6e22e">height</span><span style="color:#e6db74">}</span><span style="color:#e6db74">%;
+</span><span style="color:#e6db74">        background: </span><span style="color:#e6db74">${</span><span style="color:#a6e22e">props</span> =&gt; <span style="color:#a6e22e">props</span>.<span style="color:#a6e22e">colour</span><span style="color:#e6db74">}</span><span style="color:#e6db74">;
+</span><span style="color:#e6db74">    }
+</span><span style="color:#e6db74">`</span>
+</code></pre></div><p>So, the data is passed and the bar is resized accordingly. This could be used for any array of data, and with CSS transitions can animate nicely between states (in the bus-app case, usually the changes are minor so you can&rsquo;t see the bars moving).</p>
+<hr>
+<p>And that&rsquo;s is: a fully self-container bus display using React, Mapbox, and D3! If you want to check it out, head to the display cabinets in the ground floor of the Science Center, Building 303, University of Auckland.</p>
+<p>Or you could just head to <a href="https://tomelliott.co.nz/bus-display">https://tomelliott.co.nz/bus-display</a> (note: <strong>not</strong> mobile friendly &mdash; it&rsquo;s designed for a monitor).</p>
+<p>Github code: <a href="https://github.com/tmelliott/bus-display">https://github.com/tmelliott/bus-display</a>.</p>
+
+    </div>
+</article>
+
+<div class="post comments">
+    <div id="disqus_thread"></div>
+<script type="application/javascript">
+    var disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "tmelliott" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+</div>
+
+
+            </main><script defer src="https://friconix.com/cdn/friconix.js"></script>
+
+<script>
+  addEventListener('load', function() {
+    var blocks = document.querySelectorAll('pre code.hljs');
+    Array.prototype.forEach.call(blocks, function(block) {
+      var language = block.result.language;
+      block.insertAdjacentHTML("afterbegin",`<label>${language}</label>`)
+    });
+  })
+</script></div>
+
+        
+
+
+
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+
+
+
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/r.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/yaml.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/bash.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/scss.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/html.min.js"></script>
+<script>hljs.configure({languages: []}); hljs.initHighlightingOnLoad();</script>
+
+
+
+    </body>
+</html>

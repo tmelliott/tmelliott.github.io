@@ -1,9 +1,0 @@
-{{ define "main" }}
-
-    {{ .Render "list-header" }}
-
-    {{ range .Pages.ByPublishDate.Reverse }}
-    {{ .Render "preview" }}
-    {{ end }}
-
-{{ end }}

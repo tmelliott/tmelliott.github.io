@@ -1,5 +1,0 @@
----
-title: 'Hello and welcome to my blog-profile-thing.'
----
-
-Currently this just acts like a personal profile with some links to publications (talks, posters, and so on) but I may add random blog posts on whatever little things I find interesting during my day-to-day work and/or hobbying.
