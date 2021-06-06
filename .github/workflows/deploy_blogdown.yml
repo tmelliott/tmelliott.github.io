@@ -16,7 +16,7 @@ jobs:
       - uses: r-lib/actions/setup-r@v1
       - uses: r-lib/actions/setup-pandoc@v1
       - name: Install rmarkdown
-        run: Rscript --vanilla -e 'install.packages(c("rmarkdown","blogdown"))'
+        run: Rscript --vanilla -e 'install.packages(c("rmarkdown","blogdown"), repos = "https://cran.rstudio.com")'
       - name: install hugo
         run: Rscript --vanilla -e 'blogdown::install_hugo(version = "0.78.2")'
       - name: Render blog
