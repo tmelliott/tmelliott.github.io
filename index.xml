@@ -6,7 +6,17 @@
     <description>Recent content in Hello and welcome to my blog-profile-thing. on Tom Elliott</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-gb</language>
-    <lastBuildDate>Thu, 03 Jun 2021 09:00:00 +0000</lastBuildDate><atom:link href="https://tomelliott.co.nz/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 07 Jun 2021 11:11:33 +1200</lastBuildDate><atom:link href="https://tomelliott.co.nz/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Democratising Data Science: Some iNZights into Empowering the Many</title>
+      <link>https://tomelliott.co.nz/publications/hdsr2021/</link>
+      <pubDate>Mon, 07 Jun 2021 11:11:33 +1200</pubDate>
+      
+      <guid>https://tomelliott.co.nz/publications/hdsr2021/</guid>
+      <description>A commentary on a paper about data science at Berkeley, discussing the importance of providing tools to remove barriers and democratise access to data.
+DOI: 10.1162/99608f92.85206ff9</description>
+    </item>
+    
     <item>
       <title>Analysing Surveys with iNZight</title>
       <link>https://tomelliott.co.nz/publications/informatics-symposium-2021/</link>
