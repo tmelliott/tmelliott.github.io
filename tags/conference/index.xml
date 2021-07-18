@@ -6,7 +6,17 @@
     <description>Recent content in conference on Tom Elliott</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-gb</language>
-    <lastBuildDate>Tue, 24 Nov 2020 16:10:00 +1200</lastBuildDate><atom:link href="https://tomelliott.co.nz/tags/conference/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 05 Jul 2021 14:00:00 +1200</lastBuildDate><atom:link href="https://tomelliott.co.nz/tags/conference/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Visualisation driven analytics</title>
+      <link>https://tomelliott.co.nz/publications/anzsc2021/</link>
+      <pubDate>Mon, 05 Jul 2021 14:00:00 +1200</pubDate>
+      
+      <guid>https://tomelliott.co.nz/publications/anzsc2021/</guid>
+      <description>The utility of data resources is often limited by technical barriers to accessing and analysing the available data. In response to this need, we have developed two software tools that reduce the cost, security, and skill restrictions affecting the use of data. Both tools are developed using the R software platform.
+The first software tool is ‘iNZight’—an R-based freeware package that provides a mouse-driven user interface to a wide range of R packages for analysis and graphics.</description>
+    </item>
+    
     <item>
       <title>Predicting bus arrival in real-time (is hard)</title>
       <link>https://tomelliott.co.nz/publications/nzsa-2020/</link>
@@ -50,7 +60,7 @@
       <pubDate>Thu, 28 Jun 2018 15:15:53 +1200</pubDate>
       
       <guid>https://tomelliott.co.nz/publications/isba-conf-2018/</guid>
-      <description>  </description>
+      <description></description>
     </item>
     
     <item>

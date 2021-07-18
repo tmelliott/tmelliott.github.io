@@ -6,7 +6,34 @@
     <description>Recent content in Tags on Tom Elliott</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-gb</language>
-    <lastBuildDate>Mon, 07 Jun 2021 11:11:33 +1200</lastBuildDate><atom:link href="https://tomelliott.co.nz/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 05 Jul 2021 14:00:00 +1200</lastBuildDate><atom:link href="https://tomelliott.co.nz/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>conference</title>
+      <link>https://tomelliott.co.nz/tags/conference/</link>
+      <pubDate>Mon, 05 Jul 2021 14:00:00 +1200</pubDate>
+      
+      <guid>https://tomelliott.co.nz/tags/conference/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>inzight</title>
+      <link>https://tomelliott.co.nz/tags/inzight/</link>
+      <pubDate>Mon, 05 Jul 2021 14:00:00 +1200</pubDate>
+      
+      <guid>https://tomelliott.co.nz/tags/inzight/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>talk</title>
+      <link>https://tomelliott.co.nz/tags/talk/</link>
+      <pubDate>Mon, 05 Jul 2021 14:00:00 +1200</pubDate>
+      
+      <guid>https://tomelliott.co.nz/tags/talk/</guid>
+      <description></description>
+    </item>
+    
     <item>
       <title>data science</title>
       <link>https://tomelliott.co.nz/tags/data-science/</link>
@@ -17,29 +44,11 @@
     </item>
     
     <item>
-      <title>inzight</title>
-      <link>https://tomelliott.co.nz/tags/inzight/</link>
-      <pubDate>Mon, 07 Jun 2021 11:11:33 +1200</pubDate>
-      
-      <guid>https://tomelliott.co.nz/tags/inzight/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>paper</title>
       <link>https://tomelliott.co.nz/tags/paper/</link>
       <pubDate>Mon, 07 Jun 2021 11:11:33 +1200</pubDate>
       
       <guid>https://tomelliott.co.nz/tags/paper/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>talk</title>
-      <link>https://tomelliott.co.nz/tags/talk/</link>
-      <pubDate>Thu, 03 Jun 2021 09:00:00 +0000</pubDate>
-      
-      <guid>https://tomelliott.co.nz/tags/talk/</guid>
       <description></description>
     </item>
     
@@ -76,15 +85,6 @@
       <pubDate>Wed, 21 Apr 2021 21:37:24 +1200</pubDate>
       
       <guid>https://tomelliott.co.nz/tags/web/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>conference</title>
-      <link>https://tomelliott.co.nz/tags/conference/</link>
-      <pubDate>Tue, 24 Nov 2020 16:10:00 +1200</pubDate>
-      
-      <guid>https://tomelliott.co.nz/tags/conference/</guid>
       <description></description>
     </item>
     
