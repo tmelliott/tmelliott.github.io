@@ -1,159 +1,127 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
-  
   <url>
+    <loc>https://tomelliott.co.nz/publications/disclosure-risk-calculator/</loc>
+    <lastmod>2022-07-15T10:45:04+13:00</lastmod>
+  </url><url>
+    <loc>https://tomelliott.co.nz/</loc>
+    <lastmod>2022-07-15T10:45:04+13:00</lastmod>
+  </url><url>
+    <loc>https://tomelliott.co.nz/publications/</loc>
+    <lastmod>2022-07-15T10:45:04+13:00</lastmod>
+  </url><url>
+    <loc>https://tomelliott.co.nz/tags/</loc>
+    <lastmod>2022-07-15T10:45:04+13:00</lastmod>
+  </url><url>
+    <loc>https://tomelliott.co.nz/tags/web-app/</loc>
+    <lastmod>2022-07-15T10:45:04+13:00</lastmod>
+  </url><url>
+    <loc>https://tomelliott.co.nz/tags/conference/</loc>
+    <lastmod>2021-07-05T14:00:00+12:00</lastmod>
+  </url><url>
+    <loc>https://tomelliott.co.nz/tags/inzight/</loc>
+    <lastmod>2021-07-05T14:00:00+12:00</lastmod>
+  </url><url>
+    <loc>https://tomelliott.co.nz/tags/talk/</loc>
+    <lastmod>2021-07-05T14:00:00+12:00</lastmod>
+  </url><url>
+    <loc>https://tomelliott.co.nz/publications/anzsc2021/</loc>
+    <lastmod>2021-07-05T14:00:00+12:00</lastmod>
+  </url><url>
+    <loc>https://tomelliott.co.nz/tags/data-science/</loc>
+    <lastmod>2021-06-07T11:11:33+12:00</lastmod>
+  </url><url>
+    <loc>https://tomelliott.co.nz/publications/hdsr2021/</loc>
+    <lastmod>2021-06-07T11:11:33+12:00</lastmod>
+  </url><url>
+    <loc>https://tomelliott.co.nz/tags/paper/</loc>
+    <lastmod>2021-06-07T11:11:33+12:00</lastmod>
+  </url><url>
+    <loc>https://tomelliott.co.nz/publications/informatics-symposium-2021/</loc>
+    <lastmod>2021-06-03T09:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://tomelliott.co.nz/tags/te-rourou-t%C4%81taritanga/</loc>
+    <lastmod>2021-06-03T09:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://tomelliott.co.nz/publications/stats-seminar-2021/</loc>
+    <lastmod>2021-06-01T15:00:00+00:00</lastmod>
+  </url><url>
     <loc>https://tomelliott.co.nz/2021/04/bus-display-v2-with-react-d3-and-mapbox/</loc>
     <lastmod>2021-04-21T21:37:24+12:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://tomelliott.co.nz/tags/buses/</loc>
     <lastmod>2021-04-21T21:37:24+12:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://tomelliott.co.nz/</loc>
-    <lastmod>2021-04-21T21:37:24+12:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://tomelliott.co.nz/post/</loc>
     <lastmod>2021-04-21T21:37:24+12:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://tomelliott.co.nz/tags/react/</loc>
     <lastmod>2021-04-21T21:37:24+12:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://tomelliott.co.nz/tags/</loc>
-    <lastmod>2021-04-21T21:37:24+12:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://tomelliott.co.nz/tags/web/</loc>
     <lastmod>2021-04-21T21:37:24+12:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://tomelliott.co.nz/tags/conference/</loc>
-    <lastmod>2020-11-24T16:10:00+12:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
+    <loc>https://tomelliott.co.nz/publications/bayesian-demography-with-inzight/</loc>
+    <lastmod>2021-04-14T14:55:33+13:00</lastmod>
+  </url><url>
+    <loc>https://tomelliott.co.nz/tags/report/</loc>
+    <lastmod>2021-04-14T14:55:33+13:00</lastmod>
+  </url><url>
     <loc>https://tomelliott.co.nz/tags/phd/</loc>
     <lastmod>2020-11-24T16:10:00+12:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://tomelliott.co.nz/publications/nzsa-2020/</loc>
     <lastmod>2020-11-24T16:10:00+12:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://tomelliott.co.nz/publications/</loc>
-    <lastmod>2020-11-24T16:10:00+12:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://tomelliott.co.nz/tags/talk/</loc>
-    <lastmod>2020-11-24T16:10:00+12:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://tomelliott.co.nz/2020/09/building-my-new-website/</loc>
     <lastmod>2020-09-16T09:00:41+12:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://tomelliott.co.nz/tags/gardening/</loc>
     <lastmod>2020-08-27T14:21:40+12:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://tomelliott.co.nz/2020/08/rocketing-into-spring/</loc>
     <lastmod>2020-08-27T14:21:40+12:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://tomelliott.co.nz/publications/phd-defense/</loc>
     <lastmod>2020-08-25T10:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://tomelliott.co.nz/inzight/</loc>
     <lastmod>2020-08-12T12:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://tomelliott.co.nz/research/</loc>
     <lastmod>2020-08-12T12:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://tomelliott.co.nz/phd/</loc>
     <lastmod>2020-08-01T09:31:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://tomelliott.co.nz/publications/anzjs2020/</loc>
     <lastmod>2020-07-04T11:11:33+12:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://tomelliott.co.nz/tags/paper/</loc>
-    <lastmod>2020-07-04T11:11:33+12:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://tomelliott.co.nz/tags/inzight/</loc>
-    <lastmod>2020-02-22T09:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://tomelliott.co.nz/publications/satrday-akl-2020/</loc>
     <lastmod>2020-02-22T09:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://tomelliott.co.nz/publications/phd-talks-day-2019/</loc>
     <lastmod>2019-06-10T15:20:55+12:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://tomelliott.co.nz/publications/user-conf-2018/</loc>
     <lastmod>2018-07-12T15:17:34+12:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://tomelliott.co.nz/publications/isba-conf-2018/</loc>
     <lastmod>2018-06-28T15:15:53+12:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://tomelliott.co.nz/tags/poster/</loc>
     <lastmod>2018-06-28T15:15:53+12:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://tomelliott.co.nz/publications/nzsa-2017/</loc>
     <lastmod>2017-12-11T15:11:45+12:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://tomelliott.co.nz/publications/phd-talks-day-2017/</loc>
     <lastmod>2017-12-01T15:08:39+12:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://tomelliott.co.nz/publications/statistics-teachers-day-2017/</loc>
     <lastmod>2017-11-28T09:05:20+12:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://tomelliott.co.nz/categories/</loc>
   </url>
-  
 </urlset>

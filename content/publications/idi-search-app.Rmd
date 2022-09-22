@@ -1,0 +1,12 @@
+---
+title: "IDI Search App"
+description: "A web app for searching New Zealand's IDI"
+tags:
+  - web app
+date: 2022-09-26T09:57:23+13:00
+draft: false
+---
+
+The IDI Search App allows researchers to explore what variables are available in the IDI, and provides descriptions and SQL information about each variable. The app uses _Data Dictionaries_ from Statistics NZ to collate collection, dataset, and variable information, which is stored within a relational database. The front end is powered by [NextJS](https://nextjs.org), allowing us to provide an interface for users to list all variables or, more usefully, those variables, datasets, and collections that match a specific search term. We also periodically obtain a list of variables in the current IDI refresh, and display this information on each variable's information page so that researchers can see whether they might need to access an older refresh to get the data they are after.
+
+The app can be viewed at: [idisearch.terourou.org](https://idisearch.terourou.org/?utm_medium=terourou&utm_campaign=IDI%20Search%20App)

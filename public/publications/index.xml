@@ -6,7 +6,67 @@
     <description>Recent content in Publications on Tom Elliott</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-gb</language>
-    <lastBuildDate>Tue, 24 Nov 2020 16:10:00 +1200</lastBuildDate><atom:link href="https://tomelliott.co.nz/publications/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 15 Jul 2022 10:45:04 +1300</lastBuildDate><atom:link href="https://tomelliott.co.nz/publications/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Disclosure Risk Calculator</title>
+      <link>https://tomelliott.co.nz/publications/disclosure-risk-calculator/</link>
+      <pubDate>Fri, 15 Jul 2022 10:45:04 +1300</pubDate>
+      
+      <guid>https://tomelliott.co.nz/publications/disclosure-risk-calculator/</guid>
+      <description>Before a dataset is made public, it needs to be checked to ensure no individuals are at risk of being identified. We developed this calculator to quickly assess a dataset for disclosure risk based on a selection of variables.
+There are two aspects to the calculator:
+1. Overall risk This is the risk of disclosure given the currently chosen variablse and sampling fraction. The calculations here use only information about the number of unique and paired observations, and is easily performed in the browser.</description>
+    </item>
+    
+    <item>
+      <title>Visualisation driven analytics</title>
+      <link>https://tomelliott.co.nz/publications/anzsc2021/</link>
+      <pubDate>Mon, 05 Jul 2021 14:00:00 +1200</pubDate>
+      
+      <guid>https://tomelliott.co.nz/publications/anzsc2021/</guid>
+      <description>The utility of data resources is often limited by technical barriers to accessing and analysing the available data. In response to this need, we have developed two software tools that reduce the cost, security, and skill restrictions affecting the use of data. Both tools are developed using the R software platform.
+The first software tool is ‘iNZight’—an R-based freeware package that provides a mouse-driven user interface to a wide range of R packages for analysis and graphics.</description>
+    </item>
+    
+    <item>
+      <title>Democratising Data Science: Some iNZights into Empowering the Many</title>
+      <link>https://tomelliott.co.nz/publications/hdsr2021/</link>
+      <pubDate>Mon, 07 Jun 2021 11:11:33 +1200</pubDate>
+      
+      <guid>https://tomelliott.co.nz/publications/hdsr2021/</guid>
+      <description>A commentary on a paper about data science at Berkeley, discussing the importance of providing tools to remove barriers and democratise access to data.
+DOI: 10.1162/99608f92.85206ff9</description>
+    </item>
+    
+    <item>
+      <title>Analysing Surveys with iNZight</title>
+      <link>https://tomelliott.co.nz/publications/informatics-symposium-2021/</link>
+      <pubDate>Thu, 03 Jun 2021 09:00:00 +0000</pubDate>
+      
+      <guid>https://tomelliott.co.nz/publications/informatics-symposium-2021/</guid>
+      <description>Survey data has a huge importance for many research groups, but many software tools require users to understand the survey design and know how to specify it to the relevent program. iNZight is a graphical user interface for R that lets researchers quickly and efficiently visualise and explore their data. Recent changes to iNZight allow users to forget the design and focus on what matters: exploring their data.
+For more information, visit https://inzight.</description>
+    </item>
+    
+    <item>
+      <title>iNZight, Surveys, and the IDI</title>
+      <link>https://tomelliott.co.nz/publications/stats-seminar-2021/</link>
+      <pubDate>Tue, 01 Jun 2021 15:00:00 +0000</pubDate>
+      
+      <guid>https://tomelliott.co.nz/publications/stats-seminar-2021/</guid>
+      <description>iNZight was originally designed to teach students core data analysis skills without the need for coding. However, it is also a powerful research development tool, allowing researchers low on time, money, or both to quickly obtain simple (or advanced) statistics without having to learn to code or pay an expensive programmer/statistician to do the work for them. iNZight now handles survey designs natively (without even needing to specify the design!</description>
+    </item>
+    
+    <item>
+      <title>Bayesian Demography with iNZight</title>
+      <link>https://tomelliott.co.nz/publications/bayesian-demography-with-inzight/</link>
+      <pubDate>Wed, 14 Apr 2021 14:55:33 +1300</pubDate>
+      
+      <guid>https://tomelliott.co.nz/publications/bayesian-demography-with-inzight/</guid>
+      <description>Bayesian demography is an important technique for minority communites, and requires special methods to infer the correct results. A set of existing R packages provide a way for researchers to fit hierarchical Bayesian models to estimate birth rates, life expectancy, or forecast important values such as diabetes rates.
+iNZight is a tool for exploring and analysing data, and provides a way for researchers low on time, money, and/or skill to quickly generate the necessary results with minimal effort.</description>
+    </item>
+    
     <item>
       <title>Predicting bus arrival in real-time (is hard)</title>
       <link>https://tomelliott.co.nz/publications/nzsa-2020/</link>
@@ -59,7 +119,7 @@
       <pubDate>Mon, 10 Jun 2019 15:20:55 +1200</pubDate>
       
       <guid>https://tomelliott.co.nz/publications/phd-talks-day-2019/</guid>
-      <description>  </description>
+      <description> </description>
     </item>
     
     <item>
@@ -68,7 +128,7 @@
       <pubDate>Thu, 12 Jul 2018 15:17:34 +1200</pubDate>
       
       <guid>https://tomelliott.co.nz/publications/user-conf-2018/</guid>
-      <description>  </description>
+      <description> </description>
     </item>
     
     <item>
@@ -77,7 +137,7 @@
       <pubDate>Thu, 28 Jun 2018 15:15:53 +1200</pubDate>
       
       <guid>https://tomelliott.co.nz/publications/isba-conf-2018/</guid>
-      <description>  </description>
+      <description></description>
     </item>
     
     <item>
@@ -86,7 +146,7 @@
       <pubDate>Mon, 11 Dec 2017 15:11:45 +1200</pubDate>
       
       <guid>https://tomelliott.co.nz/publications/nzsa-2017/</guid>
-      <description>  </description>
+      <description> </description>
     </item>
     
     <item>
@@ -95,7 +155,7 @@
       <pubDate>Fri, 01 Dec 2017 15:08:39 +1200</pubDate>
       
       <guid>https://tomelliott.co.nz/publications/phd-talks-day-2017/</guid>
-      <description>  </description>
+      <description> </description>
     </item>
     
     <item>
@@ -104,7 +164,7 @@
       <pubDate>Tue, 28 Nov 2017 09:05:20 +1200</pubDate>
       
       <guid>https://tomelliott.co.nz/publications/statistics-teachers-day-2017/</guid>
-      <description>  </description>
+      <description> </description>
     </item>
     
   </channel>
