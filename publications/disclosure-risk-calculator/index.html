@@ -31,13 +31,13 @@ if (!doNotTrack) {
 
   
   <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="How can we improve bus ETAs?"/>
-<meta name="twitter:description" content="A poster presented at ISBA 2018 in Edinburgh."/>
+<meta name="twitter:title" content="Disclosure Risk Calculator"/>
+<meta name="twitter:description" content="A web app for estimating the disclosure risk of a dataset"/>
 
 
   
   
-  <title>Tom Elliott | How can we improve bus ETAs?</title>
+  <title>Tom Elliott | Disclosure Risk Calculator</title>
 </head>
 <body>
         
@@ -111,17 +111,17 @@ if (!doNotTrack) {
 <article class="post">
     <header>
   <div class="title">
-    <h2>How can we improve bus ETAs?</h2>
-    <h4>Using real-time position data to estimate road state</h4>
+    <h2>Disclosure Risk Calculator</h2>
+    
   </div>
 
   
-    <p class="desc">A poster presented at ISBA 2018 in Edinburgh.</p>
+    <p class="desc">A web app for estimating the disclosure risk of a dataset</p>
   
 
   <div class="meta">
     
-    <time datetime="2018-06-28 15:15:53 &#43;1200 NZST">28 June 2018</time>
+    <time datetime="2022-07-15 10:45:04 &#43;1300 &#43;1300">15 July 2022</time>
 
   </div>
 </header>
@@ -130,20 +130,23 @@ if (!doNotTrack) {
     <div class="content">
 
         
-        <div class="frame-container">
-          <iframe src="https://tomelliott.co.nz/talks/2018-06_isba/poster.pdf"
-            allowfullscreen
-            title="How can we improve bus ETAs?">
-          </iframe>
-        </div>
-
-        <p>To navigate, click on the slide and then use arrow keys. Press <kbd>f</kbd> to enter full screen.</p>
-        
 
         
 
 
-
+<p>Before a dataset is made public, it needs to be checked to ensure no individuals are at risk of being identified. We developed this calculator to quickly assess a dataset for disclosure risk based on a selection of variables.</p>
+<p>There are two aspects to the calculator:</p>
+<div id="overall-risk" class="section level3">
+<h3>1. Overall risk</h3>
+<p>This is the risk of disclosure given the currently chosen variablse and sampling fraction. The calculations here use only information about the number of unique and paired observations, and is easily performed in the browser. <strong>The data is not uploaded to any external server.</strong> These results are estimated using Robert’s work.</p>
+</div>
+<div id="variable-contributions-and-individual-row-risk" class="section level3">
+<h3>2. Variable contributions and individual (row) risk</h3>
+<p>To calculate more detailed summaries, we use the <strong>sdcMicro</strong> package in <code>R</code>. Do obtain access from the web app (written with <a href="react.js">reactjs</a>) we use <a href="https://www.rforge.net/Rserve/">Rserve</a>, accessed via the <a href="https://www.npmjs.com/package/@tmelliott/react-rserve">react-rserve</a>. While this does involve uploading the dataset to a remote server, the construction ensures that the dataset is accessible to only the current session. In brief, in user’s connection is private and accessible only to them, and once the connection is broken (i.e., when the browser closes) the process is killed and the data vanished (it is only ever stored in memory). Details on how this works can be found <a href="https://risk.terourou.org/about">on the app’s about page</a>.</p>
+<p>If a user chooses to, they can upload their data to our server where it will be processed using the <a href="http://www.ihsn.org/software/disclosure-control-toolbox"><strong>sdcMicro</strong></a> package. This will output the individual variable contributions to the overall disclosure risk and a table showing each row’s individual disclosure risk, with the highest at the top.</p>
+<hr />
+<p>The app can be found at <a href="https://risk.terourou.org">risk.terourou.org</a>.</p>
+</div>
 
     </div>
 </article>
