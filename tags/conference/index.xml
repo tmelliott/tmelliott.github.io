@@ -24,7 +24,6 @@ The first software tool is ‘iNZight’—an R-based freeware package that prov
       
       <guid>https://tomelliott.co.nz/publications/nzsa-2020/</guid>
       <description>
-&lt;script src=&#34;https://tomelliott.co.nz/rmarkdown-libs/header-attrs/header-attrs.js&#34;&gt;&lt;/script&gt;
 
 
 &lt;p&gt;In which I give a very basic overview of my main methods and results in a quick 15-minute presentation at the 2020 NZSA UnConference! For more details, you may consult my thesis (code and PDF available from &lt;a href=&#34;https://github.com/tmelliott/phd-thesis&#34;&gt;tmelliott/phd-thesis&lt;/a&gt;).&lt;/p&gt;
@@ -38,7 +37,6 @@ The first software tool is ‘iNZight’—an R-based freeware package that prov
       
       <guid>https://tomelliott.co.nz/publications/satrday-akl-2020/</guid>
       <description>
-&lt;script src=&#34;https://tomelliott.co.nz/rmarkdown-libs/header-attrs/header-attrs.js&#34;&gt;&lt;/script&gt;
 
 
 &lt;p&gt;I gave a talk about iNZight.&lt;/p&gt;
@@ -51,7 +49,7 @@ The first software tool is ‘iNZight’—an R-based freeware package that prov
       <pubDate>Thu, 12 Jul 2018 15:17:34 +1200</pubDate>
       
       <guid>https://tomelliott.co.nz/publications/user-conf-2018/</guid>
-      <description> </description>
+      <description></description>
     </item>
     
     <item>
@@ -69,7 +67,7 @@ The first software tool is ‘iNZight’—an R-based freeware package that prov
       <pubDate>Mon, 11 Dec 2017 15:11:45 +1200</pubDate>
       
       <guid>https://tomelliott.co.nz/publications/nzsa-2017/</guid>
-      <description> </description>
+      <description></description>
     </item>
     
   </channel>
