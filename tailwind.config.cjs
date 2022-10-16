@@ -4,7 +4,7 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        cursive: ["Dawning of a New Day"],
+        cursive: ["Rock Salt"],
       },
     },
   },
