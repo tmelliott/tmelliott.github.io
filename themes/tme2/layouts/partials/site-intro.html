@@ -18,7 +18,7 @@
     <footer>
         <ul class="social-icons">
             {{ range .Site.Menus.main }}
-            <a class="nav-link" href="{{ .URL }}">
+            <a class="nav-link" href="{{ .URL }}" rel="me">
                 {{ if .Pre }}
                 {{ $icon := printf "<i class=\"fi-xnluxl-%s\"></i> " .Pre | safeHTML }}
                 {{ $icon }}

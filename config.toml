@@ -14,14 +14,23 @@ ignoreFiles = ["\\.Rmd$", "\\.Rmarkdown$", "_files$", "_cache$"]
     name = "GitHub"
     pre = "github"
     url = "https://github.com/tmelliott"
+    weight = 1
+[[menu.main]]
+    name = "Mastodon"
+    pre = "mastodon"
+    url = "https://mastodon.nz/@tomelliott"
+    rel = "me"
+    weight = 2
 [[menu.main]]
     name = "Twitter"
     pre = "twitter"
     url = "https://twitter.com/tomelliottnz"
+    weight = 4
 [[menu.main]]
     name = "Linkedin"
     pre = "linkedin"
     url = "https://www.linkedin.com/in/tmelliott"
+    weight = 3
 
 [[menu.sidebar]]
     name = "Research"
