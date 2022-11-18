@@ -6,7 +6,16 @@
     <description>Recent content in Hello and welcome to my blog-profile-thing. on Tom Elliott</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-gb</language>
-    <lastBuildDate>Fri, 15 Jul 2022 10:45:04 +1300</lastBuildDate><atom:link href="https://tomelliott.co.nz/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 26 Sep 2022 09:57:23 +1300</lastBuildDate><atom:link href="https://tomelliott.co.nz/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>IDI Search App</title>
+      <link>https://tomelliott.co.nz/publications/idi-search-app/</link>
+      <pubDate>Mon, 26 Sep 2022 09:57:23 +1300</pubDate>
+      
+      <guid>https://tomelliott.co.nz/publications/idi-search-app/</guid>
+      <description>The IDI Search App allows researchers to explore what variables are available in the IDI, and provides descriptions and SQL information about each variable. The app uses Data Dictionaries from Statistics NZ to collate collection, dataset, and variable information, which is stored within a relational database. The front end is powered by NextJS, allowing us to provide an interface for users to list all variables or, more usefully, those variables, datasets, and collections that match a specific search term.</description>
+    </item>
+    
     <item>
       <title>Disclosure Risk Calculator</title>
       <link>https://tomelliott.co.nz/publications/disclosure-risk-calculator/</link>
