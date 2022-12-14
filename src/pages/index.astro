@@ -1,20 +1,7 @@
 ---
-import BaseHead from "../components/BaseHead.astro";
-import Header from "../components/Header.astro";
-import Footer from "../components/Footer.astro";
-import { SITE_TITLE, SITE_DESCRIPTION } from "../config";
+import MainLayout from "../layouts/MainLayout.astro";
 ---
 
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
-  </head>
-  <body>
-    <div class="min-h-screen flex flex-col">
-      <Header />
-      <main class="flex-1"></main>
-      <Footer />
-    </div>
-  </body>
-</html>
+<MainLayout>
+  <h1>Hello!</h1>
+</MainLayout>
