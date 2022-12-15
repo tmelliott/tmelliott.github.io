@@ -1,8 +1,5 @@
 ---
-import BaseHead from "../components/BaseHead.astro";
-import Header from "../components/Header.astro";
-import Footer from "../components/Footer.astro";
-import { SITE_TITLE, SITE_DESCRIPTION } from "../config";
+import MainLayout from "../layouts/MainLayout.astro";
 
 // Use Astro.glob() to fetch all posts, and then sort them by date.
 const posts = (await Astro.glob("./blog/*.{md,mdx}")).sort(
@@ -12,36 +9,28 @@ const posts = (await Astro.glob("./blog/*.{md,mdx}")).sort(
 );
 ---
 
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
-  </head>
-  <body>
-    <Header />
-    <main>
-      <section>
-        <ul>
-          {
-            posts.map((post) => (
-              <li>
-                <time datetime={post.frontmatter.pubDate}>
-                  {new Date(post.frontmatter.pubDate).toLocaleDateString(
-                    "en-us",
-                    {
-                      year: "numeric",
-                      month: "short",
-                      day: "numeric",
-                    }
-                  )}
-                </time>
-                <a href={post.url}>{post.frontmatter.title}</a>
-              </li>
-            ))
-          }
-        </ul>
-      </section>
-    </main>
-    <Footer />
-  </body>
-</html>
+<MainLayout>
+  <h2 class="text-lg font-bold">All posts</h2>
+  <section class="flex flex-col gap-2">
+    {
+      posts.map((post) => (
+        <a href={post.url} class="border-b py-2 group last:border-none">
+          <div class="flex-1">
+            <time
+              datetime={post.frontmatter.pubDate}
+              class="text-xs italic text-slate-400"
+            >
+              {new Date(post.frontmatter.pubDate).toLocaleDateString("en-us", {
+                year: "numeric",
+                month: "short",
+                day: "numeric",
+              })}
+            </time>
+            <h4 class="group-hover:text-slate-600">{post.frontmatter.title}</h4>
+          </div>
+          <p class="text-sm">{post.frontmatter.description}</p>
+        </a>
+      ))
+    }
+  </section>
+</MainLayout>
