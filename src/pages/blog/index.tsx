@@ -4,6 +4,7 @@ import fs from "fs";
 import matter from "gray-matter";
 import { GetStaticProps, InferGetStaticPropsType } from "next";
 import Head from "next/head";
+import Link from "next/link";
 import path from "path";
 
 import BaseLayout from "../../layouts/BaseLayout";
@@ -34,7 +35,11 @@ const Blog: NextPageWithLayout<BlogProps> = ({ posts }) => {
       <h2 className="text-lg font-bold">All posts</h2>
       <section className="flex flex-col gap-2">
         {posts.map((post) => (
-          <a href={post.url} className="border-b py-2 group last:border-none">
+          <Link
+            key={post.url}
+            href={post.url}
+            className="border-b py-2 group last:border-none"
+          >
             <div className="flex-1">
               <time
                 // datetime={post.frontmatter.pubDate}
@@ -49,7 +54,7 @@ const Blog: NextPageWithLayout<BlogProps> = ({ posts }) => {
               <h4 className="group-hover:text-slate-600">{post.title}</h4>
             </div>
             <p className="text-sm">{post.description}</p>
-          </a>
+          </Link>
         ))}
       </section>
     </>

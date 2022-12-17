@@ -18,12 +18,12 @@ export default function Header() {
   return (
     <header className="">
       <div className="bg-gray-50 flex flex-col items-center justify-center mt-[30vh] relative z-20">
-        <a
+        <Link
           href="/"
           className="absolute rounded-full w-[200px] -translate-y-1/2 top-0 z-20 border-8 border-gray-50"
         >
           <img src="/photo.jpg" className="rounded-full z-30" />
-        </a>
+        </Link>
         <h2 className="font-bold mt-[100px] pt-2 text-2xl tracking-wide">
           Tom Elliott
         </h2>
