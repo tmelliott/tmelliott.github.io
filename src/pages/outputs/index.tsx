@@ -2,7 +2,7 @@ import { ReactElement } from "react";
 
 import fs from "fs";
 import matter from "gray-matter";
-import { GetStaticProps, InferGetStaticPropsType } from "next";
+import { GetStaticProps } from "next";
 import Head from "next/head";
 import Link from "next/link";
 import path from "path";
@@ -10,51 +10,52 @@ import path from "path";
 import BaseLayout from "../../layouts/BaseLayout";
 import { NextPageWithLayout } from "../_app";
 
-export const BLOG_DIRECTORY = path.join(process.cwd(), "src", "pages", "blog");
+const OUTPUT_DIRECTORY = path.join(process.cwd(), "src", "pages", "outputs");
 
-export type Post = {
+type Output = {
   url: string;
   title: string;
   description: string;
   pubDate: string;
+  tags: string[];
   content?: string;
 };
 
-interface BlogProps {
-  posts: Post[];
+interface OutputsProps {
+  outputs: Output[];
 }
 
-const Blog: NextPageWithLayout<BlogProps> = ({ posts }) => {
+const Outputs: NextPageWithLayout<OutputsProps> = ({ outputs }) => {
   return (
     <>
       <Head>
-        <title>Blog | Tom Elliott</title>
+        <title>Outputs | Tom Elliott</title>
         <meta name="description" content="" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <h2 className="text-lg font-bold">All posts</h2>
+      <h2 className="text-lg font-bold">All Outputs</h2>
       <section className="flex flex-col gap-2">
-        {posts.map((post) => (
+        {outputs.map((output) => (
           <Link
-            key={post.url}
-            href={post.url}
+            key={output.url}
+            href={output.url}
             className="border-b py-2 group last:border-none"
           >
             <div className="flex-1">
               <time
-                // datetime={post.frontmatter.pubDate}
+                // datetime={Output.frontmatter.pubDate}
                 className="text-xs italic text-slate-400"
               >
-                {new Date(post.pubDate).toLocaleDateString("en-us", {
+                {new Date(output.pubDate).toLocaleDateString("en-us", {
                   year: "numeric",
                   month: "short",
                   day: "numeric",
                 })}
               </time>
-              <h4 className="group-hover:text-slate-600">{post.title}</h4>
+              <h4 className="group-hover:text-slate-600">{output.title}</h4>
             </div>
-            <p className="text-sm">{post.description}</p>
+            <p className="text-sm">{output.description}</p>
           </Link>
         ))}
       </section>
@@ -62,13 +63,13 @@ const Blog: NextPageWithLayout<BlogProps> = ({ posts }) => {
   );
 };
 
-Blog.getLayout = function getLayout(page: ReactElement) {
+Outputs.getLayout = function getLayout(page: ReactElement) {
   return <BaseLayout>{page}</BaseLayout>;
 };
 
-export const getStaticProps: GetStaticProps<BlogProps> = async () => {
-  // list files in pages/blog directory
-  const files = fs.readdirSync(BLOG_DIRECTORY);
+export const getStaticProps: GetStaticProps<OutputsProps> = async () => {
+  // list files in pages/Outputs directory
+  const files = fs.readdirSync(OUTPUT_DIRECTORY);
 
   // filter out non-markdown files
   const mdFiles = files.filter(
@@ -76,21 +77,23 @@ export const getStaticProps: GetStaticProps<BlogProps> = async () => {
   );
 
   // read frontmatter from each file
-  const posts: Post[] = mdFiles.map((file) => {
-    const { title, description, pubDate } = matter(
-      fs.readFileSync(path.join(BLOG_DIRECTORY, file))
+  const outputs: Output[] = mdFiles.map((file) => {
+    const { title, description, pubDate, tags } = matter(
+      fs.readFileSync(path.join(OUTPUT_DIRECTORY, file))
     ).data;
     return {
-      url: `/blog/${file.replace(/\.mdx?$/, "")}`,
+      url: `/outputs/${file.replace(/\.mdx?$/, "")}`,
       title,
       description,
       pubDate: new Date(pubDate).toJSON(),
+      tags: tags || [],
     };
   });
+  console.log(outputs);
 
   return {
     props: {
-      posts: posts.sort(
+      outputs: outputs.sort(
         (a, b) =>
           -(new Date(a.pubDate).getTime() - new Date(b.pubDate).getTime())
       ),
@@ -98,4 +101,4 @@ export const getStaticProps: GetStaticProps<BlogProps> = async () => {
   };
 };
 
-export default Blog;
+export default Outputs;

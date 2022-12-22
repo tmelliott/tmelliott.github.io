@@ -1,0 +1,40 @@
+---
+import MainLayout from "./MainLayout.astro";
+
+export interface Props {
+  content: {
+    title: string;
+    description: string;
+    pubDate?: string;
+    updatedDate?: string;
+    heroImage?: string;
+  };
+}
+
+const {
+  content: { title, description, pubDate },
+} = Astro.props;
+---
+
+<MainLayout>
+  <article class="prose">
+    <h2 class="">{title}</h2>
+    {
+      pubDate && (
+        <time class="text-sm text-gray-500">
+          {new Date(pubDate).toLocaleDateString("en-us", {
+            year: "numeric",
+            month: "short",
+            day: "numeric",
+          })}
+        </time>
+      )
+    }
+
+    <div class="h-4"></div>
+
+    <div class="prose">
+      <slot />
+    </div>
+  </article>
+</MainLayout>
