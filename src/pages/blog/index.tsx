@@ -2,7 +2,8 @@ import { ReactElement } from "react";
 
 import fs from "fs";
 import matter from "gray-matter";
-import { GetStaticProps, InferGetStaticPropsType } from "next";
+import { GetStaticProps } from "next";
+import { MDXRemoteSerializeResult } from "next-mdx-remote";
 import Head from "next/head";
 import Link from "next/link";
 import path from "path";
@@ -10,14 +11,24 @@ import path from "path";
 import BaseLayout from "../../layouts/BaseLayout";
 import { NextPageWithLayout } from "../_app";
 
-export const BLOG_DIRECTORY = path.join(process.cwd(), "src", "pages", "blog");
+export const BLOG_DIRECTORY = path.join(
+  process.cwd(),
+  "src",
+  "content",
+  "blog"
+);
 
 export type Post = {
   url: string;
   title: string;
   description: string;
   pubDate: string;
+  image?: string;
   content?: string;
+  mdxSource?: MDXRemoteSerializeResult<
+    Record<string, unknown>,
+    Record<string, string>
+  >;
 };
 
 interface BlogProps {
@@ -34,14 +45,14 @@ const Blog: NextPageWithLayout<BlogProps> = ({ posts }) => {
       </Head>
 
       <h2 className="text-lg font-bold">All posts</h2>
-      <section className="flex flex-col gap-2">
+      <section className="flex flex-col gap-2 w-full">
         {posts.map((post) => (
           <Link
             key={post.url}
             href={post.url}
-            className="border-b py-2 group last:border-none"
+            className="border-b py-2 group last:border-none flex-1"
           >
-            <div className="flex-1">
+            <div className="">
               <time
                 // datetime={post.frontmatter.pubDate}
                 className="text-xs italic text-slate-400"
@@ -72,7 +83,7 @@ export const getStaticProps: GetStaticProps<BlogProps> = async () => {
 
   // filter out non-markdown files
   const mdFiles = files.filter(
-    (fn) => fn.endsWith(".mdx") || fn.endsWith(".md")
+    (fn) => fn.endsWith(".md") || fn.endsWith(".mdx")
   );
 
   // read frontmatter from each file

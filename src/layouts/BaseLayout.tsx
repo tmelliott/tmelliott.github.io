@@ -12,7 +12,7 @@ export default function BaseLayout({ children }: BaseLayoutProps) {
     <div className="min-h-screen flex flex-col bg-slate-800 text-slate-800">
       <Header />
       <main className="flex-1 flex flex-col pb-12 items-center mx-auto w-full bg-gray-50 p-4">
-        {children}
+        <div className="w-full max-w-5xl">{children}</div>
       </main>
       <Footer />
     </div>

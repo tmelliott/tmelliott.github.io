@@ -4,10 +4,13 @@ import ReactMarkdown from "react-markdown";
 import fs from "fs";
 import matter from "gray-matter";
 import { GetStaticPaths, GetStaticProps } from "next";
+import { MDXRemote } from "next-mdx-remote";
+import { serialize } from "next-mdx-remote/serialize";
 import Head from "next/head";
 import path from "path";
 import { ParsedUrlQuery } from "querystring";
 
+import Gallery from "../../components/Gallery";
 import BaseLayout from "../../layouts/BaseLayout";
 import { NextPageWithLayout } from "../_app";
 import { Post, BLOG_DIRECTORY } from "./index";
@@ -25,9 +28,12 @@ const BlogPost: NextPageWithLayout<PostProps> = ({ post }) => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <section className="flex flex-col gap-2 prose">
+      <section className="flex flex-col gap-2 prose w-full mx-auto">
         <h2 className="text-lg font-bold">{post.title}</h2>
         {post.content && <ReactMarkdown>{post.content}</ReactMarkdown>}
+        {post.mdxSource && (
+          <MDXRemote {...post.mdxSource} components={{ Gallery }} />
+        )}
       </section>
     </>
   );
@@ -64,6 +70,9 @@ export const getStaticProps: GetStaticProps<PostProps, Params> = async (
     data: { title, description, pubDate },
   } = matter(fs.readFileSync(path.join(BLOG_DIRECTORY, file)));
 
+  // if mdx, serialize content
+  const mdxSource = file.endsWith(".mdx") ? await serialize(content) : null;
+
   return {
     props: {
       post: {
@@ -71,7 +80,8 @@ export const getStaticProps: GetStaticProps<PostProps, Params> = async (
         title,
         description,
         pubDate: new Date(pubDate).toJSON(),
-        content,
+        content: file.endsWith(".md") ? content : null,
+        mdxSource,
       },
     },
   };
@@ -83,19 +93,13 @@ export const getStaticPaths: GetStaticPaths = async () => {
 
   // filter out non-markdown files
   const mdFiles = files.filter(
-    (fn) => fn.endsWith(".mdx") || fn.endsWith(".md")
+    (fn) => fn.endsWith(".md") || fn.endsWith(".mdx")
   );
 
   // read frontmatter from each file
-  const posts: Post[] = mdFiles.map((file) => {
-    const { title, description, pubDate } = matter(
-      fs.readFileSync(path.join(BLOG_DIRECTORY, file))
-    ).data;
+  const posts = mdFiles.map((file) => {
     return {
       url: `/blog/${file.replace(/\.mdx?$/, "")}`,
-      title,
-      description,
-      pubDate: new Date(pubDate).toJSON(),
     };
   });
 
