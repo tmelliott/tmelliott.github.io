@@ -1,8 +1,6 @@
 // gallery of images
 import { useState } from "react";
 
-import Image from "next/image";
-
 type GalleryImage = {
   src: string;
   caption: string;

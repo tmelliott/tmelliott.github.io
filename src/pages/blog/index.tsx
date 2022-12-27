@@ -1,15 +1,15 @@
-import { ReactElement } from "react";
+import type { ReactElement } from "react";
 
 import fs from "fs";
 import matter from "gray-matter";
-import { GetStaticProps } from "next";
-import { MDXRemoteSerializeResult } from "next-mdx-remote";
+import type { GetStaticProps } from "next";
+import type { MDXRemoteSerializeResult } from "next-mdx-remote";
 import Head from "next/head";
 import Link from "next/link";
 import path from "path";
 
 import BaseLayout from "../../layouts/BaseLayout";
-import { NextPageWithLayout } from "../_app";
+import type { NextPageWithLayout } from "../_app";
 
 export const BLOG_DIRECTORY = path.join(
   process.cwd(),
@@ -24,11 +24,11 @@ export type Post = {
   description: string;
   pubDate: string;
   image?: string;
-  content?: string;
-  mdxSource?: MDXRemoteSerializeResult<
+  content: string | null;
+  mdxSource: MDXRemoteSerializeResult<
     Record<string, unknown>,
     Record<string, string>
-  >;
+  > | null;
 };
 
 interface BlogProps {
@@ -96,6 +96,8 @@ export const getStaticProps: GetStaticProps<BlogProps> = async () => {
       title,
       description,
       pubDate: new Date(pubDate).toJSON(),
+      content: null,
+      mdxSource: null,
     };
   });
 

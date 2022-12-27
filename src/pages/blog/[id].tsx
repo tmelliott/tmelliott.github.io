@@ -1,19 +1,20 @@
-import { ReactElement } from "react";
+import type { ReactElement } from "react";
 import ReactMarkdown from "react-markdown";
 
 import fs from "fs";
 import matter from "gray-matter";
-import { GetStaticPaths, GetStaticProps } from "next";
+import type { GetStaticPaths, GetStaticProps } from "next";
 import { MDXRemote } from "next-mdx-remote";
 import { serialize } from "next-mdx-remote/serialize";
 import Head from "next/head";
 import path from "path";
-import { ParsedUrlQuery } from "querystring";
+import type { ParsedUrlQuery } from "querystring";
 
 import Gallery from "../../components/Gallery";
 import BaseLayout from "../../layouts/BaseLayout";
-import { NextPageWithLayout } from "../_app";
-import { Post, BLOG_DIRECTORY } from "./index";
+import type { NextPageWithLayout } from "../_app";
+import type { Post } from "./index";
+import { BLOG_DIRECTORY } from "./index";
 
 type PostProps = {
   post: Post;
@@ -54,7 +55,7 @@ export const getStaticProps: GetStaticProps<PostProps, Params> = async (
   const files = fs.readdirSync(BLOG_DIRECTORY);
 
   // find post matching id
-  const { id } = context.params!;
+  const { id } = context.params ?? {};
   const file = files.find((fn) => fn.replace(/\.mdx?$/, "") === id);
   if (!file) {
     return {

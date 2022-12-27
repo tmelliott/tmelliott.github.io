@@ -1,14 +1,14 @@
-import { ReactElement } from "react";
+import type { ReactElement } from "react";
 
 import fs from "fs";
 import matter from "gray-matter";
-import { GetStaticProps } from "next";
+import type { GetStaticProps } from "next";
 import Head from "next/head";
 import Link from "next/link";
 import path from "path";
 
 import BaseLayout from "../../layouts/BaseLayout";
-import { NextPageWithLayout } from "../_app";
+import type { NextPageWithLayout } from "../_app";
 
 const OUTPUT_DIRECTORY = path.join(process.cwd(), "src", "pages", "outputs");
 
@@ -89,7 +89,6 @@ export const getStaticProps: GetStaticProps<OutputsProps> = async () => {
       tags: tags || [],
     };
   });
-  console.log(outputs);
 
   return {
     props: {
