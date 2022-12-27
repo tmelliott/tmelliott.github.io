@@ -4,6 +4,7 @@ import Link from "next/link";
 import { useRouter } from "next/router";
 
 import profilePic from "../../../public/photo.jpg";
+import MovingCircles from "../MovingCircles";
 
 export const SITE_LINKS = [
   {
@@ -22,7 +23,10 @@ export default function Header() {
   if (path === "/") {
     return (
       <motion.header layoutId="headerContainer">
-        <div className="bg-gray-50 flex flex-col items-center justify-center mt-[30vh] relative z-20">
+        <div className="absolute h-[30vh] w-full z-0 ">
+          <MovingCircles />
+        </div>
+        <div className="bg-gray-50 flex flex-col items-center justify-center mt-[30vh] relative z-20 ">
           <Link
             href="/"
             className="absolute rounded-full -translate-y-1/2 top-0 z-20 border-8 border-gray-50 bg-gray-50 h-[180px] w-[180px]"
