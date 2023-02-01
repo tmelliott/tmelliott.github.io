@@ -4,6 +4,8 @@ import MDXPost from "./MDXPost";
 import dayjs from "dayjs";
 import rehypeHighlight from "rehype-highlight";
 import Image from "next/image";
+import { join } from "path";
+import getPosts from "../getPosts";
 
 var calendar = require("dayjs/plugin/calendar");
 dayjs.extend(calendar);
@@ -16,8 +18,9 @@ export default async function BlogPost({
   const { slug } = params;
 
   // read the post file
+  console.log(slug);
   const source = readFileSync(
-    `${process.cwd()}/content/blog/${slug}.mdx`,
+    join(process.cwd(), "content", "blog", `${slug}.mdx`),
     "utf8"
   );
 
@@ -59,4 +62,13 @@ export default async function BlogPost({
       </div>
     </div>
   );
+}
+
+export async function generateStaticParams() {
+  // list posts in /content/blog/
+  const posts = getPosts();
+
+  return posts.map(({ slug }) => ({
+    slug,
+  }));
 }

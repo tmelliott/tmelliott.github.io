@@ -4,8 +4,8 @@ import matter from "gray-matter";
 import { join } from "path";
 
 function readFrontmatter(slug: string) {
-  const dir = join(process.cwd(), "content", "blog", slug);
-  const { data } = matter(readFileSync(join(dir), "utf8"));
+  const file = join(process.cwd(), "content", "blog", slug);
+  const { data } = matter(readFileSync(file, "utf8"));
   return {
     slug: slug.replace(/\.mdx?$/, ""),
     title: data.title || slug,
