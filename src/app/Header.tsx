@@ -57,34 +57,6 @@ const navItems = [
   },
 ];
 
-const socialListVariants = {
-  initial: {
-    opacity: 0,
-  },
-  animate: {
-    opacity: 1,
-    transition: {
-      when: "beforeChildren",
-      delay: 1.5,
-      staggerChildren: 0.3,
-    },
-  },
-};
-
-const socialIconVariants = {
-  initial: {
-    opacity: 0,
-    scale: 0.95,
-  },
-  animate: {
-    opacity: 1,
-    scale: 1,
-    transition: {
-      duration: 0.8,
-    },
-  },
-};
-
 export default function Header() {
   const path = usePathname();
 
@@ -94,13 +66,9 @@ export default function Header() {
   };
 
   return (
-    <header className="flex flex-col items-center justify-start gap-12 lg:bg-gray-50 lg:h-full">
+    <header className="flex flex-col items-center justify-start gap-12 lg:bg-slate-600 lg:h-full text-slate-100">
       <hgroup className="flex items-center justify-center gap-6 p-8">
-        <motion.div
-          initial={{ x: 100, rotateZ: 0, opacity: 0 }}
-          animate={{ x: 0, rotateZ: 0, opacity: 1 }}
-          transition={{ duration: 1.5 }}
-        >
+        <div>
           <Image
             src="/profile.jpg"
             alt="Tom Elliott"
@@ -108,36 +76,25 @@ export default function Header() {
             height={82}
             className="rounded shadow"
           />
-        </motion.div>
+        </div>
         <div className="flex flex-col gap-2">
-          <motion.h1
-            initial={{ opacity: 0, y: 10 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, delay: 1 }}
-            className="text-2xl font-heading"
-          >
-            Tom Elliott
-          </motion.h1>
+          <h1 className="text-2xl font-heading">Tom Elliott</h1>
           {/* social icons */}
-          <motion.ul
-            initial="initial"
-            animate="animate"
-            variants={socialListVariants}
-            className="flex items-center gap-3"
-          >
+          <ul className="flex items-center gap-3">
             {social.map(({ name, href, icon }) => (
-              <motion.li variants={socialIconVariants} key={name}>
+              <li key={name}>
                 <a href={href} title={name}>
                   <Image
                     src={`/icons/${icon}.svg`}
                     alt={name}
-                    width={24}
-                    height={24}
+                    width={26}
+                    height={26}
+                    className="bg-white rounded-full p-[1px]"
                   />
                 </a>
-              </motion.li>
+              </li>
             ))}
-          </motion.ul>
+          </ul>
         </div>
       </hgroup>
 
@@ -155,15 +112,25 @@ export default function Header() {
               {checkMatch(href) && (
                 <motion.div
                   layoutId="activeLinkBG"
-                  className="bg-white absolute inset-0 z-0"
+                  className="bg-stone-100 absolute inset-0 z-0"
                 ></motion.div>
               )}
               <Link href={href}>
-                <div className="flex items-center gap-2 group-hover:text-gray-800 absolute inset-0 px-8 z-10">
+                <div
+                  className={`flex font-heading items-center gap-2 absolute inset-0 px-8 z-10 ${
+                    checkMatch(href)
+                      ? "text-gray-800"
+                      : "group-hover:text-gray-200 group-hover:bg-white group-hover:bg-opacity-5"
+                  }`}
+                >
                   <Icon
                     height={24}
                     width={24}
-                    className="group-hover:animate-wiggle group-hover:scale-110"
+                    className={`${
+                      checkMatch(href)
+                        ? ""
+                        : "group-hover:animate-wiggle group-hover:scale-110"
+                    }`}
                   />
                   {name}
                 </div>

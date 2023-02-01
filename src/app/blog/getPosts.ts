@@ -6,11 +6,18 @@ import { join } from "path";
 function readFrontmatter(slug: string) {
   const file = join(process.cwd(), "content", "blog", slug);
   const { data } = matter(readFileSync(file, "utf8"));
+
+  if (data.image) {
+    data.image = join("/images", data.image);
+  } else {
+    data.image = `https://picsum.photos/seed/${slug}/600/400?blur=5`;
+  }
+
   return {
     slug: slug.replace(/\.mdx?$/, ""),
     title: data.title || slug,
     description: data.description || "",
-    image: data.image ? join("/images", data.image) : null,
+    image: data.image,
     date: data.date || null,
     tags: data.tags || [],
     draft: data.draft || false,
