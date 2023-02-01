@@ -47,7 +47,7 @@ export default async function BlogPost({
                 ? image
                 : `https://picsum.photos/seed/${slug}/600/400?blur=5}`
             }`}
-            alt={frontmatter.title}
+            alt={frontmatter?.title || slug}
             fill={true}
             className="p-0 m-0 object-cover"
           />
