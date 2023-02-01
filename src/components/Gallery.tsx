@@ -16,7 +16,7 @@ export default function Gallery({ images }: GalleryProps) {
       {images.map(({ src, alt }) => (
         <div className="shadow p-2 flex flex-col gap-2" key={src}>
           <Image
-            src={`/images/${src}`}
+            src={`${src}`}
             alt={alt}
             width={200}
             height={80}

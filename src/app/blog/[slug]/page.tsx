@@ -18,7 +18,6 @@ export default async function BlogPost({
   const { slug } = params;
 
   // read the post file
-  console.log(slug);
   const source = readFileSync(
     join(process.cwd(), "content", "blog", `${slug}.mdx`),
     "utf8"
@@ -41,21 +40,23 @@ export default async function BlogPost({
       {/* a nice image header */}
 
       <div className="prose">
+        <div className="w-full h-[300px] relative p-0 mb-4">
+          <Image
+            src={`${
+              image
+                ? image
+                : `https://picsum.photos/seed/${slug}/600/400?blur=5}`
+            }`}
+            alt={frontmatter.title}
+            fill={true}
+            className="p-0 m-0 object-cover"
+          />
+        </div>
+
         <h1>{frontmatter?.title || slug}</h1>
         {/* format date with datejs */}
         {frontmatter?.date && (
           <p className="text-sm italic">{date.format("D MMMM YYYY")}</p>
-        )}
-
-        {image && (
-          <div className=" h-[300px] relative p-0">
-            <Image
-              src={`/images/${image}`}
-              alt={frontmatter.title}
-              fill={true}
-              className="p-0 m-0 object-contain"
-            />
-          </div>
         )}
 
         <MDXPost mdx={postMdx} />

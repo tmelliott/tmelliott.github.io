@@ -4,7 +4,6 @@ import getPosts from "./getPosts";
 
 export default function Blog() {
   const posts = getPosts();
-  console.log(posts);
 
   return (
     <>
@@ -27,7 +26,11 @@ export default function Blog() {
                     }`}
                   >
                     <Image
-                      src={`${image}`}
+                      src={`${
+                        image
+                          ? image
+                          : `https://picsum.photos/seed/${slug}/600/400?blur=5}`
+                      }`}
                       alt={title}
                       fill={true}
                       className="object-cover group-hover:scale-105 transition-transform"

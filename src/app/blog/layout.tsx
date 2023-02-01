@@ -4,9 +4,9 @@ export default function BlogLayout({
   children: React.ReactNode;
 }) {
   return (
-    <div className="flex flex-col xl:flex-row h-full gap-8">
+    <div className="flex flex-col 2xl:flex-row h-full gap-8">
       <section className="flex-1">{children}</section>
-      <aside className="lg:w-[240px] border-t lg:border-t-0 lg:border-l h-full py-8 lg:py-0 lg:px-8 flex lg:flex-col gap-12">
+      <aside className="2xl:w-[240px] border-t 2xl:border-t-0 2xl:border-l h-full py-8 2xl:py-0 2xl:px-8 flex 2xl:flex-col gap-12">
         <div className="flex gap-4 flex-col">
           <h4 className="font-bold font-heading">Recent posts</h4>
           <ul className="">

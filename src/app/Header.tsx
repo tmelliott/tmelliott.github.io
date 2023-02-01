@@ -66,43 +66,50 @@ export default function Header() {
   };
 
   return (
-    <header className="flex flex-col items-center justify-start gap-12 lg:bg-slate-600 lg:h-full text-slate-100">
-      <hgroup className="flex items-center justify-center gap-6 p-8">
-        <div>
-          <Image
-            src="/profile.jpg"
-            alt="Tom Elliott"
-            width={82}
-            height={82}
-            className="rounded shadow"
-          />
-        </div>
-        <div className="flex flex-col gap-2">
-          <h1 className="text-2xl font-heading">Tom Elliott</h1>
-          {/* social icons */}
-          <ul className="flex items-center gap-3">
-            {social.map(({ name, href, icon }) => (
-              <li key={name}>
-                <a href={href} title={name}>
-                  <Image
-                    src={`/icons/${icon}.svg`}
-                    alt={name}
-                    width={26}
-                    height={26}
-                    className="bg-white rounded-full p-[1px]"
-                  />
-                </a>
-              </li>
-            ))}
-          </ul>
-        </div>
-      </hgroup>
+    <header className="flex lg:flex-col items-center gap-6 bg-slate-600 lg:h-full text-slate-100">
+      <div className="flex items-center justify-between w-full p-4 md:p-8 lg:p-4 xl:p-8">
+        <hgroup className="flex lg:flex-col xl:flex-row items-center justify-center gap-6">
+          <div className="relative h-12 w-12 md:h-20 md:w-20 lg:h-14 lg:w-14">
+            {" "}
+            <Image
+              src="/profile.jpg"
+              alt="Tom Elliott"
+              fill={true}
+              className="bg-white  shadow p-[1px]"
+            />
+          </div>
+          <div className="flex flex-col gap-2 justify-center xl:text-left">
+            <h1 className="text-2xl font-heading lg:hidden xl:block">
+              Tom Elliott
+            </h1>
+            {/* social icons */}
+            <ul className="flex lg:flex-col xl:flex-row items-center gap-3">
+              {social.map(({ name, href, icon }) => (
+                <li key={name}>
+                  <a
+                    href={href}
+                    title={name}
+                    className="relative w-4 h-4 md:w-8 md:h-8 block"
+                  >
+                    <Image
+                      src={`/icons/${icon}.svg`}
+                      alt={name}
+                      fill={true}
+                      className="bg-white rounded-full p-[1px] "
+                    />
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </div>
+        </hgroup>
 
-      {/* <p className="text-sm">Statistical computing and data science</p> */}
+        {/* this will be responsive i.e., a side-drawer */}
+        <div className="lg:hidden">Menu</div>
+      </div>
 
-      {/* this will be responsive i.e., a side-drawer */}
       <nav className="hidden lg:block w-full">
-        <ul className="flex flex-col items-start w-full">
+        <ul className="flex flex-col items-start w-full flex-wrap">
           {navItems.map(({ name, href, Icon }) => (
             <li
               key={href}
@@ -117,7 +124,7 @@ export default function Header() {
               )}
               <Link href={href}>
                 <div
-                  className={`flex font-heading items-center gap-2 absolute inset-0 px-8 z-10 ${
+                  className={`flex font-heading items-center gap-2 absolute inset-0 px-8 z-10 justify-center xl:justify-start ${
                     checkMatch(href)
                       ? "text-gray-800"
                       : "group-hover:text-gray-200 group-hover:bg-white group-hover:bg-opacity-5"
@@ -132,7 +139,7 @@ export default function Header() {
                         : "group-hover:animate-wiggle group-hover:scale-110"
                     }`}
                   />
-                  {name}
+                  <div className="hidden xl:block">{name}</div>
                 </div>
               </Link>
             </li>
