@@ -24,9 +24,9 @@ export default function RootLayout({
         head.tsx. Find out more at https://beta.nextjs.org/docs/api-reference/file-conventions/head
       */}
       <head />
-      <body className="font-body bg-stone-100 flex flex-col lg:flex-row p-8 gap-8 h-screen ">
+      <body className="font-body bg-stone-100 flex flex-col lg:flex-row md:p-8 gap-8 h-screen ">
         <Header />
-        <main className="flex-1 lg:h-full lg:overflow-y-scroll">
+        <main className="flex-1 lg:h-full lg:overflow-y-scroll px-8 md:px-0">
           {children}
         </main>
       </body>

@@ -82,25 +82,6 @@ export default function Header() {
             <h1 className="text-2xl font-heading lg:hidden xl:block">
               Tom Elliott
             </h1>
-            {/* social icons */}
-            <ul className="flex lg:flex-col xl:flex-row items-center gap-3">
-              {social.map(({ name, href, icon }) => (
-                <li key={name}>
-                  <a
-                    href={href}
-                    title={name}
-                    className="relative w-4 h-4 md:w-8 md:h-8 block"
-                  >
-                    <Image
-                      src={`/icons/${icon}.svg`}
-                      alt={name}
-                      fill={true}
-                      className="bg-white rounded-full p-[1px] "
-                    />
-                  </a>
-                </li>
-              ))}
-            </ul>
           </div>
         </hgroup>
 
@@ -108,8 +89,8 @@ export default function Header() {
         <div className="lg:hidden">Menu</div>
       </div>
 
-      <nav className="hidden lg:block w-full">
-        <ul className="flex flex-col items-start w-full flex-wrap">
+      <nav className="hidden h-full lg:flex w-full flex-col">
+        <ul className="flex flex-col items-start w-full flex-wrap flex-1">
           {navItems.map(({ name, href, Icon }) => (
             <li
               key={href}
@@ -142,6 +123,26 @@ export default function Header() {
                   <div className="hidden xl:block">{name}</div>
                 </div>
               </Link>
+            </li>
+          ))}
+        </ul>
+
+        {/* social icons */}
+        <ul className="flex lg:flex-col xl:flex-row items-center gap-3 w-full justify-center p-8">
+          {social.map(({ name, href, icon }) => (
+            <li key={name}>
+              <a
+                href={href}
+                title={name}
+                className="relative w-4 h-4 md:w-8 md:h-8 block"
+              >
+                <Image
+                  src={`/icons/${icon}.svg`}
+                  alt={name}
+                  fill={true}
+                  className="bg-white rounded-full p-[1px] "
+                />
+              </a>
             </li>
           ))}
         </ul>
