@@ -55,7 +55,7 @@ const navItems = [
   },
   {
     name: "Articles & Reports",
-    href: "/articles",
+    href: "/pubs",
     Icon: NewspaperIcon,
   },
 ];
@@ -113,7 +113,7 @@ export default function Header() {
       <nav
         className={`${
           !showMenu && "hidden"
-        } fixed inset-0 flex flex-col pt-24 gap-12 z-10 lg:pt-0 items-center lg:static lg:bg-inherit lg:h-full lg:flex lg:w-full lg:flex-col bg-stone-500 `}
+        } fixed inset-0 flex flex-col pt-24 gap-12 z-10 lg:pt-0 items-center lg:static lg:bg-transparent lg:h-full lg:flex lg:w-full lg:flex-col bg-stone-500`}
       >
         {/* a big close button */}
         {showMenu && (
@@ -144,7 +144,7 @@ export default function Header() {
                 <div
                   className={`flex font-heading items-center gap-2 lg:absolute inset-0 py-4 lg:py-0 px-8 z-10 lg:justify-center xl:justify-start lg:flex-col lg:gap-1 xl:gap-2 xl:flex-row ${
                     checkMatch(href) && !showMenu
-                      ? "text-gray-800 bg-gray-200"
+                      ? "text-gray-800 bg-gray-200 lg:bg-transparent"
                       : "group-hover:text-gray-200 group-hover:bg-opacity-30  lg:bg-black lg:bg-opacity-20"
                   }`}
                 >
