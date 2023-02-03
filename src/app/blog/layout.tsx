@@ -25,7 +25,7 @@ export default function BlogLayout({
 
   return (
     <div className="flex flex-col 2xl:flex-row gap-8 h-full">
-      <section className="xl:h-full xl:overflow-y-scroll flex-1">
+      <section className="xl:h-full 2xl:overflow-y-scroll flex-1">
         {children}
       </section>
       <aside className="2xl:w-[240px] border-t 2xl:border-t-0 2xl:border-l h-full py-8 2xl:py-0 2xl:px-8 flex 2xl:flex-col gap-12">

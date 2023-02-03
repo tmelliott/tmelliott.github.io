@@ -39,7 +39,7 @@ export default async function BlogPost({
     <div className="flex justify-start p-8">
       {/* a nice image header */}
 
-      <div className="prose">
+      <div className="prose w-full md:w-auto">
         <div className="w-full h-[300px] relative p-0 mb-4">
           <Image
             src={`${
