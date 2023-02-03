@@ -71,8 +71,17 @@ export default function Header() {
   const [showMenu, setShowMenu] = useState(false);
 
   return (
-    <header className="flex lg:flex-col items-center gap-6 bg-slate-600 lg:h-full text-slate-100">
-      <div className="flex items-center justify-between w-full p-4 md:p-8 lg:p-4 xl:p-8">
+    <header className="flex lg:flex-col items-center gap-6 lg:h-full text-slate-100 relative">
+      <div className="absolute inset-0 bg-pink-50 z-0">
+        <Image
+          src="/bg.jpg"
+          fill={true}
+          alt="Flowers"
+          className="absolute object-cover"
+        />
+      </div>
+
+      <div className="flex items-center justify-between w-full p-4 md:p-8 lg:p-4 xl:p-8 z-10">
         <hgroup className="flex lg:flex-col xl:flex-row items-center justify-center gap-6 lg:w-full">
           <div className="relative h-12 w-12 md:h-20 md:w-20 lg:h-14 lg:w-14">
             <Image
@@ -82,8 +91,8 @@ export default function Header() {
               className="bg-white  shadow p-[1px]"
             />
           </div>
-          <div className="flex flex-col gap-2 justify-center xl:text-left">
-            <h1 className="text-2xl font-heading flex items-center gap-2 lg:flex-col xl:flex-row lg:text-lg xl:text-2xl">
+          <div className="flex flex-col gap-2 justify-center xl:text-left bg-black bg-opacity-40 p-2">
+            <h1 className="text-2xl font-heading flex items-center gap-2 lg:flex-col xl:flex-row lg:text-lg xl:text-2xl ">
               <span>Tom</span>
               <span>Elliott</span>
             </h1>
@@ -93,9 +102,9 @@ export default function Header() {
         {/* this will be responsive i.e., a side-drawer */}
         <div className="lg:hidden">
           <Bars3Icon
-            height={26}
-            width={26}
-            className="cursor-pointer hover:text-gray-300"
+            height={36}
+            width={36}
+            className="cursor-pointer hover:text-gray-300 bg-black bg-opacity-20 p-2"
             onClick={() => setShowMenu(true)}
           />
         </div>
@@ -104,11 +113,11 @@ export default function Header() {
       <nav
         className={`${
           !showMenu && "hidden"
-        } fixed inset-0 bg-slate-600 flex flex-col pt-24 gap-12 lg:pt-0 items-center lg:static lg:bg-inherit lg:h-full lg:flex lg:w-full lg:flex-col`}
+        } fixed inset-0 flex flex-col pt-24 gap-12 z-10 lg:pt-0 items-center lg:static lg:bg-inherit lg:h-full lg:flex lg:w-full lg:flex-col bg-stone-500 `}
       >
         {/* a big close button */}
         {showMenu && (
-          <div className="lg:hidden text-sm uppercase flex flex-col gap-2 cursor-pointer hover:text-gray-300">
+          <div className="lg:hidden text-sm uppercase flex flex-col gap-2 cursor-pointer hover:text-gray-300 ">
             <XCircleIcon
               height={42}
               width={42}
@@ -125,18 +134,18 @@ export default function Header() {
               className={`${checkMatch(href) ? "" : ""}
                 relative block w-full group py-3 h-[48px] lg:h-[92px] xl:h-[48px]`}
             >
-              {checkMatch(href) && !showMenu && (
+              {/* {checkMatch(href) && !showMenu && (
                 <motion.div
                   layoutId="activeLinkBG"
                   className="bg-stone-100 absolute inset-0 z-0"
                 ></motion.div>
-              )}
-              <Link href={href}>
+              )} */}
+              <Link href={href} onClick={() => setShowMenu(false)}>
                 <div
                   className={`flex font-heading items-center gap-2 lg:absolute inset-0 py-4 lg:py-0 px-8 z-10 lg:justify-center xl:justify-start lg:flex-col lg:gap-1 xl:gap-2 xl:flex-row ${
                     checkMatch(href) && !showMenu
-                      ? "text-gray-800"
-                      : "group-hover:text-gray-200 group-hover:bg-white group-hover:bg-opacity-5"
+                      ? "text-gray-800 bg-gray-200"
+                      : "group-hover:text-gray-200 group-hover:bg-opacity-30  lg:bg-black lg:bg-opacity-20"
                   }`}
                 >
                   <Icon
@@ -159,7 +168,7 @@ export default function Header() {
         </ul>
 
         {/* social icons */}
-        <ul className="flex lg:flex-col xl:flex-row items-center gap-3 w-full justify-center p-8">
+        <ul className="flex lg:flex-col xl:flex-row items-center gap-3 w-full justify-center p-8 z-10 ">
           {social.map(({ name, href, icon }) => (
             <li key={name}>
               <a
