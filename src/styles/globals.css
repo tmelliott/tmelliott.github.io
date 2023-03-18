@@ -1,3 +1,12 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* mask hole in div */
+.mask {
+  -webkit-mask-image: radial-gradient(
+    100px at 50% 50%,
+    transparent 95%,
+    ;black 100%
+  );
+}
