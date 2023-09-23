@@ -1,0 +1,19 @@
+---
+import Navigation from "../components/Navigation.astro";
+const { title } = Astro.props;
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tom Elliott{title && ` | ${title}`}</title>
+  </head>
+  <body>
+    <div class="flex min-h-screen">
+      <Navigation />
+      <main class="flex-1 p-4"><slot /></main>
+    </div>
+  </body>
+</html>
