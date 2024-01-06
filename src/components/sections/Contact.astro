@@ -1,0 +1,56 @@
+---
+import { Icon } from "astro-icon/components";
+
+const social = [
+  {
+    logo: "fa6-brands:x-twitter",
+    name: "@tomelliottnz",
+    link: "https://twitter.com/tomelliottnz",
+  },
+  {
+    logo: "fa6-brands:github",
+    name: "@tmelliott",
+    link: "https://github.com/tmelliott",
+  },
+  {
+    logo: "simple-icons:bluesky",
+    name: "@tomelliott.bsky.social",
+    link: "https://bsky.app/profile/tomelliott.bsky.social",
+  },
+  {
+    logo: "fa6-brands:linkedin",
+    name: "tmelliott",
+    link: "https://www.linkedin.com/in/tmelliott/",
+  },
+  {
+    logo: "fa6-brands:orcid",
+    name: "0000-0002-7815-6318",
+    link: "https://orcid.org/0000-0002-7815-6318",
+  },
+  {
+    logo: "mdi:email",
+    name: "tom@inzight.co.nz",
+    link: "mailto:tom@inzight.co.nz",
+  },
+];
+---
+
+<div class="flex flex-col items-center">
+  <h5 class="text-xl text-purple-300 flex gap-4 font-light">
+    <strong class="font-bold">Whakapā mai</strong>
+    Get in touch
+  </h5>
+
+  <div class="flex gap-6 justify-center my-8 flex-wrap mx-8">
+    {
+      social.map((soc) => (
+        <a
+          href={soc.link}
+          class="bg-gray-400 text-gray-800 rounded hover:text-purple-800 hover:bg-purple-100 transition-colors duration-200"
+        >
+          <Icon name={soc.logo} class="size-14 p-2" />
+        </a>
+      ))
+    }
+  </div>
+</div>
