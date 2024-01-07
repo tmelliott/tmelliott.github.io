@@ -1,25 +1,26 @@
 ---
-import { Img } from "astro-imagetools/components";
+import { Picture } from "astro-imagetools/components";
 
 const titles = ["Data scientist", "Statistical software developer"];
 ---
 
 <div
-  class="max-w-4xl text-blue-50 w-full flex flex-col lg:flex-row items-center justify-center px-4 gap-24 my-24 group"
+  class="max-w-4xl text-blue-50 w-full flex flex-col lg:flex-row items-center justify-center px-4 gap-12 lg:gap-24 group"
 >
   <div
-    class="h-64 w-64 rounded relative border-2 border-purple-200 overflow-hidden bg-gray-500"
+    class="size-48 md:size-64 rounded relative border-2 border-purple-200 overflow-hidden bg-gray-500"
   >
-    <Img
+    <Picture
       src="/tomelliott.jpg"
       alt=""
-      width="256"
       height="256"
+      width="256"
+      aspect={1}
       position="left"
       attributes={{
         img: {
           class:
-            "rounded grayscale group-hover:grayscale-0 group-hover:scale-110 transition-all duration-[2s]",
+            "rounded lg:group-hover:scale-110 lg:transition-all lg:duration-[2s]",
         },
       }}
     />
@@ -40,7 +41,7 @@ const titles = ["Data scientist", "Statistical software developer"];
       }
     </h2>
 
-    <p class="mt-8 text-center lg:text-left">
+    <p class="mt-4 lg:mt-8 text-center lg:text-left">
       I enjoy building statistical tools and applications that help others make
       the most of their data. I work primarily with R and Javascript, but dabble
       in many other tools, languages, and technologies. As part of my <a
