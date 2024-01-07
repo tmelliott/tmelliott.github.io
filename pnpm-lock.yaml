@@ -37,6 +37,9 @@ dependencies:
     version: 3.4.0
 
 devDependencies:
+  object-hash:
+    specifier: ^3.0.0
+    version: 3.0.0
   prettier:
     specifier: ^3.1.1
     version: 3.1.1
@@ -4228,7 +4231,6 @@ packages:
   /object-hash@3.0.0:
     resolution: {integrity: sha512-RSn9F68PjH9HqtltsSnqYC1XXoWe9Bju5+213R98cNGttag9q9yAOTzdbsqvIa7aNm5WffBZFpWYr2aWrklWAw==}
     engines: {node: '>= 6'}
-    dev: false
 
   /omggif@1.0.10:
     resolution: {integrity: sha512-LMJTtvgc/nugXj0Vcrrs68Mn2D1r0zf630VNtqtpI1FEO7e+O9FP4gqs9AcnBaSEeoHIPm28u6qgPR0oyEpGSw==}
