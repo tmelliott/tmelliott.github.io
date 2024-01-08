@@ -1,5 +1,6 @@
 ---
 import Navigation from "../components/Navigation.astro";
+import Particles from "../components/BgParticles.astro";
 const { title } = Astro.props;
 ---
 
@@ -16,14 +17,17 @@ const { title } = Astro.props;
   </head>
   <body class="">
     <div
-      class="min-h-screen bg-gradient-to-tr from-gray-950 to-purple-950 flex flex-col justify-center"
+      class="fixed inset-0 -z-10 bg-gradient-to-tr from-gray-950 to-purple-950"
     >
+    </div>
+    <div class="min-h-screen flex flex-col justify-center">
       <!-- <Navigation /> -->
       <main
-        class="flex-1 p-4 flex flex-col items-center justify-center gap-12 lg:gap-36"
+        class="flex-1 p-4 flex flex-col items-center justify-center gap-12 lg:gap-36 -mb-[150px]"
       >
         <slot />
       </main>
+      <Particles />
     </div>
   </body>
 </html>
